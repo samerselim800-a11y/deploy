@@ -1,0 +1,325 @@
+.portfolioSection {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background-color: #050505;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .portfolioSection {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+}
+
+/* ستايل أزرار الفلترة */
+.filterBtn {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  padding: 0.5rem 1.25rem;
+  background: transparent;
+  border: 1px solid #222225;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.2s ease-in-out;
+}
+
+.filterBtn:hover {
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+
+.activeFilter {
+  border-color: #f59e0b !important;
+  background-color: #f59e0b !important;
+  color: #000000 !important;
+  font-weight: 600;
+}
+
+/* ستايل الكارت */
+.portfolioCard {
+  background-color: #121214;
+}
+
+.imageWrapper {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.cardImg {
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* تأثير الـ Hover على الصورة */
+:global(.group):hover .cardImg {
+  transform: scale(1.1);
+}
+
+/* ظلال سوداء متدرجة في أسفل الصورة ليظهر النص المكتوب بوضوح */
+.cardOverlay {
+  background: linear-gradient(to top, #050505 0%, rgba(5, 5, 5, 0.3) 50%, transparent 100%);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+:global(.group):hover .cardOverlay {
+  opacity: 0.95;
+}
+
+.cardCategory {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  color: #f59e0b;
+}
+
+.fontDisplay {
+  font-family: var(--font-display, serif);
+  color: #ffffff;
+}
+
+/* دائرة السهم */
+.arrowCircle {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(18, 18, 20, 0.8);
+  color: #f59e0b;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+:global(.group):hover .arrowCircle {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #000000;
+  transform: rotate(45deg);
+}
+
+/* زر رؤية كل الأعمال */
+.seeAllBtn {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid #222225;
+  color: #ffffff;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.seeAllBtn:hover {
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+
+/* ─── Modal Backdrop ─────────────────────────────────────────── */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ─── Modal ──────────────────────────────────────────────────── */
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #111113;
+  border: 1px solid #2a2a2a;
+  border-radius: 24px;
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  scrollbar-width: thin;
+  scrollbar-color: #2a2a2a transparent;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.modal::-webkit-scrollbar { width: 4px; }
+.modal::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 4px; }
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: all 0.2s ease;
+}
+
+.closeBtn:hover { background: rgba(255,255,255,0.15); }
+
+/* ─── Modal Image ────────────────────────────────────────────── */
+.modalImg {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 24px 24px 0 0;
+}
+
+.modalImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modalImgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(17,17,19,0.9) 0%, transparent 60%);
+}
+
+.modalCategory {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.5rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+/* ─── Modal Body ─────────────────────────────────────────────── */
+.modalBody {
+  padding: 1.75rem 2rem 2rem;
+}
+
+.modalMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.modalClient {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.modalYear {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.3);
+}
+
+.modalTitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+  font-family: var(--font-display, serif);
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.modalDesc {
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.60);
+  margin: 0;
+}
+
+.modalDivider {
+  height: 1px;
+  background: #1f1f1f;
+  margin: 1.5rem 0;
+}
+
+/* ─── Results ────────────────────────────────────────────────── */
+.resultsRow {
+  display: flex;
+  gap: 0;
+}
+
+.resultItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0 1rem;
+  border-right: 1px solid #1f1f1f;
+}
+
+.resultItem:first-child { padding-left: 0; }
+.resultItem:last-child  { border-right: none; }
+
+.resultValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f59e0b;
+  font-family: var(--font-display, serif);
+  line-height: 1;
+}
+
+.resultLabel {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ─── Services Tags ──────────────────────────────────────────── */
+.modalLabel {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #444;
+  margin-bottom: 0.75rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid #2a2a2a;
+  background: rgba(255,255,255,0.03);
+  color: rgba(255,255,255,0.6);
+  font-size: 0.78rem;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .modal { border-radius: 18px; }
+  .modalImg { border-radius: 18px 18px 0 0; aspect-ratio: 4/3; }
+  .modalBody { padding: 1.25rem 1.25rem 1.5rem; }
+  .modalTitle { font-size: 1.3rem; }
+  .resultValue { font-size: 1.2rem; }
+}

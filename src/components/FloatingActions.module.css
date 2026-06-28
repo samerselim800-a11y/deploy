@@ -1,0 +1,107 @@
+.wrap {
+  position: fixed;
+  left: 1.25rem;
+  top: 75%;
+  transform: translateY(-50%);
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* Base button */
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow: hidden;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s ease,
+              transform 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.btn:hover {
+  width: 140px;
+  transform: translateX(4px);
+}
+
+/* Icon area */
+.btn svg,
+.btn > :first-child {
+  flex-shrink: 0;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Label */
+.label {
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.25s ease 0.05s, transform 0.25s ease 0.05s;
+  padding-right: 1rem;
+  color: inherit;
+}
+
+.btn:hover .label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Contact button */
+.contactBtn {
+  background: var(--secondary);
+  color: #ffffff;
+}
+
+.contactBtn:hover {
+  box-shadow: 0 8px 28px rgba(43, 110, 194, 0.45);
+  color: #ffffff;
+}
+
+/* WhatsApp button */
+.waBtn {
+  background: linear-gradient(135deg, #25d366, #128c4e);
+  color: #ffffff;
+}
+
+.waBtn:hover {
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.4);
+  color: #ffffff;
+}
+
+/* Mobile — أصغر وبدون expand */
+@media (max-width: 640px) {
+  .wrap {
+    left: 0.75rem;
+    top: auto;
+    bottom: 1.5rem;
+    transform: none;
+  }
+
+  .btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .btn:hover {
+    width: 44px;
+    transform: none;
+  }
+
+  .label {
+    display: none;
+  }
+}

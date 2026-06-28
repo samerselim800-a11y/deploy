@@ -1,0 +1,78 @@
+.ctaSection {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background-color: #050505;
+  color: #ffffff;
+}
+.fontsmall {
+  font-size: 0.9rem;
+  color: #918c8c;
+}
+@media (min-width: 768px) {
+  .ctaSection {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+}
+
+.bgHero {
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: linear-gradient(180deg, #050505 0%, #0f0f11 100%);
+  z-index: 0;
+}
+
+.glowBlur {
+  width: 600px;
+  height: 400px;
+  background-color: rgba(245, 158, 11, 0.08); /* إضاءة ذهبية خفيفة خلفية */
+  filter: blur(120px);
+  z-index: 0;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: #f59e0b;
+}
+
+.line {
+  height: 1px;
+  width: 40px;
+  background-color: #f59e0b;
+}
+
+.fontDisplay {
+  font-family: var(--font-display, serif);
+  line-height: 1.1;
+}
+
+.gradientGold {
+  background: linear-gradient(135deg, #fccd4d, #f59e0b);
+
+}
+
+.btnGold {
+  margin-top: 2.5rem;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #000000 !important; /* نص أسود متباين فوق الزر الذهبي */
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2);
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+  position: relative;
+}
+
+.btnGold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(245, 158, 11, 0.3);
+}
+
+.arrowIcon {
+  transition: transform 0.2s ease-in-out;
+}
+
+.btnGold:hover .arrowIcon {
+  transform: translateX(5px);
+}

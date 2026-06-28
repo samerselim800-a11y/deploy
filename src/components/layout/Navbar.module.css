@@ -1,0 +1,256 @@
+/* Navbar.module.css */
+
+.header {
+  position: Absolute;
+  inset-inline: 0;
+  top: 0;
+  z-index: 50;
+  transition: background 0.4s ease, border-color 0.4s ease;
+}
+
+/* التناسق المظلم الشفاف مع الخلفية عند التمرير */
+.headerScrolled {
+  background: rgba(18, 20, 22, 0.75) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.headerTransparent {
+  background: transparent;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 84rem;
+  margin-inline: auto;
+  padding: 1.25rem 4rem; /* متناسق مع هوامش الهيرو البوتستراب المحدثة */
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* ── Brand ── */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--foreground);
+}
+
+.logo {
+  height: 2.2rem;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brand:hover .logo {
+  transform: scale(1.05);
+}
+
+.brandName {
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+@media (max-width: 520px) {
+  .brandName {
+    display: none;
+  }
+}
+
+/* ── Desktop Nav ── */
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: 2.25rem;
+}
+
+@media (min-width: 1024px) {
+  .desktopNav {
+    display: flex;
+  }
+}
+
+.navLink {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--foreground);
+  opacity: 0.75;
+  text-decoration: none;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.navLink:hover {
+  opacity: 1;
+  color: var(--primary) !important;
+}
+
+.navLinkActive {
+  opacity: 1;
+  color: var(--primary) !important;
+  font-weight: 600;
+}
+
+/* ── Actions ── */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.langBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: rgba(18, 20, 22, 0.35);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.langBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 640px) {
+  .langBtn {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* زر التحويل المتطابق مع الهيرو الذهبي الفاخر */
+.ctaBtn {
+  display: none;
+  padding: 0.65rem 1.5rem;
+  border-radius: 9999px;
+  background: var(--gradient-gold) !important;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-foreground) !important;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.15);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.3);
+}
+
+@media (min-width: 768px) {
+  .ctaBtn {
+    display: inline-flex;
+  }
+}
+
+/* تعديل زر القائمة لمنع ظهوره على الشاشات الكبيرة */
+.menuBtn {
+  display: grid;
+  place-items: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.menuBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 1024px) {
+  .menuBtn {
+    display: none; /* إخفاء تام في الشاشات الكبيرة */
+  }
+}
+
+/* ── Mobile Nav ── */
+.mobileNav {
+  overflow: hidden;
+  background: rgba(18, 20, 22, 0.95);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+@media (min-width: 1024px) {
+  .mobileNav {
+    display: none;
+  }
+}
+
+.mobileInner {
+  max-width: 84rem;
+  margin-inline: auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobileLink {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--foreground);
+  opacity: 0.8;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, opacity 0.2s;
+}
+
+.mobileLink:hover {
+  background: rgba(255, 255, 255, 0.05);
+  opacity: 1;
+  color: var(--primary) !important;
+}
+
+.mobileLinkActive {
+  background: rgba(255, 193, 7, 0.1) !important;
+  opacity: 1;
+  color: var(--primary) !important;
+}
+
+.mobileCtaBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 9999px;
+  background: var(--gradient-gold);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-foreground) !important;
+  text-decoration: none;
+}

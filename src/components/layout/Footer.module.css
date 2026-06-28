@@ -1,0 +1,132 @@
+.footer {
+ 
+
+  background: #1a1204;
+  color: #e8d5b0;
+  padding: 60px 0 0;
+  border-top: 1px solid #2e2010;
+  position: relative;
+  overflow: hidden;
+}
+
+.glow {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 200px;
+  background: radial-gradient(ellipse, rgba(255,196,61,.10) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* التعديل الجديد للوجو */
+.logo {
+  height: 56px;       /* حجم أكبر ومناسب للـ Layout */
+  width: auto;        /* الحفاظ على أبعاد اللوجو الأصلي بدون تشويه */
+  display: block;
+  margin-left: -4px;  /* ضبط المحاذاة اليسارية بدقة مع النصوص */
+}
+
+.headline {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--primary);
+}
+
+.headline span {
+  color: var(--secondary) !important;
+}
+
+.btnStart {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--secondary);  
+  color: #fafafa;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.25s ease, color 0.25s ease;
+}
+
+.btnStart:hover {
+  background: var(--secondaryHover);
+  color: #ffffff;
+}
+
+.colLabel {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #7a6a4a;
+  margin-bottom: 1rem;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links li {
+  margin-bottom: 0.5rem;
+}
+
+.links a {
+  color: #c4a870;
+  text-decoration: none;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: #ffc43d;
+}
+
+.iconBox {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background:var(--primary) !important;
+  color: #ffffff;
+  flex-shrink: 0;
+  transition: background 0.25s ease;
+}
+
+.links a:hover .iconBox {
+  background: #f0a646;
+}
+
+.muted {
+  color: #5a4e38;
+  font-size: 0.85rem;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bottom {
+  border-top: 1px solid #2e2010;
+  margin-top: 3rem;
+  padding: 20px 0;
+}
+
+.bottomText {
+  font-size: 0.75rem;
+  color: #5a4e38;
+}

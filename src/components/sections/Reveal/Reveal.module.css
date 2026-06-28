@@ -1,0 +1,20 @@
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: var(--bs-primary);
+}
+
+.line {
+  height: 1px;
+  width: 32px;
+  background-color: var(--bs-primary);
+}
+
+.fontDisplay {
+  font-family: var(--font-display, serif);
+  line-height: 1.05;
+}
+
+.max-w-760 {
+  max-width: 760px;
+}

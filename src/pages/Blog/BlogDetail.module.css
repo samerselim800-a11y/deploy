@@ -1,0 +1,73 @@
+.articleContainer {
+  padding-top: 10rem;
+  padding-bottom: 6rem;
+  background-color: #080808;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .articleContainer {
+    padding-top: 12rem;
+  }
+}
+
+.backLink {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  color: #6c757d;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: #f59e0b;
+}
+
+.postMeta {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  color: #f59e0b;
+}
+
+.fontDisplay {
+  font-family: var(--font-display, serif);
+  line-height: 1.2;
+}
+
+.featuredImage {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* تنسيق خطوط ونصوص متن المقال للمقروئية العالية */
+.articleBody {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.articleBody p {
+  margin-bottom: 1.5rem;
+}
+
+.articleBody h2 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+/* محاذاة مقاسات الهياكل المخصصة للمقالات الشبيهة بـ Tailwind */
+:global(.max-w-760) {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+:global(.max-w-1000) {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+:global(.min-vh-screen) {
+  min-height: 100vh;
+}

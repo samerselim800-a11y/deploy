@@ -1,0 +1,49 @@
+.processSection {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background-color: #050505;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .processSection {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+}
+.fontsmall {
+  font-size: 0.9rem;
+  color: #918c8c;
+}
+.dividerLine {
+  top: 40px;
+  height: 1px;
+  background-color: #222225;
+  z-index: 0;
+}
+
+.stepCircle {
+  width: 80px;
+  height: 80px;
+  background-color: #0a0a0c;
+  border: 1px solid #222225 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  
+  /* تدرج ذهبي للنص J1, J2 */
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+ 
+  
+  font-family: var(--font-display, serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  z-index: 1;
+  position: relative;
+}
+
+.fontDisplay {
+  font-family: var(--font-display, serif);
+  color: #ffffff;
+}

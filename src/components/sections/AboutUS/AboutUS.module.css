@@ -1,0 +1,475 @@
+/* ──────────────────────────────────────────────
+   WhyChooseUs.module.css
+   Updated to match Aero Marketing theme variables
+   ────────────────────────────────────────────── */
+
+/* ── Layout ── */
+
+.section {
+  position: relative;
+  overflow: hidden;
+  background: var(--background);
+  padding: 6rem 0 5rem;
+}
+
+.glow {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 166, 72, 0.25),
+    rgba(255, 193, 7, 0.10),
+    transparent 70%
+  );
+
+  filter: blur(70px);
+  animation: glowPulse 7s ease-in-out infinite;
+}
+
+
+
+.gridBg {
+  position: absolute;
+  inset: 0;
+ 
+  mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+  opacity: 0.4;
+}
+.aurora {
+  position: absolute;
+  inset: -30%;
+  pointer-events: none;
+
+  background: radial-gradient(circle at 25% 30%, rgba(255, 166, 72, 0.18), transparent 45%),
+              radial-gradient(circle at 70% 60%, rgba(0, 129, 208, 0.16), transparent 50%),
+              radial-gradient(circle at 50% 90%, rgba(255, 193, 7, 0.08), transparent 55%);
+
+  filter: blur(90px);
+  opacity: 0.9;
+
+  animation: auroraMove 14s ease-in-out infinite alternate;
+}
+
+
+
+
+
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* ── Badge ── */
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  gap: 0.7rem;
+  padding: 1rem 3rem;
+  border-radius: 999px;
+
+  background: transparent;
+  border: 2px solid color-mix(in srgb, var(--primary) 35%, transparent);
+  color: var(--primary) !important;
+
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin: 15px auto 1rem;
+  backdrop-filter: blur(10px);
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+
+    box-shadow 0.3s ease;
+}
+
+.badge:hover{
+   background-color: rgba(255, 193, 7, 0.08) !important;
+  border-color: var(--primary) !important;
+  box-shadow: var(--shadow-glow);
+}
+.badgeIcon {
+  size: 2.2rem;
+  color: var(--primary);
+}
+
+/* ── Content grid ── */
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .rightCol {
+    order: -1;
+  }
+}
+
+/* ── Left column ── */
+.leftCol {
+display: flex;
+  flex-direction: column;
+  justify-content: SPace-Around; 
+  align-items: flex-start;
+  gap: 1.4rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.heading {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.3;
+  text-transform: uppercase; /* يفضل كتابتها cross-browser بأحرف صغيرة في الـ CSS */
+  color: var(--primary); /* اللون الأزرق الافتراضي للسطر الثاني */
+  margin: 0;
+
+  letter-spacing: 0.05em;
+}
+
+.headingAccent {
+  background: var(--secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.body {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #fafafa;
+  font-weight: 400;
+  max-width: 520px;
+  margin: 0;
+  text-transform: none;
+  letter-spacing: 0.02em; /* ↓ بدل 2.23px اللي كانت واسعة أوي */
+  text-align: justify;    /* ← ده اللي بيخلي النص زي الصورة بالظبط */
+
+}
+
+
+
+/* ── Text reveal animations ── */
+.revealHidden {
+  opacity: 0;
+  filter: blur(4px);
+  transform: translateY(6px);
+}
+
+.revealIn {
+  animation: revealText 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+@keyframes revealText {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+/* ── Right column / image ── */
+.rightCol {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: start;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 3 / 4;
+  padding: 0;
+  left: -8%;
+  TOP:0;
+}
+
+.image {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  display: block;
+}
+
+.imageRing {
+  position: absolute;
+  top: 0; 
+  inset: -6px;
+  border-radius: 1.6rem;
+  pointer-events: none;
+}
+
+/* ── Metrics box ── */
+.metricsBox {
+  margin-top: 3.5rem;
+  width: 100%;
+  border-radius: 1.25rem;
+  background: color-mix(in srgb, var(--foreground) 3%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary) 20%, transparent);
+  padding: 2rem 2.5rem;
+  backdrop-filter: blur(16px);
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.metricsBox.metricsVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.metricsTitle {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--foreground) 35%, transparent);
+  margin: 0 0 1.5rem;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .metricsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.metricsBox.metricsVisible .metricItem {
+  animation: slideUp 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.metricNumberFix {
+  font-size: clamp(
+    1.2rem,
+    2.5vw,
+    1.75rem
+  ); /* تصغير مرن ومناسب للرقم الطويل مع العملة */
+  font-weight: 800;
+  color: var(--foreground);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  direction: ltr; /* لضمان ظهور العملة SAR بجانب الرقم بشكل سليم */
+}
+/* ─────────────────────────
+   Tablet
+───────────────────────── */
+
+@media (max-width: 1024px) {
+
+  .section {
+    padding: 5rem 1.5rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .contentGrid {
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+
+  .body {
+    max-width: 100%;
+    font-size: .92rem;
+  }
+
+  .imageWrap {
+    max-width: 360px;
+    left: 0;
+    margin-inline: auto;
+  }
+
+  .glow {
+    width: 550px;
+    height: 550px;
+  }
+
+}
+
+/* ─────────────────────────
+   Mobile
+───────────────────────── */
+
+@media (max-width: 768px) {
+
+  .section {
+    padding: 4rem 1rem;
+  }
+
+  .badge {
+    padding: .85rem 1.8rem;
+    font-size: .9rem;
+    margin-bottom: 2rem;
+  }
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .leftCol {
+    order: 2;
+    align-items: center;
+    text-align: center;
+  }
+
+  .rightCol {
+    order: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heading {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .body {
+    max-width: 100%;
+    text-align: center;
+    font-size: .92rem;
+    line-height: 1.8;
+  }
+
+  .imageWrap {
+    width: 100%;
+    max-width: 300px;
+    left: 0;
+    margin: auto;
+    aspect-ratio: 1 / 1.2;
+  }
+
+  .image {
+    width: 100%;
+  }
+
+  .metricsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .glow {
+    width: 420px;
+    height: 420px;
+    filter: blur(60px);
+  }
+
+  .aurora {
+    inset: -50%;
+  }
+
+}
+
+/* ─────────────────────────
+   Small Phones
+───────────────────────── */
+
+@media (max-width: 480px) {
+
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .badge {
+    padding: .75rem 1.3rem;
+    font-size: .8rem;
+    gap: .5rem;
+  }
+
+  .badgeIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .heading {
+    font-size: 26px;
+    letter-spacing: .03em;
+  }
+
+  .body {
+    font-size: .88rem;
+    line-height: 1.7;
+  }
+
+  .imageWrap {
+    max-width: 250px;
+  }
+
+  .metricsBox {
+    padding: 1.5rem;
+  }
+
+  .glow {
+    width: 320px;
+    height: 320px;
+  }
+
+}
+.ctaButton {
+  position: relative;
+  z-index: 20;
+
+  cursor: pointer;
+}
+.glow,
+.gridBg,
+.aurora {
+  pointer-events: none;
+}

@@ -1,0 +1,66 @@
+.blogSection {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background-color: #050505;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .blogSection {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+}
+
+.blogLink {
+  color: inherit;
+}
+
+.imageContainer {
+  aspect-ratio: 4 / 3;
+}
+
+.blogImg {
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* تأثير تكبير الصورة عند تمرير الماوس فوق الكارت */
+:global(.group):hover .blogImg {
+  transform: scale(1.05);
+}
+
+.postMeta {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+}
+
+.category {
+  color: #f59e0b; /* اللون الذهبي */
+}
+
+.fontDisplay {
+  font-family: var(--font-display, serif);
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+/* تغيير لون العنوان عند تمرير الماوس */
+:global(.group):hover .fontDisplay {
+  color: #f59e0b;
+}
+
+.readMore {
+  color: #f59e0b;
+  font-weight: 500;
+}
+
+.arrowIcon {
+  transition: transform 0.3s ease;
+}
+
+/* حركة السهم عند الـ Hover */
+:global(.group):hover .arrowIcon {
+  transform: translate(2px, -2px);
+}

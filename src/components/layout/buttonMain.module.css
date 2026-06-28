@@ -1,0 +1,79 @@
+.ctaButton {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.9rem 2.25rem;
+
+  border-radius: 50px;
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  background: var(--secondary);
+
+  color: #fff !important;
+
+  text-decoration: none;
+
+  font-size: .9rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: .1em;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 15px rgba(13,41,84,.25);
+
+  transition:
+    background .3s ease,
+    box-shadow .3s ease,
+    transform .3s ease;
+}
+
+/* Hover */
+
+.ctaButton:hover {
+
+  background: var(--secondaryHover);
+
+  box-shadow: 0 15px 35px rgba(43,110,194,.4);
+
+  transform: translateY(-2px);
+
+}
+
+/* Tablet */
+
+@media (max-width:768px){
+
+  .ctaButton{
+    width:100%;
+    max-width:280px;
+
+    margin:auto;
+
+    padding:.85rem 1.8rem;
+
+    font-size:.85rem;
+  }
+
+}
+
+/* Small phones */
+
+@media (max-width:480px){
+
+  .ctaButton{
+    max-width:230px;
+
+    padding:.8rem 1.5rem;
+
+    font-size:.8rem;
+
+    border-radius:40px;
+  }
+
+}

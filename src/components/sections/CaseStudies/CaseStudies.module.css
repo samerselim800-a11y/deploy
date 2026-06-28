@@ -1,0 +1,419 @@
+/* ─── Section ───────────────────────────────────────────────── */
+.section {
+  width: 100%;
+  padding: 140px 0;
+  background: var(--background);
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+
+/* دمج مسحة خفيفة من الأزرق المطور في هالة التوهج الخلفية الكبرى للقسم */
+.section::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(ellipse, rgba(41, 95, 153, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+  overflow: visible;
+}
+
+/* ─── Header ────────────────────────────────────────────────── */
+.header {
+  margin-bottom: 64px;
+}
+
+.titleSection {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  width: fit-content;
+  gap: 0.7rem;
+  padding: 1rem 3rem;
+  border-radius: 999px;
+
+  background: transparent;
+  border: 2px solid color-mix(in srgb, var(--primary) 35%, transparent);
+  color: var(--primary) !important;
+
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 23px;
+  margin-left: 0;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(10px);
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+
+    box-shadow 0.3s ease;
+}
+
+.titleSection:hover {
+   background-color: rgba(255, 193, 7, 0.08) !important;
+  border-color: var(--primary) !important;
+  box-shadow: var(--shadow-glow);
+}
+.heading {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--foreground);
+  margin: 0 0 16px;
+  line-height: 1.1;
+}
+
+.subheading {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--muted-foreground);
+  max-width: 440px;
+  margin: 0;
+}
+
+/* ─── Grid ──────────────────────────────────────────────────── */
+.grid {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  overflow: visible;
+}
+
+/* ─── Video column ──────────────────────────────────────────── */
+.videoCol {
+  width: 34%;
+  flex-shrink: 0;
+  position: sticky;
+  top: 80px;
+  align-self: flex-start;
+  max-height: calc(100vh - 100px);
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.videoWrap {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: calc(100vh - 100px);
+}
+
+.videoGlow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, oklch(0.13 0.008 60 / 0.7) 100%);
+  pointer-events: none;
+}
+
+/* ─── Cards column ──────────────────────────────────────────── */
+.cardsCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+/* ─── Card ──────────────────────────────────────────────────── */
+.card {
+  display: flex;
+  gap: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 14px;
+  padding: 1px;
+  background: var(--secondary) !important; 
+ -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); /* 👈 أضف هذا السطر هنا */
+  
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--secondaryHover) !important;
+  box-shadow: 0 15px 35px rgba(41, 95, 153, 0.2);
+}
+
+/* ── Card left (text) ── */
+.cardText {
+  width: 63%;
+  padding: 26px;
+  background: radial-gradient(
+    circle at -4% 118%,
+    oklch(0.22 0.06 270 / 0.8) 0%,
+    oklch(0.16 0.01 60) 100%
+  );
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.companyHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.companyName {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.logo {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: oklch(1 0 0 / 0.08);
+  padding: 5px;
+  border: 1px solid var(--border);
+}
+
+.pill {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--muted-foreground);
+  background: oklch(0.78 0.14 70 / 0.12);
+  border: 1px solid oklch(0.78 0.14 70 / 0.2);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+
+.desc {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--muted-foreground);
+  margin: 0 0 18px;
+}
+
+.comparison {
+  display: flex;
+  align-items: stretch;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.compBefore,
+.compAfter {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 12px;
+  gap: 6px;
+  text-align: center;
+}
+
+.compBefore {
+  background: oklch(1 0 0 / 0.04);
+  border-right: 1px solid var(--border);
+}
+
+.compAfter {
+  background: oklch(0.78 0.14 70 / 0.08);
+  border-left: 1px solid oklch(0.78 0.14 70 / 0.15);
+}
+
+.compLabel {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted-foreground);
+}
+
+.compValue {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--foreground);
+  line-height: 1.2;
+}
+
+.compAfter .compValue {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.arrow {
+  width: 44px;
+  height: 44px;
+  background: var(--secondary) !important; /* تحويل السهم الدائري للون الأزرق */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff !important;      /* أيقونة السهم بالداخل بيضاء صافية متباينة */
+  font-size: 15px;
+  flex-shrink: 0;
+  align-self: center;
+  margin: 0 -10px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 18px rgba(41, 95, 153, 0.6); /* توهج أزرق ناصع وثابت */
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 18px rgba(41, 95, 153, 0.5);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 28px rgba(41, 95, 153, 0.8);
+  }
+}
+
+/* ── Card right (metrics) ── */
+.cardMetrics {
+  width: 37%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px 18px;
+  position: relative;
+}
+
+.cardMetrics::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: oklch(0.13 0.008 60 / 0.72);
+  pointer-events: none;
+}
+
+.metric {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  padding: 14px 10px;
+  background: oklch(1 0 0 / 0.05);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  transition: background 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+  gap: 5px;
+}
+
+/* تلوين حواف صناديق الإحصائيات الفردية بالأزرق المطور عند الـ Hover */
+.metric:hover {
+  background: oklch(1 0 0 / 0.09);
+  transform: translateY(-2px);
+  border-color: var(--secondaryHover) !important;
+  box-shadow: 0 4px 14px rgba(41, 95, 153, 0.3);
+}
+
+.metricValue {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--foreground);
+  letter-spacing: -0.02em;
+}
+
+.metricLabel {
+  font-size: 11px;
+  color: var(--muted-foreground);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+}
+
+/* ─── Responsive ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .container { padding: 0 28px; }
+  .videoCol { display: none; }
+  .cardsCol { width: 100%; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 64px 0; }
+  .container { padding: 0 20px; }
+  .heading { font-size: 32px; }
+  .subheading { max-width: 100%; }
+  .header { margin-bottom: 40px; }
+  .card { flex-direction: column; }
+  
+  .cardText {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .cardMetrics {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .metric {
+    grid-column: span 1;
+  }
+  .metric:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+  .comparison { flex-direction: column; }
+  .compBefore { border-right: none; border-bottom: 1px solid var(--border); }
+  .compAfter { border-left: none; }
+  
+  .arrow {
+    margin: 0 auto;
+    transform: rotate(90deg);
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .companyName { font-size: 20px; }
+  .metricValue { font-size: 17px; }
+}
