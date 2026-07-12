@@ -159,11 +159,11 @@
 .marquee {
   display: flex;
   width: max-content;
-  animation: scrollLeft 80s linear infinite;
+  animation: scrollLeft 200s linear infinite;
 }
 
 .marquee.reverse {
-  animation: scrollRight 80s linear infinite;
+  animation: scrollRight 200s linear infinite;
 }
 
 .marqueeContent {

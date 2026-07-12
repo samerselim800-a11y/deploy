@@ -21,9 +21,8 @@ function AboutPage() {
   return (
     <>
       <AboutUs translationPrefix="aboutPage.intro" />
-      <ServicesGrid translationPrefix="aboutPage.values" />
+      <ServicesGrid translationPrefix="home.values" />
       <StatsCounter translationPrefix="aboutPage.stats" />
-      <ProcessSection translationPrefix="aboutPage.process" />
       <CTABanner translationPrefix="aboutPage.cta" />
     </>
   );

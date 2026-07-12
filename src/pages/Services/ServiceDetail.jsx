@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { X, TrendingUp, Briefcase, Search, Target, PenTool, Megaphone, BarChart2, MousePointerClick, Share2, Map, MessageCircle, FileText, Rocket } from "lucide-react";
+import { X, TrendingUp, Briefcase, Search, Target, PenTool, Megaphone, BarChart2, MousePointerClick, Share2, Map, Palette, Video, Globe, FileText } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import styles from "./ServiceDetail.module.css";
 
@@ -106,17 +106,7 @@ export const ALL_SERVICES = [
     category: "strategy",
   },
   {
-    number: "11", slug: "whatsapp-sales",
-    title: "WhatsApp & Sales Communication", titleAr: "دعم واتساب والتواصل البيعي",
-    short: "We improve the start of customer conversations and build qualification flows that help your team understand needs, reduce hesitation, and close faster.",
-    long: "We write professional welcome messages, build short qualification question flows, and develop reply frameworks for common objections. We align replies with service type and guide conversations toward a booking, meeting, or clear purchase request — giving your sales team a consistent, effective communication system.",
-    icon: MessageCircle,
-    features: ["Professional welcome message writing", "Short qualification question setup", "Common objection reply development", "Reply alignment with service or offer type", "Conversation direction toward booking or meeting"],
-    when: ["Many messages but few sales", "Team replies differ from person to person", "Customers need qualification before a call or visit"],
-    category: "advertising",
-  },
-  {
-    number: "12", slug: "reporting",
+    number: "11", slug: "reporting",
     title: "Reporting & Performance Review", titleAr: "التقارير ومراجعة الأداء",
     short: "We provide reports that don't just display numbers — they translate performance into insights, recommendations, and actionable decisions.",
     long: "We deliver monthly or bi-weekly performance reports covering content results, campaign data, and lead quality — not just raw numbers. We identify reasons for improvement or weakness and provide clear recommendations for the next stage, turning data into a decision-making tool for your management team.",
@@ -126,24 +116,34 @@ export const ALL_SERVICES = [
     category: "strategy",
   },
   {
-    number: "13", slug: "launch-systems",
-    title: "Launch & Growth Systems", titleAr: "أنظمة الإطلاق والنمو",
-    short: "We prepare launch or relaunch systems for businesses, services, and apps — from awareness and data collection to conversion and scaling.",
-    long: "We prepare your launch messaging, plan pre-launch, launch, and post-launch content, and build a phased campaign structure (Awareness → Traffic → Conversion). We develop launch offers when needed and analyze early results to improve the next stage — turning your launch into the foundation for continuous growth.",
-    icon: Rocket,
-    features: ["Launch message preparation", "Pre-launch, launch, and post-launch content planning", "Phased awareness, traffic, and conversion campaigns", "Launch offer development when needed", "Result analysis and next-stage improvement"],
-    when: ["Launching an app, service, or new branch", "Reintroducing a brand to the market", "Awareness must be built before gradual conversion"],
-    category: "advertising",
+    number: "12", slug: "brand-identity",
+    title: "Brand Identity & Corporate Design", titleAr: "بناء الهوية البصرية والتصميم المؤسسي",
+    short: "We design your brand's unique visual identity from scratch, from the logo and color palette to typography, ensuring a consistent image in your audience's mind.",
+    long: "We design your brand's unique visual identity from scratch — including logo design, expressive color palette selection, and official typography — to ensure a cohesive, unified brand image. We also translate your identity into tangible assets through company profiles, presentations, and official print materials.",
+    icon: Palette,
+    features: ["Logo design from scratch", "Expressive color palette selection", "Official brand typography", "Company profile and presentation design", "Official print material design"],
+    when: ["Brand has no clear visual identity", "Need for a unified brand image across touchpoints", "Before launching a new website, campaign, or profile"],
+    category: "content",
   },
   {
-    number: "14", slug: "portfolio-support",
-    title: "Portfolio & Case Presentation", titleAr: "تحويل الأعمال إلى Portfolio",
-    short: "We turn your previous work into marketing material that proves experience, builds trust, and helps new clients understand your quality before reaching out.",
-    long: "We organize your previous projects by type, write simplified case studies, develop Before/After or highlight content, and craft professional descriptions of delivered services. The goal is to turn your portfolio from a gallery into a sales tool — one that communicates results, not just aesthetics.",
-    icon: Briefcase,
-    features: ["Previous project organization by type", "Simplified case study writing", "Before/After and project highlight content", "Professional delivered service descriptions", "Portfolio as a sales tool, not a gallery"],
-    when: ["Strong previous work not used in marketing", "Preparing a new website or portfolio", "Targeting higher-quality or higher-budget clients"],
+    number: "13", slug: "social-media-design",
+    title: "Social Media Design & Video Production", titleAr: "تصميمات السوشيال ميديا وإنتاج الفيديوهات",
+    short: "We create eye-catching creative designs for social platforms, along with ad videos, motion graphics, and short-form reels.",
+    long: "We create eye-catching creative designs for social media platforms, along with ad video production, motion graphics, AI-generated videos, and short-form social media (reels) videos.",
+    icon: Video,
+    features: ["Social media post design", "Ad video production", "Motion graphics", "AI-generated videos", "Short-form reels video production"],
+    when: ["Current design doesn't reflect the brand's level", "Need for professional video content", "Building a consistent visual presence across platforms"],
     category: "content",
+  },
+  {
+    number: "14", slug: "web-dev-stores",
+    title: "Website & Store Development", titleAr: "تصميم وتطوير المواقع والمتاجر",
+    short: "We build and design complete websites and online stores, delivering a smooth UI/UX experience to increase sales.",
+    long: "We build and design complete websites and online stores, delivering a smooth UI/UX experience to increase sales.",
+    icon: Globe,
+    features: ["Website programming and design", "Online store programming and design", "UI/UX design", "Interface optimization for higher conversion", "Payment and tracking system integration"],
+    when: ["No professional website or online store exists", "Poor user experience on the current website", "Need for an online store to increase sales"],
+    category: "advertising",
   },
 ];
 
@@ -162,10 +162,10 @@ const SERVICE_KEYS = {
   "campaign-optimization": "campaignOptimization",
   "social-media": "socialMedia",
   "customer-journey": "customerJourney",
-  "whatsapp-sales": "whatsappSales",
   reporting: "reporting",
-  "launch-systems": "launchSystems",
-  "portfolio-support": "portfolioSupport",
+  "brand-identity": "brandIdentity",
+  "social-media-design": "socialMediaDesign",
+  "web-dev-stores": "webDevStores",
 };
 
 // ─── Modal ──────────────────────────────────────────────────────────────────

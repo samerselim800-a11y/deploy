@@ -1,44 +1,45 @@
+
 import styles from "./OurClients.module.css";
 import { useTranslation } from "react-i18next";
-
 import { Building2 } from "lucide-react";
 
-import logo1 from "@/assets/loooo1.webp"; // Integrated Growth System
-import logo2 from "@/assets/loooo2.webp"; // Nibras 360
-import logo3 from "@/assets/loooo3.webp"; // Belt & Road Trading
-import logo4 from "@/assets/loooo4.webp"; // Panda Host
-import logo5 from "@/assets/loooo5.webp"; // Al Aswar Al Sameda
+// تحميل كل الصور تلقائياً من الفولدر
+const images = import.meta.glob(
+  "../../../assets/OurClints/*.{webp,png,jpg,jpeg}",
+  {
+    eager: true,
+    query: "?url",
+    import: "default",
+  }
+);
 
-const logoSources = [logo1, logo2, logo3, logo4, logo5];
+const logoSources = Object.values(images);
 
-// أسماء حقيقية للبراندات والعملاء الموثقين داخل ملفاتك لرفع دقة الـ SEO والـ Accessibility
-const clientNames = [
-  "Integrated Growth System",
-  "Nibras 360",
-  "Belt & Road Trading",
-  "Panda Host",
-  "Al Aswar Al Sameda"
-];
-
-const LOGO_COUNT = 20;
+const LOGO_COUNT = logoSources.length;
 
 const LOGOS = Array.from({ length: LOGO_COUNT }, (_, i) => ({
-  src: logoSources[i % logoSources.length],
-  alt: `${clientNames[i % clientNames.length]} - EGO STUDIO Client`,
+  src: logoSources[i],
+  alt: `EGO STUDIO Client Logo ${i + 1}`,
 }));
 
 function MarqueeRow({ reverse = false }) {
   return (
     <div className={styles.marqueeContainer}>
       <div
-        className={`${styles.marquee}
-        ${reverse ? styles.reverse : ""}`}
+        className={`${styles.marquee} ${
+          reverse ? styles.reverse : ""
+        }`}
       >
         {[0, 1].map((copy) => (
           <div key={copy} className={styles.marqueeContent}>
             {LOGOS.map((logo, i) => (
               <div key={i} className={styles.logoWrap}>
-                <img src={logo.src} alt={logo.alt} className={styles.logo} />
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className={styles.logo}
+                  loading="lazy"
+                />
               </div>
             ))}
           </div>
@@ -62,7 +63,9 @@ export default function OurClients() {
 
           <h2 className={styles.heading}>
             {t("home.clients.title")}{" "}
-            <span className={styles.highlight}>{t("home.clients.titleHighlight")}</span>
+            <span className={styles.highlight}>
+              {t("home.clients.titleHighlight")}
+            </span>
           </h2>
 
           <p className={styles.subheading}>
@@ -76,3 +79,4 @@ export default function OurClients() {
     </section>
   );
 }
+

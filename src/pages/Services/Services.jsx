@@ -9,6 +9,7 @@ import { StatsCounter } from "../../components/sections/StatsCounter/StatsCounte
 import Testimonials from "../../components/sections/Testimonials/Testimonials";
 import styles from "./Services.module.css";
 import TeamCraftImg from "../../assets/What-we-do Icon.png";
+import CaseStudies from "../../components/sections/CaseStudies/CaseStudies";
 
 function ServicesPage() {
   const { t } = useTranslation();
@@ -76,7 +77,8 @@ function ServicesPage() {
       {/* FAQ */}
 
       {/* Call To Action */}
-      <CTABanner translationPrefix="servicesPage.cta" />
+      <CTABanner translationPrefix="aboutPage.cta" />
+      <CaseStudies translationPrefix="portfolioPage.caseStudies" />
     </>
   );
 }

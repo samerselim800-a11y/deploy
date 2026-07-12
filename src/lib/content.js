@@ -163,8 +163,8 @@ export const PORTFOLIO_CATEGORIES = [
 
 export const STATS = [
   { value: 14, suffix: "+", label: "Core services built" },
-  { value: 12, suffix: "x", label: "Avg. ROAS uplift" },
-  { value: 26, suffix: "M+", label: "Trackable Sales (SAR)" },
+  { value: 23, suffix: "x", label: "Avg. ROAS uplift" },
+  { value: 13.7, suffix: "M+", label: "Trackable Sales (SAR)" },
   { value: 8, suffix: "+yrs", label: "Team Experience" },
 ];
 
