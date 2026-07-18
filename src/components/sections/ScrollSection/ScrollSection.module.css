@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.7rem;
-
+  
   padding: 1rem 3.5rem;
   white-space: nowrap;
 
@@ -33,6 +33,7 @@
 
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+  margin: 0 10px;
 }
 
 .badge:hover {
