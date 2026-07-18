@@ -9,10 +9,10 @@
   flex-direction: column;
 }
 
-/* استبدل تعريف .badge بده بالكامل */
+/* Badge — now anchored to .panel (fixed 100vh), not .inner (variable height) */
 .badge {
   position: absolute;
-  top: -70px;              /* فوق الـ inner شوية عشان ميدخلش على العنوان */
+  top: 24px;                /* ثابت من فوق الـ panel مباشرة، بدل top:-70px القديمة */
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;
@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.7rem;
-  
+
   padding: 1rem 3.5rem;
   white-space: nowrap;
 
@@ -33,7 +33,7 @@
 
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
-  
+
 }
 
 .badge:hover {
@@ -44,14 +44,14 @@
 
 @media (max-width: 768px) {
   .badge {
-    top: -50px;
+    top: 16px;
     padding: 0.7rem 1.6rem;
   }
 }
 
 /* ─── Individual panel ──────────────────────────────────────── */
 .panel {
-  position: sticky;
+  position: sticky;   /* دي أصلاً بتعمل containing block لأي absolute جواها زي الـ badge */
   top: 0;
   width: 100%;
   height: 100vh;
@@ -61,7 +61,6 @@
   will-change: transform;
 }
 
-/* ─── Per-slide backgrounds ─────────────────────────────────── */
 /* ─── Per-slide backgrounds ─────────────────────────────────── */
 .panel1 {
   background: var(--background);
@@ -173,7 +172,7 @@
   font-size: 50px;
   font-weight: 900;
   color: transparent;
-  -webkit-text-stroke: 1px var(--foreground); /* تحويل الرقم إلى لون أزرق مطور مع تباين واضح */
+  -webkit-text-stroke: 1px var(--foreground);
   margin-right: 12px;
   display: inline-block;
   line-height: 1;
@@ -181,12 +180,12 @@
 }
 
 .title {
-  
+
   font-size: 45px;
   display: inline-block !important;
   font-weight: 700;
   margin: 0 0 12px;
-  color: var(--primary) !important; /* تلوين العنوان الرئيسي باللون الأزرق المطور */
+  color: var(--primary) !important;
   line-height: 1.1;
   font-family: var(--font-display);
   letter-spacing: -0.03em;
@@ -261,18 +260,17 @@ font-weight: 600;
   gap: 12px;
   font-size: 15px;
   color: var(--foreground);
-  
+
 }
 
-/* الكلاس المطور باللون الأزرق المضيء #295f99 والتوهج الناعم */
 .checkIcon {
-  color: var(--primary) !important; 
+  color: var(--primary) !important;
 
-background:#232323; 
+background:#232323;
 border-radius: 50%;
   flex-shrink: 0;
- 
- 
+
+
 }
 
 /* ─── Right image ───────────────────────────────────────────── */
@@ -288,9 +286,8 @@ border-radius: 50%;
   border-radius: 16px;
   filter: drop-shadow(0 20px 40px oklch(0 0 0 / 0.5));
   transition: all 0.3s ease;
-  
- cursor:pointer;
 
+  cursor: pointer;
 }
 
 .image {
@@ -320,10 +317,8 @@ border-radius: 50%;
   transition: all 0.3s ease;
 }
 
-/* التوظيف الممتاز للون الأزرق عند الـ Hover */
 .ctaSecondary:hover {
   background:  var(--secondaryHover);
-  /* إضافة توهج خلفي ناعم بنفس الدرجة ليعطي إيحاء بأن العنصر يضيء */
   box-shadow: 0 15px 35px rgba(43, 110, 194, 0.4);
 }
 /* ─── Responsive ────────────────────────────────────────────── */
