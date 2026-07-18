@@ -63,6 +63,7 @@ export default function ScrollSection() {
     <>
       {/* Services Scroll Section */}
       <section id="services" className={styles.section}>
+        
         {SERVICES.map((service, i) => (
           <div
             key={service.number}
@@ -76,7 +77,7 @@ export default function ScrollSection() {
 
               {/* Badge shows only inside the first panel, centered across the whole width */}
               {i === 0 && (
-                <div className={styles.badge}>
+                <div className={`${styles.badge} mt-4`} >
                   <span>{t("home.scrollSection.cta")}</span>
                 </div>
               )}
