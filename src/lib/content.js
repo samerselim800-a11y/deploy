@@ -1,11 +1,29 @@
 import strategy from "@/assets/hero-strategy.jpg";
 import social from "@/assets/hero-social.jpg";
-import w1 from "@/assets/work-1.jpg";
+import w1 from "@/assets/Sadanah/Sadanah Guideline_Page_01.jpg";
 import w2 from "@/assets/work-2.jpg";
 import w3 from "@/assets/work-3.jpg";
 import w4 from "@/assets/work-4.jpg";
 import w5 from "@/assets/work-5.jpg";
 import w6 from "@/assets/work-6.jpg";
+
+// 1. قمنا بتعريف الجاليري هنا أولاً لكي نتمكن من استخدامه داخل مصفوفة الـ PORTFOLIO بالأسفل
+const nibrasGallery = Object.entries(
+  import.meta.glob("@/assets/Sadanah/Sadanah Guideline_Page_*.jpg", {
+    eager: true,
+    import: "default",
+  })
+)
+  .sort(([a], [b]) => {
+    const numA = Number(a.match(/Page_(\d+)/)?.[1]);
+    const numB = Number(b.match(/Page_(\d+)/)?.[1]);
+    return numA - numB;
+  })
+  .slice(1, 32)
+  .map(([_, src], index) => ({
+    id: `nibras-${index + 2}`,
+    src,
+  }));
 
 export const HERO_SLIDES = [
   {
@@ -85,8 +103,12 @@ export const SERVICES = [
 
 export const PORTFOLIO = [
   {
-    id: 1, title: "Nibras 360 Visual Identity", category: "Branding", image: w1,
-    client: "Nibras 360", year: "2024",
+    id: 1, 
+    title: "Nibras 360 Visual Identity", 
+    category: "Branding", 
+    image: w1,
+    client: "Nibras 360", 
+    year: "2024",
     description: "A complete visual identity system built from the ground up — logo, color palette, typography, and brand guidelines that communicate precision and trust across all touchpoints.",
     services: ["Brand Strategy", "Logo Design", "Visual Identity System", "Brand Guidelines"],
     results: [
@@ -94,6 +116,7 @@ export const PORTFOLIO = [
       { label: "Assets delivered", value: "40+" },
       { label: "Turnaround", value: "3 weeks" },
     ],
+    gallery: nibrasGallery, // 2. قمنا بربط الجاليري الحقيقي هنا بالكارد الأول ليحل محل الصور الافتراضية
   },
   {
     id: 2, title: "Nurture Nature's Touch", category: "Identity Guide", image: w2,

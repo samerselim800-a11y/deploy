@@ -41,21 +41,21 @@
 }
 
 .imageWrapper {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
+  background: #0b0b0b;
 }
 
 .cardImg {
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
-/* تأثير الـ Hover على الصورة */
 :global(.group):hover .cardImg {
   transform: scale(1.1);
 }
 
-/* ظلال سوداء متدرجة في أسفل الصورة ليظهر النص المكتوب بوضوح */
 .cardOverlay {
   background: linear-gradient(to top, #050505 0%, rgba(5, 5, 5, 0.3) 50%, transparent 100%);
   opacity: 0.8;
@@ -81,7 +81,6 @@
   color: #ffffff;
 }
 
-/* دائرة السهم */
 .arrowCircle {
   width: 44px;
   height: 44px;
@@ -100,7 +99,6 @@
   transform: rotate(45deg);
 }
 
-/* زر رؤية كل الأعمال */
 .seeAllBtn {
   font-size: 0.8rem;
   letter-spacing: 0.2em;
@@ -135,16 +133,17 @@
   to   { opacity: 1; }
 }
 
-/* ─── Modal ──────────────────────────────────────────────────── */
+/* ─── Modal — الجزء المعدَّل ─────────────────────────────────── */
 .modal {
   position: relative;
   width: 100%;
-  max-width: 680px;
-  max-height: 90vh;
+  max-width: 1000px;
+  max-height: 88vh;
   overflow-y: auto;
   background: #111113;
   border: 1px solid #2a2a2a;
   border-radius: 24px;
+  padding: 2.5rem 2rem 2rem;
   animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   scrollbar-width: thin;
   scrollbar-color: #2a2a2a transparent;
@@ -179,147 +178,76 @@
 
 .closeBtn:hover { background: rgba(255,255,255,0.15); }
 
-/* ─── Modal Image ────────────────────────────────────────────── */
-.modalImg {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-radius: 24px 24px 0 0;
+/* ─── Compact gallery header ───────────────────────────────────── */
+.galleryHeader {
+  margin-bottom: 1.5rem;
+  padding-right: 2.5rem;
 }
 
-.modalImg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.modalImgOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(17,17,19,0.9) 0%, transparent 60%);
-}
-
-.modalCategory {
-  position: absolute;
-  bottom: 1.25rem;
-  left: 1.5rem;
+.modalCategoryTop {
+  display: inline-block;
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #f59e0b;
   font-weight: 600;
-}
-
-/* ─── Modal Body ─────────────────────────────────────────────── */
-.modalBody {
-  padding: 1.75rem 2rem 2rem;
-}
-
-.modalMeta {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 0.75rem;
-}
-
-.modalClient {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: rgba(255,255,255,0.5);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.modalYear {
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.3);
+  margin-bottom: 0.6rem;
 }
 
 .modalTitle {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #fff;
   font-family: var(--font-display, serif);
   line-height: 1.25;
-  margin-bottom: 1rem;
-}
-
-.modalDesc {
-  font-size: 0.92rem;
-  line-height: 1.8;
-  color: rgba(255,255,255,0.60);
   margin: 0;
 }
 
-.modalDivider {
-  height: 1px;
-  background: #1f1f1f;
-  margin: 1.5rem 0;
+/* ─── Masonry gallery — الجزء الأساسي المطلوب ───────────────────── */
+.galleryGrid {
+  columns: 2;
+  column-gap: 0.9rem;
 }
 
-/* ─── Results ────────────────────────────────────────────────── */
-.resultsRow {
-  display: flex;
-  gap: 0;
+.galleryItem {
+  break-inside: avoid;
+  margin-bottom: 0.9rem;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  cursor: pointer;
 }
 
-.resultItem {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  padding: 0 1rem;
-  border-right: 1px solid #1f1f1f;
+.galleryItem::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  box-shadow: inset 0 0 0 1px rgba(245, 158, 11, 0);
+  transition: box-shadow 0.35s ease;
+  pointer-events: none;
 }
 
-.resultItem:first-child { padding-left: 0; }
-.resultItem:last-child  { border-right: none; }
-
-.resultValue {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #f59e0b;
-  font-family: var(--font-display, serif);
-  line-height: 1;
+.galleryItem:hover::after {
+  box-shadow: inset 0 0 0 1px rgba(245, 158, 11, 0.5);
 }
 
-.resultLabel {
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.4);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+.galleryImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ─── Services Tags ──────────────────────────────────────────── */
-.modalLabel {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #444;
-  margin-bottom: 0.75rem;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.tag {
-  padding: 0.35rem 0.85rem;
-  border-radius: 999px;
-  border: 1px solid #2a2a2a;
-  background: rgba(255,255,255,0.03);
-  color: rgba(255,255,255,0.6);
-  font-size: 0.78rem;
+.galleryItem:hover .galleryImg {
+  transform: scale(1.06);
 }
 
 /* ─── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 640px) {
-  .modal { border-radius: 18px; }
-  .modalImg { border-radius: 18px 18px 0 0; aspect-ratio: 4/3; }
-  .modalBody { padding: 1.25rem 1.25rem 1.5rem; }
-  .modalTitle { font-size: 1.3rem; }
-  .resultValue { font-size: 1.2rem; }
+  .modal { border-radius: 18px; padding: 2.25rem 1.25rem 1.5rem; }
+  .galleryHeader { padding-right: 2rem; }
+  .modalTitle { font-size: 1.25rem; }
+  .galleryGrid { columns: 1; }
 }

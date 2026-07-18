@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
+
 import { Reveal } from "@/components/sections/Reveal/Reveal";
 import styles from "./ContactSection.module.css";
 
 const contactInfo = {
   email: "info@theegostudio.com",
-  phone: "+20 10 2010 7479",
+  phones: ["+966 59 700 6963", "+20 10 2010 7479"],
   address: "Cairo, Egypt",
 };
 
@@ -17,18 +20,31 @@ export function ContactSection({ sent, onSubmit }) {
     <section className={styles.contactSection}>
       <div className="container">
         <div className="row g-5">
-
           {/* Form */}
+
           <div className="col-12 col-md-6">
             <Reveal>
               <form onSubmit={onSubmit} className="d-flex flex-column gap-4">
-
                 <Field label={t("contactPage.form.nameLabel")} id="name" />
-                <Field label={t("contactPage.form.emailLabel")} id="email" type="email" />
-                <Field label={t("contactPage.form.companyLabel")} id="company" />
+
+                <Field
+                  label={t("contactPage.form.emailLabel")}
+                  id="email"
+                  type="email"
+                />
+
+                <PhoneField label="PHONE NUMBER" />
+
+                <Field
+                  label={t("contactPage.form.companyLabel")}
+                  id="company"
+                />
 
                 <div>
-                  <label htmlFor="msg" className={`form-label text-uppercase ${styles.label}`}>
+                  <label
+                    htmlFor="msg"
+                    className={`form-label text-uppercase ${styles.label}`}
+                  >
                     {t("contactPage.form.messageLabel")}
                   </label>
 
@@ -48,29 +64,29 @@ export function ContactSection({ sent, onSubmit }) {
                     t("contactPage.form.success")
                   ) : (
                     <>
-                      {t("contactPage.form.submit")} <Send size={16} />
+                      {t("contactPage.form.submit")}
+                      <Send size={16} />
                     </>
                   )}
                 </button>
-
               </form>
             </Reveal>
           </div>
 
           {/* Contact Info */}
+
           <div className="col-12 col-md-6">
             <Reveal delay={0.1}>
               <div className="d-flex flex-column gap-5">
-
                 <div>
                   <p className={`text-uppercase mb-3 ${styles.label}`}>
                     {t("contactPage.info.title")}
                   </p>
 
                   <ul className="list-unstyled d-flex flex-column gap-3">
-
                     <li className="d-flex align-items-center gap-3 text-light">
                       <Mail size={16} className={styles.iconColor} />
+
                       <a
                         href={`mailto:${contactInfo.email}`}
                         className={`text-decoration-none ${styles.infoLink}`}
@@ -80,27 +96,39 @@ export function ContactSection({ sent, onSubmit }) {
                     </li>
 
                     <li className="d-flex align-items-center gap-3 text-light">
-                      <Phone size={16} className={styles.iconColor} />
-                      <a
-                        href={`tel:${contactInfo.phone}`}
-                        className={`text-decoration-none ${styles.infoLink}`}
-                      >
-                        {contactInfo.phone}
-                      </a>
+                      <Phone size={21} className={styles.iconColor} />
+
+                      <div className="d-flex flex-column gap-2">
+                        {contactInfo.phones.map((phone, index) => (
+                          <a
+                            key={index}
+                            href={`tel:${phone.replace(/\s+/g, "")}`}
+                            className={`text-decoration-none ${styles.infoLink}`}
+                          >
+                            {phone}
+                          </a>
+                        ))}
+                      </div>
                     </li>
 
                     <li className="d-flex align-items-start gap-3 text-light">
-                      <MapPin size={16} className={`mt-1 ${styles.iconColor}`} />
+                      <MapPin
+                        size={16}
+                        className={`mt-1 ${styles.iconColor}`}
+                      />
+
                       <span className="opacity-90">
                         {t("contactPage.info.addressValue")}
                       </span>
                     </li>
-
                   </ul>
                 </div>
 
                 {/* Map */}
-                <div className={`overflow-hidden rounded-4 border ${styles.mapWrapper}`}>
+
+                <div
+                  className={`overflow-hidden rounded-4 border ${styles.mapWrapper}`}
+                >
                   <iframe
                     title={t("contactPage.info.mapTitle")}
                     src="https://maps.google.com/maps?q=Cairo%2C%20Egypt&t=&z=11&ie=UTF8&iwloc=&output=embed"
@@ -110,22 +138,24 @@ export function ContactSection({ sent, onSubmit }) {
                     className={styles.mapIframe}
                   />
                 </div>
-
               </div>
             </Reveal>
           </div>
-
         </div>
       </div>
     </section>
   );
 }
 
-/* Form Field */
+/* Normal Input */
+
 function Field({ label, id, type = "text" }) {
   return (
     <div>
-      <label htmlFor={id} className={`form-label text-uppercase ${styles.label}`}>
+      <label
+        htmlFor={id}
+        className={`form-label text-uppercase ${styles.label}`}
+      >
         {label}
       </label>
 
@@ -134,6 +164,29 @@ function Field({ label, id, type = "text" }) {
         type={type}
         required
         className={`form-control ${styles.inputControl}`}
+      />
+    </div>
+  );
+}
+
+/* Phone Input */
+
+function PhoneField({ label }) {
+  const [phone, setPhone] = useState("");
+
+  return (
+    <div>
+      <label className={`form-label text-uppercase ${styles.label}`}>
+        {label}
+      </label>
+
+      <PhoneInput
+        defaultCountry="eg"
+        value={phone}
+        onChange={(value) => setPhone(value)}
+        className={styles.phoneWrapper}
+        inputClass={styles.phoneInput}
+        placeholder="Phone number"
       />
     </div>
   );

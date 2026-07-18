@@ -24,6 +24,19 @@ const CATEGORY_KEYS = {
   "Company Profiles": "companyProfiles",
 };
 
+// ─── Gallery placeholder helper ──────────────────────────────────────────
+// لغاية ما تعمل import للصور الحقيقية: كل مشروع بياخد سِت صور بارتفاعات
+// متفاوتة من Picsum CDN عشان يطلع Masonry حقيقي مش صفوف متساوية.
+const GALLERY_COUNT = 7;
+const GALLERY_HEIGHTS = [420, 560, 480, 640, 400, 520, 460];
+
+function buildGallery(seed) {
+  return Array.from({ length: GALLERY_COUNT }, (_, i) => ({
+    id: `${seed}-${i}`,
+    src: `https://picsum.photos/seed/${seed}-${i}/600/${GALLERY_HEIGHTS[i % GALLERY_HEIGHTS.length]}`,
+  }));
+}
+
 function ProjectModal({ project, onClose, labels }) {
   useEffect(() => {
     const onKey = (e) => e.key === "Escape" && onClose();
@@ -34,6 +47,9 @@ function ProjectModal({ project, onClose, labels }) {
       document.body.style.overflow = "";
     };
   }, [onClose]);
+
+  // لو project.gallery موجودة (لما تضيفها في content.js) بتتستخدم هي بدل الـ placeholder
+  const gallery = project.gallery || buildGallery(project.id);
 
   return (
     <div className={styles.backdrop} onClick={onClose}>
@@ -47,46 +63,24 @@ function ProjectModal({ project, onClose, labels }) {
           <X size={18} />
         </button>
 
-        <div className={styles.modalImg}>
-          <img src={project.image} alt={project.title} />
-          <div className={styles.modalImgOverlay} />
-          <span className={styles.modalCategory}>{project.categoryLabel}</span>
+        {/* Compact header — category + title بس */}
+        <div className={styles.galleryHeader}>
+          <span className={styles.modalCategoryTop}>{project.categoryLabel}</span>
+          <h2 className={styles.modalTitle}>{project.title}</h2>
         </div>
 
-        <div className={styles.modalBody}>
-          <div className={styles.modalMeta}>
-            <span className={styles.modalClient}>{project.client}</span>
-            <span className={styles.modalYear}>{project.year}</span>
-          </div>
-
-          <h2 className={styles.modalTitle}>{project.title}</h2>
-          <p className={styles.modalDesc}>{project.description}</p>
-
-          <div className={styles.modalDivider} />
-
-          {project.results && (
-            <div className={styles.resultsRow}>
-              {project.results.map((r) => (
-                <div key={r.label} className={styles.resultItem}>
-                  <span className={styles.resultValue}>{r.value}</span>
-                  <span className={styles.resultLabel}>{r.label}</span>
-                </div>
-              ))}
+        {/* Project gallery — masonry, scroll-y */}
+        <div className={styles.galleryGrid}>
+          {gallery.map((img) => (
+            <div className={styles.galleryItem} key={img.id}>
+              <img
+                className={styles.galleryImg}
+                src={img.src}
+                alt={project.title}
+                loading="lazy"
+              />
             </div>
-          )}
-
-          <div className={styles.modalDivider} />
-
-          {project.services && (
-            <div>
-              <p className={styles.modalLabel}>{labels.whatWeDid}</p>
-              <div className={styles.tags}>
-                {project.services.map((s) => (
-                  <span key={s} className={styles.tag}>{s}</span>
-                ))}
-              </div>
-            </div>
-          )}
+          ))}
         </div>
       </div>
     </div>

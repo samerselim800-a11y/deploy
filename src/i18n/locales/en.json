@@ -28,7 +28,7 @@
   },
   "home": {
     "hero": {
-      "primaryButton": "Book Consultation",
+      "primaryButton": "Our Portfolio",
       "secondaryButton": "See services",
       "scrollSwipe": "Scroll / swipe",
       "continue": "Continue",
@@ -41,12 +41,12 @@
         "social": {
           "badge": "02 — Social",
           "title": "We Design Brands\nThat Stand Out",
-          "description": "Branding · Content Strategy · Meta Ads · Company Profiles"
+          "description": "Branding · Content Strategy · Paid advertisements · Meta Ads · Company Profiles"
         }
       }
     },
     "scrollSection": {
-      "cta": "See services",
+      "cta": "Our services",
       "items": {
         "marketingGrowth": {
           "title": "Marketing Growth",
@@ -179,7 +179,7 @@
   "values": {
     "badge": "How We Work",
     "title": "Because we believe the problem is not a lack of marketing tools",
-    "titleSecondLine": "We Are",
+    "titleSecondLine": "",
     "description": "We believe the problem isn't a lack of marketing tools, but the absence of a clear vision that connects those tools to a single business objective. Without that, results remain out of reach. That's why we built our approach around:",
     "items": {
       "salesFirst": {
@@ -515,7 +515,7 @@
     "cta": {
       "eyebrow": "Ready when you are",
       "title": "Every great brand..",
-      "titleHighlight": "starts with the right decision.",
+      "titleHighlight": "starts with the right decision",
       "description": "Start your growth and success story today with The Ego Studio!",
       "button": "Book your free consultation"
     }
