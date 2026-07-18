@@ -276,15 +276,15 @@ border-radius: 50%;
 /* ─── Right image ───────────────────────────────────────────── */
 .imageContainer:hover {
 
-
   border: 1px solid #ffa648;
 }
 .imageContainer {
   width: 45%;
-  border: 0.1px solid #ffa74854;
+  height: 60vh;              /* ثابت دايمًا، مش متأثر بحجم أي صورة */
+  max-height: 500px;         /* سقف عشان مايبقاش عملاق على الشاشات الطويلة */
 
+  border: 0.1px solid #ffa74854;
   border-radius: 16px;
-  filter: drop-shadow(0 20px 40px oklch(0 0 0 / 0.5));
   transition: all 0.3s ease;
 
   cursor: pointer;
@@ -294,7 +294,7 @@ border-radius: 50%;
   width: 100%;
   height: 100%;
   border-radius: 16px;
-  object-fit: contain;
+  object-fit: contain;   /* الصورة هتترسم كاملة جوه المساحة الثابتة دي من غير تشويه */
 }
 .ctaContainer {
   margin-top: 24px;
