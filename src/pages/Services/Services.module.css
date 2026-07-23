@@ -20,6 +20,7 @@
 .fontDisplay {
   font-family: var(--font-display, serif);
   line-height: 1.1;
+  
 }
 
 .description {

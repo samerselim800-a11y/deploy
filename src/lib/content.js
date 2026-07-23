@@ -140,39 +140,9 @@ export const PORTFOLIO = [
       { label: "Launch timeline", value: "4 weeks" },
     ],
   },
-  {
-    id: 4, title: "PACKGO Social Campaign", category: "Social Media", image: w4,
-    client: "PACKGO", year: "2024",
-    description: "A structured social media campaign designed to build awareness, drive engagement, and convert followers into paying customers — combining content pillars with a clear posting strategy.",
-    services: ["Content Strategy", "Caption Writing", "Creative Direction", "Campaign Planning"],
-    results: [
-      { label: "Engagement rate", value: "+180%" },
-      { label: "Posts delivered", value: "60/mo" },
-      { label: "Follower growth", value: "+3,200" },
-    ],
-  },
-  {
-    id: 5, title: "Aqua Cool Paid Ads", category: "Paid Ads", image: w5,
-    client: "Aqua Cool", year: "2024",
-    description: "A full Meta ads system built from scratch — from campaign architecture and audience segmentation to creative testing and ongoing optimization that turned ad spend into measurable monthly revenue.",
-    services: ["Meta Ads Management", "Campaign Structure", "Audience Targeting", "Performance Optimization"],
-    results: [
-      { label: "ROAS achieved", value: "14x" },
-      { label: "Monthly sales", value: "170K+ SAR" },
-      { label: "Growth period", value: "3 months" },
-    ],
-  },
-  {
-    id: 6, title: "Belt & Road Company Profile", category: "Company Profiles", image: w6,
-    client: "Belt & Road Trading", year: "2023",
-    description: "A professional company profile that transformed raw business data into a persuasive sales document — designed to open doors with corporate clients and communicate credibility at first glance.",
-    services: ["Copywriting", "Profile Design Direction", "Case Study Writing", "Service Presentation"],
-    results: [
-      { label: "Pages designed", value: "24" },
-      { label: "Client feedback", value: "Excellent" },
-      { label: "Deals influenced", value: "3 major" },
-    ],
-  },
+
+
+
 ];
 
 export const PORTFOLIO_CATEGORIES = [

@@ -33,10 +33,13 @@ function ServicesPage() {
                 <p className={`mb-3 text-uppercase ${styles.eyebrow}`}>
                   {t("servicesPage.hero.badge")}
                 </p>
-                <h1 className={`display-1 fw-normal mb-0 ${styles.fontDisplay}`}>
+                <h1 className={`display-1 title .main fw-normal mb-0 ${styles.fontDisplay}`}>
                   {t("servicesPage.hero.title")}
                   <br />
+                  <span className="titleAccent">
+
                   {t("servicesPage.hero.titleSecondLine")}
+                  </span>
                 </h1>
                 <p className={`mt-4 text-muted fs-5 mb-0 ${styles.description}`}>
                   {t("servicesPage.hero.description")}
