@@ -123,7 +123,26 @@
   max-width: 580px;        /* تحديد العرض للنص */
   text-align: left;        /* التأكيد على المحاذاة لليسار */
 }
+.cardTop p {
+  color: var(--muted-foreground) ;
+  opacity: 0.8;
+  line-height: 1.6;
+  font-size: 15px;
+  direction: rtl;   /* forces trailing "." to sit on the left, not right */
+}
 
+
+.cardsIntro {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 22px 0 36px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  direction: rtl;
+}
 /* ════════════════════════════════════════
    GRID LAYOUT
 ════════════════════════════════════════ */

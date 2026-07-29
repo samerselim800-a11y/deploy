@@ -12,13 +12,21 @@ export function ServicesGrid({ translationPrefix }) {
         <div className={styles.contentHowWeWork}>
           <div className={styles.titleSection}>
             <Flame size={23} />
-            <span>{translationPrefix ? t(`${translationPrefix}.badge`) : "How We Work"}</span>
+            <span>
+              {translationPrefix
+                ? t(`${translationPrefix}.badge`)
+                : "How We Work"}
+            </span>
           </div>
 
           <h2>
-            {translationPrefix ? t(`${translationPrefix}.title`) : "Marketing That"}
+            {translationPrefix
+              ? t(`${translationPrefix}.title`)
+              : "Marketing That"}
             <br />
-            {translationPrefix ? t(`${translationPrefix}.titleSecondLine`) : "Drives Revenue"}
+            {translationPrefix
+              ? t(`${translationPrefix}.titleSecondLine`)
+              : "Drives Revenue"}
           </h2>
 
           <p>
@@ -26,8 +34,12 @@ export function ServicesGrid({ translationPrefix }) {
               ? t(`${translationPrefix}.description`)
               : "We turn marketing into measurable growth through data-driven strategies and optimized funnels."}
           </p>
+          <h4 className={styles.cardsIntro}>
+            {translationPrefix
+              ? t(`${translationPrefix}.introCards`)
+              : "That's why we built a business model that brings together:"}
+          </h4>
         </div>
-        
 
         <div className={styles.featureGrid}>
           {/* Card 1 */}
@@ -38,9 +50,13 @@ export function ServicesGrid({ translationPrefix }) {
               </div>
 
               <h3>
-                {translationPrefix ? t(`${translationPrefix}.items.salesFirst.title`) : "Sales-First"}
+                {translationPrefix
+                  ? t(`${translationPrefix}.items.salesFirst.title`)
+                  : "Sales-First"}
                 <br />
-                {translationPrefix ? t(`${translationPrefix}.items.salesFirst.titleSecondLine`) : "Approach"}
+                {translationPrefix
+                  ? t(`${translationPrefix}.items.salesFirst.titleSecondLine`)
+                  : "Approach"}
               </h3>
 
               <div className={styles.line}></div>
@@ -65,6 +81,7 @@ export function ServicesGrid({ translationPrefix }) {
           </div>
 
           {/* Card 2 */}
+
           <div className={styles.featureCard}>
             <div className={styles.cardTop}>
               <div className={styles.iconBox}>
@@ -72,9 +89,13 @@ export function ServicesGrid({ translationPrefix }) {
               </div>
 
               <h3>
-                {translationPrefix ? t(`${translationPrefix}.items.dataDriven.title`) : "Data-Driven"}
+                {translationPrefix
+                  ? t(`${translationPrefix}.items.dataDriven.title`)
+                  : "Data-Driven"}
                 <br />
-                {translationPrefix ? t(`${translationPrefix}.items.dataDriven.titleSecondLine`) : "Decisions"}
+                {translationPrefix
+                  ? t(`${translationPrefix}.items.dataDriven.titleSecondLine`)
+                  : "Decisions"}
               </h3>
 
               <div className={styles.line}></div>
@@ -106,9 +127,15 @@ export function ServicesGrid({ translationPrefix }) {
               </div>
 
               <h3>
-                {translationPrefix ? t(`${translationPrefix}.items.fastExecution.title`) : "Fast Execution"}
+                {translationPrefix
+                  ? t(`${translationPrefix}.items.fastExecution.title`)
+                  : "Fast Execution"}
                 <br />
-                {translationPrefix ? t(`${translationPrefix}.items.fastExecution.titleSecondLine`) : "& Optimization"}
+                {translationPrefix
+                  ? t(
+                      `${translationPrefix}.items.fastExecution.titleSecondLine`,
+                    )
+                  : "& Optimization"}
               </h3>
 
               <div className={styles.line}></div>

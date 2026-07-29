@@ -81,7 +81,6 @@ function ServicesPage() {
 
       {/* Call To Action */}
       <CTABanner translationPrefix="aboutPage.cta" />
-      <CaseStudies translationPrefix="portfolioPage.caseStudies" />
     </>
   );
 }

@@ -459,3 +459,46 @@
     font-size: 0.88rem;
   }
 }
+
+/* ---------- Fix mixed Arabic / English ---------- */
+
+/* أي نص إنجليزي داخل الكروت */
+.ltrText {
+  direction: ltr;
+  unicode-bidi: plaintext;
+  text-align: left;
+}
+
+/* العنوان الإنجليزي */
+.cardTitle,
+.modalTitle {
+  unicode-bidi: plaintext;
+}
+
+/* الوصف الإنجليزي */
+.cardShort,
+.modalLong {
+  unicode-bidi: plaintext;
+}
+
+/* لو اللغة إنجليزي */
+html[lang="en"] .cardTitle,
+html[lang="en"] .cardShort,
+html[lang="en"] .modalTitle,
+html[lang="en"] .modalLong,
+html[lang="en"] .featureItem,
+html[lang="en"] .whenItem {
+  direction: ltr;
+  text-align: left;
+}
+
+/* لو اللغة عربي */
+html[lang="ar"] .cardTitle,
+html[lang="ar"] .cardShort,
+html[lang="ar"] .modalTitle,
+html[lang="ar"] .modalLong,
+html[lang="ar"] .featureItem,
+html[lang="ar"] .whenItem {
+  direction: rtl;
+  text-align: right;
+}
