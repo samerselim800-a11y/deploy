@@ -65,7 +65,6 @@ function PortfolioPage() {
       <PortfolioShowcase />
 
       {/* Numbers that back the work */}
-      <StatsCounter translationPrefix="portfolioPage.stats" />
 
       {/* Detailed Case Studies */}
       <CaseStudies translationPrefix="portfolioPage.caseStudies" />

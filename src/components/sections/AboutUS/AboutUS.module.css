@@ -160,7 +160,7 @@ font-size: 55px;
 .body {
   font-size: 0.95rem;
   line-height: 1.75;
-  color: #fafafa;
+  color: #fafafa !important;
   font-weight: 400;
   max-width: 520px;
   margin: 0;

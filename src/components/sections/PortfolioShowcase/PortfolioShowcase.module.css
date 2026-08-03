@@ -5,6 +5,8 @@
   color: #ffffff;
 }
 
+
+
 @media (min-width: 768px) {
   .portfolioSection {
     padding-top: 9rem;
@@ -12,7 +14,7 @@
   }
 }
 
-/* ستايل أزرار الفلترة */
+/* ستايل أزرار الفلترة (لم تعد مستخدمة ولكن تركناها للاحتياط) */
 .filterBtn {
   font-size: 0.75rem;
   letter-spacing: 0.2em;
@@ -114,7 +116,7 @@
   color: #f59e0b;
 }
 
-/* ─── Modal Backdrop ─────────────────────────────────────────── */
+/* ─── Modal Backdrop ─── */
 .backdrop {
   position: fixed;
   inset: 0;
@@ -133,7 +135,7 @@
   to   { opacity: 1; }
 }
 
-/* ─── Modal — الجزء المعدَّل ─────────────────────────────────── */
+/* ─── Modal ─── */
 .modal {
   position: relative;
   width: 100%;
@@ -178,7 +180,7 @@
 
 .closeBtn:hover { background: rgba(255,255,255,0.15); }
 
-/* ─── Compact gallery header ───────────────────────────────────── */
+/* ─── Compact gallery header ─── */
 .galleryHeader {
   margin-bottom: 1.5rem;
   padding-right: 2.5rem;
@@ -203,7 +205,7 @@
   margin: 0;
 }
 
-/* ─── Masonry gallery — الجزء الأساسي المطلوب ───────────────────── */
+/* ─── Masonry gallery ─── */
 .galleryGrid {
   columns: 2;
   column-gap: 0.9rem;
@@ -244,10 +246,26 @@
   transform: scale(1.06);
 }
 
-/* ─── Responsive ─────────────────────────────────────────────── */
+/* ─── Responsive ─── */
 @media (max-width: 640px) {
   .modal { border-radius: 18px; padding: 2.25rem 1.25rem 1.5rem; }
   .galleryHeader { padding-right: 2rem; }
   .modalTitle { font-size: 1.25rem; }
   .galleryGrid { columns: 1; }
+}
+
+/* ─── الاستهداف الشامل للخطوط (الشرطتين) لإجبارها على أخذ اللون ─── */
+
+.overrideLines :global(*) {
+  border-color: var(--primary) !important;
+}
+
+.overrideLines :global(*)::before,
+.overrideLines :global(*)::after {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.overrideLines :global(span) {
+  color: var(--primary) !important;
 }

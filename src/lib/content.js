@@ -101,48 +101,121 @@ export const SERVICES = [
   },
 ];
 
+// احتفظ بكل السطور العلوية الخاصة بعمليات الـ Import والـ nibrasGallery كما هي في ملفك
+
 export const PORTFOLIO = [
+  // ─── قسم الهوية التجارية (5 كروت) ───
   {
-    id: 1, 
-    title: "Nibras 360 Visual Identity", 
-    category: "Branding", 
-    image: w1,
-    client: "Nibras 360", 
-    year: "2024",
-    description: "A complete visual identity system built from the ground up — logo, color palette, typography, and brand guidelines that communicate precision and trust across all touchpoints.",
+    id: 1, title: "Nibras 360 Visual Identity", category: "Branding", image: w1,
+    client: "Nibras 360", year: "2024",
+    description: "A complete visual identity system built from the ground up.",
     services: ["Brand Strategy", "Logo Design", "Visual Identity System", "Brand Guidelines"],
-    results: [
-      { label: "Brand consistency", value: "100%" },
-      { label: "Assets delivered", value: "40+" },
-      { label: "Turnaround", value: "3 weeks" },
-    ],
-    gallery: nibrasGallery, // 2. قمنا بربط الجاليري الحقيقي هنا بالكارد الأول ليحل محل الصور الافتراضية
+    results: [{ label: "Brand consistency", value: "100%" }, { label: "Assets delivered", value: "40+" }],
+    gallery: nibrasGallery, // الجاليري الحقيقي الخاص بك
   },
   {
     id: 2, title: "Nurture Nature's Touch", category: "Identity Guide", image: w2,
     client: "Nurture Nature", year: "2024",
-    description: "A comprehensive identity guide that documented every aspect of the brand — voice, tone, visual rules, and usage standards to ensure consistency across all team members and channels.",
-    services: ["Identity Guidelines", "Brand Voice", "Typography System", "Color Usage Rules"],
-    results: [
-      { label: "Pages delivered", value: "28" },
-      { label: "Brand elements", value: "60+" },
-      { label: "Team adoption", value: "Full" },
-    ],
+    description: "A comprehensive identity guide that documented every aspect of the brand.",
+    services: ["Identity Guidelines", "Brand Voice", "Typography System"],
+    results: [{ label: "Pages delivered", value: "28" }, { label: "Team adoption", value: "Full" }],
   },
   {
     id: 3, title: "Ippo Child Foot Branding", category: "Branding", image: w3,
     client: "Ippo", year: "2023",
-    description: "A playful yet professional branding system for a children's footwear brand — crafted to appeal to both parents and kids while building strong shelf and digital presence.",
-    services: ["Brand Identity", "Packaging Direction", "Social Media Visual Style", "Brand Story"],
-    results: [
-      { label: "Market reception", value: "Positive" },
-      { label: "SKUs branded", value: "12+" },
-      { label: "Launch timeline", value: "4 weeks" },
-    ],
+    description: "A playful yet professional branding system for a children's footwear brand.",
+    services: ["Brand Identity", "Packaging Direction", "Brand Story"],
+    results: [{ label: "Market reception", value: "Positive" }, { label: "Launch timeline", value: "4 weeks" }],
+  },
+  {
+    id: 4, title: "AquaCool Rebranding", category: "Branding", image: w4,
+    client: "AquaCool", year: "2023",
+    description: "Modernizing a legacy brand to appeal to a younger demographic.",
+    services: ["Rebranding", "Visual System", "Stationery"],
+    results: [{ label: "Brand awareness", value: "+45%" }],
+  },
+  {
+    id: 5, title: "Belt & Road Identity", category: "Identity Guide", image: w5,
+    client: "Belt & Road", year: "2024",
+    description: "Corporate identity system for a global logistics company.",
+    services: ["Corporate Identity", "Brand Manual"],
+    results: [{ label: "Global branches applied", value: "12" }],
   },
 
+  // ─── قسم السوشيال ميديا (5 كروت) ───
+  {
+    id: 6, title: "TechNova Social Strategy", category: "Social Media", image: w6,
+    client: "TechNova", year: "2024",
+    description: "Engaging social media strategy focused on educational tech content.",
+    services: ["Content Creation", "Grid Design", "Copywriting"],
+    results: [{ label: "Follower growth", value: "+12K" }],
+  },
+  {
+    id: 7, title: "FreshBite Ad Campaign", category: "Paid Ads", image: w2,
+    client: "FreshBite", year: "2024",
+    description: "High-converting Meta ads for a food delivery service.",
+    services: ["Meta Ads", "Creative Design", "A/B Testing"],
+    results: [{ label: "ROAS", value: "3.2x" }],
+  },
+  {
+    id: 8, title: "Lumina Instagram Revamp", category: "Social Media", image: w3,
+    client: "Lumina", year: "2023",
+    description: "Complete overhaul of the Instagram visual feed.",
+    services: ["Visual Direction", "Highlight Covers", "Reels Strategy"],
+    results: [{ label: "Engagement rate", value: "8.5%" }],
+  },
+  {
+    id: 9, title: "FitCore Lead Generation", category: "Paid Ads", image: w4,
+    client: "FitCore", year: "2024",
+    description: "Targeted lead generation campaign for a premium gym.",
+    services: ["Lead Generation", "Ad Copy", "Landing Page UI"],
+    results: [{ label: "Cost per Lead", value: "-30%" }],
+  },
+  {
+    id: 10, title: "EcoLife Awareness", category: "Social Media", image: w5,
+    client: "EcoLife", year: "2023",
+    description: "A viral awareness campaign focusing on sustainability.",
+    services: ["Campaign Strategy", "Influencer Collaboration", "Social Media Design"],
+    results: [{ label: "Total Reach", value: "2.1M" }],
+  },
 
-
+  // ─── قسم بروفايلات الشركات (5 كروت) ───
+  {
+    id: 11, title: "Apex Corp Profile", category: "Company Profiles", image: w6,
+    client: "Apex Corp", year: "2024",
+    description: "A professional and sleek corporate profile designed for B2B pitching.",
+    services: ["Copywriting", "Layout Design", "Print Ready"],
+    results: [{ label: "Pages", value: "32" }],
+  },
+  {
+    id: 12, title: "Zenith Real Estate", category: "Company Profiles", image: w2,
+    client: "Zenith", year: "2023",
+    description: "A luxurious company profile highlighting premium properties and firm history.",
+    services: ["Editorial Design", "Information Architecture"],
+    results: [{ label: "Client acquisitions", value: "+15%" }],
+  },
+  {
+    id: 13, title: "NexGen IT Portfolio", category: "Company Profiles", image: w3,
+    client: "NexGen", year: "2024",
+    description: "A dynamic portfolio and company profile for a software agency.",
+    services: ["Digital Profile", "Case Study Formatting"],
+    results: [{ label: "Sales cycle reduction", value: "20%" }],
+  },
+  {
+    id: 14, title: "UrbanBuild Pitch Deck", category: "Company Profiles", image: w4,
+    client: "UrbanBuild", year: "2024",
+    description: "Investor-focused company profile and pitch deck.",
+    services: ["Pitch Deck Design", "Financial Visualization"],
+    results: [{ label: "Funds raised", value: "$1.2M" }],
+  },
+  {
+    id: 15, title: "MediCare Annual Report", category: "Company Profiles", image: w5,
+    client: "MediCare", year: "2023",
+    description: "A comprehensive annual profile combining achievements and future roadmap.",
+    services: ["Annual Report Design", "Data Graphics"],
+    results: [{ label: "Stakeholder rating", value: "5/5" }],
+  },
+  
 ];
 
 export const PORTFOLIO_CATEGORIES = [
