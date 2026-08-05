@@ -1,9 +1,11 @@
+/* Portfolio.module.css */
+
 .heroSection {
   position: relative;
   padding: 12rem 0 6rem;
   background: linear-gradient(180deg, #121212 0%, #080808 100%);
   color: #fff;
-  overflow: hidden;
+  overflow: hidden; /* يمنع خروج العناصر عن إطار القسم */
   display: flex;
   align-items: center;
   min-height: 80vh;
@@ -31,7 +33,7 @@
 .imageWrapper {
   position: relative;
   width: 100%;
-  width: 550px;
+  max-width: 550px; /* تم التعديل هنا: استخدام max-width بدلاً من width ثابت */
   height: 480px;
   border-radius: 20px;
   overflow: hidden;
@@ -40,6 +42,7 @@
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(14px);
   transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  margin: 0 auto; /* لضمان توسيط الصورة إذا كانت الشاشة أصغر */
 }
 
 .imageWrapper:hover {
@@ -72,6 +75,7 @@
   transform: scale(1.06);
 }
 
+/* RESPONSIVE */
 @media (max-width: 991.98px) {
   .heroSection {
     padding: 10rem 0 4rem;

@@ -31,6 +31,10 @@
 /* ─── Header ────────────────────────────────────────────────── */
 .header {
   margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
 
 .titleSection {
@@ -75,7 +79,7 @@
 }
 
 .subheading {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.7;
   color: var(--muted-foreground);
   max-width: 440px;
