@@ -21,10 +21,12 @@ function App() {
   const currentLanguage = i18n.resolvedLanguage || i18n.language;
 
   useEffect(() => {
-    const language = currentLanguage === "en" ? "en" : "ar";
+    const language = currentLanguage?.startsWith("ar") ? "ar" : "en";
+    const direction = language === "ar" ? "rtl" : "ltr";
 
     document.documentElement.lang = language;
-    document.documentElement.dir = "ltr";
+    document.documentElement.dir = direction;
+    document.body.dir = direction;
   }, [currentLanguage]);
 
   return (

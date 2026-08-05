@@ -12,15 +12,29 @@ import Testimonials from '../components/sections/Testimonials/Testimonials';
 const Home = () => {
   return (
     <>
-    <HeroScrollLock />
-    <AboutUs translationPrefix="home.intro" />
-    <StatsCounter translationPrefix="home.stats" />
-    <ServicesGrid translationPrefix="home.values" />
-    <ScrollSection /> 
-    <WhyChooseUs translationPrefix="home.whyChooseUs" />
-    <OurClints /> 
-    <OurProcess />
-      <Testimonials translationPrefix="home.testimonials" />
+      <div dir="ltr">
+        <HeroScrollLock />
+      </div>
+
+      <AboutUs translationPrefix="home.intro" />
+
+      <div dir="ltr">
+        <StatsCounter translationPrefix="home.stats" />
+      </div>
+
+      <ServicesGrid translationPrefix="home.values" />
+      <ScrollSection />
+      <WhyChooseUs translationPrefix="home.whyChooseUs" />
+
+      <div dir="ltr">
+        <OurClints />
+      </div>
+
+      <OurProcess />
+
+      <div dir="ltr">
+        <Testimonials translationPrefix="home.testimonials" />
+      </div>
     </>
   );
 };
