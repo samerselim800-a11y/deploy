@@ -26,7 +26,7 @@ const Home = () => {
       <ScrollSection />
       <WhyChooseUs translationPrefix="home.whyChooseUs" />
 
-      <div dir="ltr">
+      <div >
         <OurClints />
       </div>
 

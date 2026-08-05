@@ -49,22 +49,14 @@ function MarqueeRow({ reverse = false }) {
 }
 
 export default function OurClients() {
-  const { t, i18n } = useTranslation();
-  
-  // التحقق من اللغة الحالية
-  const isArabic = i18n.language === "ar";
+  const { t } = useTranslation();
 
   return (
     <section id="our-clients" className={styles.section}>
       <div className={styles.container}>
-        <div 
-          className={styles.header}
-          style={{
-            // تطبيق المحاذاة ديناميكياً بناءً على اللغة
-            textAlign: isArabic ? "right" : "left",
-            alignItems: isArabic ? "flex-end" : "flex-start"
-          }}
-        >
+        
+        {/* شيلنا المحاذاة الديناميكية وهنعتمد على التوسيط في الـ CSS */}
+        <div className={styles.header}>
           <div className={styles.titleSection}>
             <Building2 size={23} />
             <span>{t("home.clients.badge")}</span>
@@ -82,8 +74,12 @@ export default function OurClients() {
           </p>
         </div>
 
-        <MarqueeRow />
-        <MarqueeRow reverse />
+        {/* الشريط مغلف بـ ltr عشان الأنميشن ميبوظش */}
+        <div dir="ltr">
+          <MarqueeRow />
+          <MarqueeRow reverse />
+        </div>
+
       </div>
     </section>
   );
