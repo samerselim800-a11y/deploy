@@ -23,7 +23,9 @@ function PortfolioPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className={`position-relative overflow-hidden ${styles.heroSection}`}>
+      <section
+        className={`position-relative overflow-hidden ${styles.heroSection}`}
+      >
         <div className="container">
           <div className="row align-items-center g-5">
             <div className="col-12 col-lg-6 d-flex align-items-center">
@@ -31,15 +33,18 @@ function PortfolioPage() {
                 <p className={`mb-3 text-uppercase ${styles.eyebrow}`}>
                   {t("portfolioPage.hero.badge")}
                 </p>
-                <h1 className={`display-1 title fw-normal mb-0 ${styles.fontDisplay}`}>
+                <h1
+                  className={`display-1 title fw-normal mb-0 ${styles.fontDisplay}`}
+                >
                   {t("portfolioPage.hero.title")}
                   <br />
                   <span className="titleAccent">
-
-                  {t("portfolioPage.hero.titleSecondLine")}
+                    {t("portfolioPage.hero.titleSecondLine")}
                   </span>
                 </h1>
-                <p className={`mt-4 text-muted fs-5 mb-0 ${styles.description}`}>
+                <p
+                  className={`mt-4 text-muted fs-5 mb-0 ${styles.description}`}
+                >
                   {t("portfolioPage.hero.description")}
                 </p>
               </Reveal>
@@ -70,7 +75,9 @@ function PortfolioPage() {
       <CaseStudies translationPrefix="portfolioPage.caseStudies" />
 
       {/* Client Testimonials */}
-      <Testimonials translationPrefix="portfolioPage.testimonials" />
+      <div dir="ltr">
+        <Testimonials translationPrefix="home.testimonials" />
+      </div>
 
       {/* Call To Action */}
       <CTABanner translationPrefix="portfolioPage.cta" />

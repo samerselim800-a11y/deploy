@@ -1,4 +1,3 @@
-
 import styles from "./OurClients.module.css";
 import { useTranslation } from "react-i18next";
 import { Building2 } from "lucide-react";
@@ -50,12 +49,22 @@ function MarqueeRow({ reverse = false }) {
 }
 
 export default function OurClients() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  
+  // التحقق من اللغة الحالية
+  const isArabic = i18n.language === "ar";
 
   return (
     <section id="our-clients" className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.header}>
+        <div 
+          className={styles.header}
+          style={{
+            // تطبيق المحاذاة ديناميكياً بناءً على اللغة
+            textAlign: isArabic ? "right" : "left",
+            alignItems: isArabic ? "flex-end" : "flex-start"
+          }}
+        >
           <div className={styles.titleSection}>
             <Building2 size={23} />
             <span>{t("home.clients.badge")}</span>
@@ -79,4 +88,3 @@ export default function OurClients() {
     </section>
   );
 }
-

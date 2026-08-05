@@ -1,5 +1,3 @@
-/* HowWeWork.module.css */
-
 /* ════════════════════════════════════════
    SECTION & CONTAINER
 ════════════════════════════════════════ */
@@ -60,88 +58,78 @@
 ════════════════════════════════════════ */
 .contentHowWeWork {
   width: 100%;            
-  max-width: 100%;       
-  margin-bottom: 80px;
+  margin-bottom: 70px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  justify-content: start;
-  align-items: start;      
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+  gap: 18px; 
 }
 
 .titleSection {
   display: flex;
-  justify-content: start;
-  align-items: start;
+  align-items: center;
+  justify-content: center;
   width: fit-content;
   gap: 0.7rem;
-  padding: 1rem 3rem;
+  padding: 0.8rem 2.5rem;
   border-radius: 999px;
 
   background: transparent;
-  border: 2px solid color-mix(in srgb, var(--primary) 35%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary) 40%, transparent);
   color: var(--primary) !important;
 
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
   
-  align-self: center;       
-  margin: 15px 0;          
+  margin: 0 auto 10px auto; 
   
   backdrop-filter: blur(10px);
-  transition:
-    background-color 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
+
 .titleSection:hover {
-   background-color: rgba(255, 193, 7, 0.08) !important;
+  background-color: rgba(255, 193, 7, 0.08) !important;
   border-color: var(--primary) !important;
-  box-shadow: var(--shadow-glow);
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.15);
 }
 
 .contentHowWeWork h2 {
   font-family: var(--font-display);
-  font-size: 2.8rem;
-  line-height: 1.1;
-  color: var(--foreground) !important;
-  margin-bottom: 24px;
-  font-weight: 700;
+  font-size: clamp(32px, 4vw, 46px); 
+  line-height: 1.2;
+  color: var(--primary) !important;
+  font-weight: 800;
   letter-spacing: -0.02em;
-  
-  max-width: 680px;        /* تحديد العرض للعنوان ليبقى متناسقاً على اليسار */
-  text-align: left;        /* التأكيد على المحاذاة لليسار */
+  margin: 0;
+  max-width: 800px; 
 }
 
 .contentHowWeWork p {
   color: var(--muted-foreground) !important;
-  opacity: 0.85;
-  font-size: 18px;
-  line-height: 1.7;
-  
-  max-width: 580px;        /* تحديد العرض للنص */
-  text-align: left;        /* التأكيد على المحاذاة لليسار */
+  opacity: 0.9;
+  font-size: 1.15rem; 
+  line-height: 1.8;
+  max-width: 750px; 
+  margin: 0;
+  font-weight: 400;
 }
-.cardTop p {
-  color: var(--muted-foreground) ;
-  opacity: 0.8;
-  line-height: 1.6;
-  font-size: 15px;
-  direction: rtl;   /* forces trailing "." to sit on the left, not right */
-}
-
 
 .cardsIntro {
   font-family: var(--font-display);
-  font-size: 2.5rem;
+  font-size: 1.6rem; 
   font-weight: 700;
-  color: #ffffff;
-  margin: 22px 0 36px;
+  margin: 30px auto 10px;
   text-align: center;
-  width: 100%;
   position: relative;
   direction: rtl;
+  
+
+  background-clip: text;
+  color: var(--secondary) !important;
+
 }
 /* ════════════════════════════════════════
    GRID LAYOUT
@@ -171,7 +159,7 @@
   position: absolute;
   inset: 0;
   border-radius: 28px;
-  background: #000000; /* تعديل: تم تحويل خلفية الـ pseudo-element لأسود أيضاً */
+  background: #000000; 
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.5s ease;
@@ -183,7 +171,6 @@
   box-shadow: 0 30px 60px -12px rgba(41, 95, 153, 0.25);
 }
 
-/* تم إبقاؤها 0 لتجنب حجب أو بهتان الفيديو */
 .featureCard:hover::after {
   opacity: 0; 
 }
@@ -196,6 +183,14 @@
   padding: 45px 35px 30px;
   position: relative;
   z-index: 5;
+}
+
+.cardTop p {
+  color: var(--muted-foreground) !important;
+  opacity: 0.8;
+  line-height: 1.6;
+  font-size: 15px;
+  direction: rtl; 
 }
 
 .iconBox {
@@ -235,13 +230,6 @@
   margin-bottom: 20px;
 }
 
-.cardTop p {
-  color: var(--muted-foreground) !important;
-  opacity: 0.8;
-  line-height: 1.6;
-  font-size: 15px;
-}
-
 /* ════════════════════════════════════════
    VIDEO SCENE
 ════════════════════════════════════════ */
@@ -251,7 +239,7 @@
   width: 100%;
   height: 250px; 
   overflow: hidden;
-  background: #000000; /* أسود صريح خلف الفيديو */
+  background: #000000; 
   border-top: 1px solid var(--border);
 }
 
@@ -308,4 +296,3 @@
     font-size: 36px;
   }
 }
-

@@ -69,13 +69,17 @@ function ServicesPage() {
       <WhyChooseUs translationPrefix="servicesPage.whyChooseUs" />
 
       {/* Stats / Social Proof */}
-      <StatsCounter translationPrefix="servicesPage.stats" />
+       <div dir="ltr">
+        <StatsCounter translationPrefix="home.stats" />
+      </div>
 
       {/* How We Work */}
       <ProcessSection translationPrefix="servicesPage.process" />
 
       {/* Client Testimonials */}
-      <Testimonials translationPrefix="servicesPage.testimonials" />
+       <div dir="ltr">
+             <Testimonials translationPrefix="home.testimonials" />
+           </div>
 
       {/* FAQ */}
 

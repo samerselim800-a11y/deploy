@@ -1300,6 +1300,7 @@
     "form": {
       "nameLabel": "Name",
       "emailLabel": "Email",
+      "phoneLabel": "Phone Number",
       "companyLabel": "Company",
       "messageLabel": "Project details",
       "submit": "Send message",

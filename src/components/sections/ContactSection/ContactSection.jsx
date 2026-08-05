@@ -33,7 +33,8 @@ export function ContactSection({ sent, onSubmit }) {
                   type="email"
                 />
 
-                <PhoneField label="PHONE NUMBER" />
+                {/* تم تعديل هذا السطر لاستخدام الترجمة */}
+                <PhoneField label={t("contactPage.form.phoneLabel")} />
 
                 <Field
                   label={t("contactPage.form.companyLabel")}
@@ -186,6 +187,8 @@ function PhoneField({ label }) {
         onChange={(value) => setPhone(value)}
         className={styles.phoneWrapper}
         inputClass={styles.phoneInput}
+        // هنا يمكنك أيضاً استبدال الـ Placeholder بالترجمة إذا أردت:
+        // placeholder={label} 
         placeholder="Phone number"
       />
     </div>

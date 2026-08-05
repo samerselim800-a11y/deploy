@@ -64,8 +64,10 @@ function ContactPage() {
           </div>
         </div>
       </section>
+<div dir="ltr">
 
       <ContactSection sent={sent} onSubmit={onSubmit} />
+</div>
     </>
   );
 }

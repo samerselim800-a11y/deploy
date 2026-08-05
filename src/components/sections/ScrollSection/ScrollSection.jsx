@@ -1,3 +1,4 @@
+import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
@@ -50,20 +51,19 @@ const SERVICES = [
   {
     number: "6",
     key: "webDev",
-    image: work1,
+    image: work1, // يمكنك تعديل الصورة إذا كانت مختلفة
     imageAlt: "Web Development UI/UX",
-    panelClass: styles.panel1,
+    panelClass: styles.panel1, // يمكنك تغيير الكلاس إذا كان هناك panel6
   },
 ];
 
 export default function ScrollSection() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <>
       {/* Services Scroll Section */}
       <section id="services" className={styles.section}>
-
         {SERVICES.map((service, i) => (
           <div
             key={service.number}
@@ -73,7 +73,7 @@ export default function ScrollSection() {
               top: `${i * 20}px`,
             }}
           >
-            {/* Badge shows only inside the first panel, now anchored to .panel (fixed 100vh) not .inner */}
+            {/* Badge shows only inside the first panel */}
             {i === 0 && (
               <div className={`${styles.badge} mt-4`}>
                 <span>{t("home.scrollSection.cta")}</span>
@@ -81,82 +81,52 @@ export default function ScrollSection() {
             )}
 
             <div className={styles.inner}>
-
               <div className={styles.content}>
-
                 <h1 className={styles.title}>
+                  {/* تغيير شكل الرقم بناءً على لغة الموقع */}
                   <span className={styles.serviceNumber}>
-                    {service.number}
+                    {Number(service.number).toLocaleString(
+                      i18n.language === "ar" ? "ar-EG" : "en-US"
+                    )}
                   </span>
 
-                  {t(
-                    `home.scrollSection.items.${service.key}.title`
-                  )}
+                  {t(`home.scrollSection.items.${service.key}.title`)}
 
                   <br />
 
-                  <span className={styles.ampersand}>
-                    &
-                  </span>{" "}
-
+                  <span className={styles.ampersand}>&</span>{" "}
                   <span className={styles.titleAccent}>
-                    {t(
-                      `home.scrollSection.items.${service.key}.accent`
-                    )}
+                    {t(`home.scrollSection.items.${service.key}.accent`)}
                   </span>
                 </h1>
 
-
                 <span className={styles.subtitle}>
-                  {t(
-                    `home.scrollSection.items.${service.key}.subtitle`
-                  )}
+                  {t(`home.scrollSection.items.${service.key}.subtitle`)}
                 </span>
-
 
                 <div className={styles.underline} />
 
-
                 <p className={styles.description}>
-                  {t(
-                    `home.scrollSection.items.${service.key}.description`
-                  )}
+                  {t(`home.scrollSection.items.${service.key}.description`)}
                 </p>
 
-
                 <ul className={styles.features}>
-                  {t(
-                    `home.scrollSection.items.${service.key}.features`,
-                    {
-                      returnObjects: true,
-                    }
-                  ).map((feat) => (
-                    <li
-                      key={feat}
-                      className={styles.featureItem}
-                    >
-                      <FaCheckCircle
-                        className={styles.checkIcon}
-                        size={18}
-                      />
-
+                  {t(`home.scrollSection.items.${service.key}.features`, {
+                    returnObjects: true,
+                  }).map((feat) => (
+                    <li key={feat} className={styles.featureItem}>
+                      <FaCheckCircle className={styles.checkIcon} size={18} />
                       <span>{feat}</span>
                     </li>
                   ))}
                 </ul>
 
-
                 <div className={styles.ctaContainer}>
-                  <Link
-                    to="/services"
-                    className={styles.ctaSecondary}
-                  >
+                  <Link to="/services" className={styles.ctaSecondary}>
                     {t("home.scrollSection.cta")}
                   </Link>
                 </div>
-
               </div>
-
 
               <div className={styles.imageContainer}>
                 <img
@@ -167,7 +137,6 @@ export default function ScrollSection() {
                   draggable={false}
                 />
               </div>
-
             </div>
           </div>
         ))}

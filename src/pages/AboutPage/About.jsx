@@ -22,7 +22,9 @@ function AboutPage() {
     <>
       <AboutUs translationPrefix="aboutPage.intro" />
       <ServicesGrid translationPrefix="home.values" />
-      <StatsCounter translationPrefix="aboutPage.stats" />
+    <div dir="ltr">
+          <StatsCounter translationPrefix="home.stats" />
+        </div>
       <CTABanner translationPrefix="aboutPage.cta" />
     </>
   );

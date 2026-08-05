@@ -143,6 +143,9 @@
   color: var(--primary);
   margin: 0;
   letter-spacing: 0.05em;
+  text-align: start;
+
+
 }
 
 .headingAccent {
