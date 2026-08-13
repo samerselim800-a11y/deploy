@@ -1,6 +1,6 @@
 .heroSection {
   position: relative;
-  padding: 12rem 0 6rem;
+  padding: clamp(8rem, 12vw, 12rem) 0 clamp(3rem, 6vw, 6rem);
   background: linear-gradient(180deg, #121212 0%, #080808 100%);
   color: #fff;
   overflow: hidden;
@@ -20,7 +20,7 @@
 .fontDisplay {
   font-family: var(--font-display, serif);
   line-height: 1.1;
-  
+  font-size: clamp(2rem, 4vw, 3.5rem);
 }
 
 .description {
@@ -31,9 +31,9 @@
 /* IMAGE WRAPPER */
 .imageWrapper {
   position: relative;
-  width: 100%;
-  width: 550px;
-  height: 480px;
+  width: min(100%, 550px);
+  aspect-ratio: 4 / 3;
+  max-height: 480px;
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -68,7 +68,22 @@
   }
   .imageWrapper {
     max-width: 100%;
-    height: 400px;
+    max-height: 400px;
     margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    min-height: auto;
+    padding: 8rem 0 3rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .imageWrapper {
+    max-height: 300px;
   }
 }

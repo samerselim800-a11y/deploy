@@ -51,9 +51,9 @@ const SERVICES = [
   {
     number: "6",
     key: "webDev",
-    image: work1, // يمكنك تعديل الصورة إذا كانت مختلفة
+    image: work1,
     imageAlt: "Web Development UI/UX",
-    panelClass: styles.panel1, // يمكنك تغيير الكلاس إذا كان هناك panel6
+    panelClass: styles.panel1,
   },
 ];
 
@@ -62,7 +62,6 @@ export default function ScrollSection() {
 
   return (
     <>
-      {/* Services Scroll Section */}
       <section id="services" className={styles.section}>
         {SERVICES.map((service, i) => (
           <div
@@ -83,7 +82,6 @@ export default function ScrollSection() {
             <div className={styles.inner}>
               <div className={styles.content}>
                 <h1 className={styles.title}>
-                  {/* تغيير شكل الرقم بناءً على لغة الموقع */}
                   <span className={styles.serviceNumber}>
                     {Number(service.number).toLocaleString(
                       i18n.language === "ar" ? "ar-EG" : "en-US"

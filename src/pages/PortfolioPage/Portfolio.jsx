@@ -21,7 +21,8 @@ function PortfolioPage() {
   }, [t]);
 
   return (
-    <>
+    /* تغليف كل محتوى الصفحة داخل wrapper خاص */
+    <div className={styles.portfolioPageWrapper}>
       {/* Hero Section */}
       <section
         className={`position-relative overflow-hidden ${styles.heroSection}`}
@@ -69,8 +70,6 @@ function PortfolioPage() {
       {/* Portfolio Grid */}
       <PortfolioShowcase />
 
-      {/* Numbers that back the work */}
-
       {/* Detailed Case Studies */}
       <CaseStudies translationPrefix="portfolioPage.caseStudies" />
 
@@ -81,7 +80,7 @@ function PortfolioPage() {
 
       {/* Call To Action */}
       <CTABanner translationPrefix="portfolioPage.cta" />
-    </>
+    </div>
   );
 }
 

@@ -1,7 +1,7 @@
 /* ─── Section ───────────────────────────────────────────────── */
 .section {
   width: 100%;
-  padding: 140px 0;
+  padding: clamp(80px, 10vw, 140px) 0;
   background: var(--background);
   position: relative;
   z-index: 1;
@@ -385,17 +385,19 @@
   .heading { font-size: 32px; }
   .subheading { max-width: 100%; }
   .header { margin-bottom: 40px; }
+  .grid { flex-direction: column; gap: 20px; }
   .card { flex-direction: column; }
   
   .cardText {
     width: 100%;
     border-right: none;
     border-bottom: 1px solid var(--border);
+    padding: 20px;
   }
   .cardMetrics {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
   }
   .metric {
@@ -418,6 +420,10 @@
 }
 
 @media (max-width: 480px) {
+  .section { padding: 56px 0; }
   .companyName { font-size: 20px; }
   .metricValue { font-size: 17px; }
+  .cardMetrics { grid-template-columns: 1fr; }
+  .metric:nth-child(3) { grid-column: auto; }
+  .desc { font-size: 12px; }
 }

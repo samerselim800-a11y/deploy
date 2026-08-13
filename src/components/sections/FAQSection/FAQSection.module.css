@@ -3,7 +3,7 @@
 /* ─── Section ───────────────────────────────────────────────── */
 .section {
   width: 100%;
-  padding: 120px 0;
+  padding: clamp(72px, 10vw, 120px) 0;
   background: var(--gradient-hero);
   min-height: 100vh;
   box-sizing: border-box;
@@ -27,7 +27,7 @@
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 clamp(1.25rem, 4vw, 2.5rem);
   position: relative;
   z-index: 1;
 }
@@ -299,7 +299,11 @@
   }
 
   .title {
-    font-size: 34px;
+    font-size: clamp(1.9rem, 6vw, 2.2rem);
+  }
+
+  .description {
+    font-size: 0.95rem;
   }
 
   .question {
@@ -312,5 +316,29 @@
 
   .answerText {
     padding: 4px 20px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    gap: 24px;
+  }
+
+  .titleSection {
+    margin-inline: auto;
+  }
+
+  .question {
+    padding: 16px 18px;
+    gap: 12px;
+  }
+
+  .questionText {
+    font-size: 14px;
+  }
+
+  .answerText {
+    padding: 4px 18px 16px;
+    font-size: 14px;
   }
 }

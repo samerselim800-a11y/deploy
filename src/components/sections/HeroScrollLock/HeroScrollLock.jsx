@@ -16,7 +16,17 @@ export function HeroScrollLock() {
   const [active, setActive] = useState(0);
   const [locked, setLocked] = useState(true);
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  
+  // التحقق من اللغة
+  const isArabic = i18n.language === "ar";
+  
+  // تحديد مكان المحتوى والشخصية بدقة (Zig-Zag)
+  const isContentRight = isArabic ? active === 0 : active === 1;
+  const isMascotLeft = isArabic ? active === 0 : active === 1;
+  
+  // اختيار الكلاس المناسب للاتجاه
+  const contentPositionClass = isContentRight ? styles.contentRight : styles.contentLeft;
 
   const lastTrigger = useRef(0);
   const touchStartY = useRef(null);
@@ -27,29 +37,19 @@ export function HeroScrollLock() {
   const advance = useCallback(
     (dir) => {
       const now = Date.now();
-
       if (now - lastTrigger.current < 850) return;
-
       lastTrigger.current = now;
 
       setActive((curr) => {
         const next = curr + dir;
-
         if (next < 0) return 0;
-
         if (next > total - 1) {
           setLocked(false);
-
           setTimeout(() => {
-            window.scrollBy({
-              top: 1,
-              behavior: "smooth",
-            });
+            window.scrollBy({ top: 1, behavior: "smooth" });
           }, 900);
-
           return total - 1;
         }
-
         return next;
       });
     },
@@ -58,40 +58,31 @@ export function HeroScrollLock() {
 
   useEffect(() => {
     if (!locked) return;
-
     document.body.style.overflow = "hidden";
 
     const onWheel = (e) => {
       if (Math.abs(e.deltaY) < 8) return;
-
       e.preventDefault();
-
       advance(e.deltaY > 0 ? 1 : -1);
     };
 
     const onKey = (e) => {
       if (e.key === "ArrowDown" || e.key === "PageDown" || e.key === " ") {
         e.preventDefault();
-
         advance(1);
       }
-
       if (e.key === "ArrowUp" || e.key === "PageUp") {
         e.preventDefault();
-
         advance(-1);
       }
     };
 
     window.addEventListener("wheel", onWheel, { passive: false });
-
     window.addEventListener("keydown", onKey);
 
     return () => {
       document.body.style.overflow = "";
-
       window.removeEventListener("wheel", onWheel);
-
       window.removeEventListener("keydown", onKey);
     };
   }, [locked, advance]);
@@ -102,13 +93,8 @@ export function HeroScrollLock() {
 
   const onTouchEnd = (e) => {
     if (touchStartY.current == null) return;
-
     const dy = touchStartY.current - e.changedTouches[0].clientY;
-
-    if (Math.abs(dy) >= 50) {
-      advance(dy > 0 ? 1 : -1);
-    }
-
+    if (Math.abs(dy) >= 50) advance(dy > 0 ? 1 : -1);
     touchStartY.current = null;
   };
 
@@ -117,57 +103,40 @@ export function HeroScrollLock() {
   };
 
   const slide = HERO_SLIDES[active] || HERO_SLIDES[0];
-
   const slideKey = HERO_SLIDE_KEYS[slide.id];
 
   return (
     <section
       ref={sectionRef}
       className={styles.section}
+      dir="ltr" /* إجبار السكشن العام ليكون LTR لحماية الأنيميشن */
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
       onTouchMove={onTouchMove}
       aria-roledescription="carousel"
     >
       {/* Background */}
-
       <AnimatePresence mode="popLayout">
         <motion.div
           key={slide.id}
-          initial={{
-            opacity: 0,
-            scale: 1.08,
-          }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-          }}
-          exit={{
-            opacity: 0,
-            scale: 0.98,
-          }}
-          transition={{
-            duration: 0.8,
-            ease: [0.25, 1, 0.5, 1],
-          }}
+          initial={{ opacity: 0, scale: 1.08 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.98 }}
+          transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
           className={styles.bgWrapper}
         >
           <img src={slide.image} alt="" className={styles.bgImage} />
-
           <div className={styles.bgOverlayGradient} />
-
           <div className={styles.bgOverlayColor} />
         </motion.div>
       </AnimatePresence>
 
       <div className={styles.shapes}>
         <div className={styles.shapeLeft} />
-
         <div className={styles.shapeRight} />
       </div>
 
       {/* Mascot */}
-
       <AnimatePresence mode="popLayout">
         <motion.img
           key={`mascot-${active}`}
@@ -175,60 +144,39 @@ export function HeroScrollLock() {
           alt="The Ego Studio mascot"
           initial={{
             opacity: 0,
-            x: active === 0 ? 150 : -150,
-            scale: 0.9,
+            x: isMascotLeft ? -150 : 150, /* الدخول من الاتجاه الصحيح */
           }}
-          animate={{
-            opacity: 1,
-            x: 0,
-            scale: 1,
-          }}
+          animate={{ opacity: 1, x: 0, scale: 1 }}
           exit={{
             opacity: 0,
-            x: active === 0 ? 80 : -80,
+            x: isMascotLeft ? -80 : 80,
             scale: 0.95,
           }}
-          transition={{
-            duration: 0.85,
-            ease: [0.25, 1, 0.5, 1],
-          }}
-          className={`${styles.mascot} ${
-            active === 1 ? styles.mascotLeft : ""
-          }`}
+          transition={{ duration: 0.85, ease: [0.25, 1, 0.5, 1] }}
+          className={`${styles.mascot} ${isMascotLeft ? styles.mascotLeft : ""}`}
         />
       </AnimatePresence>
 
       {/* Content */}
-
-      <div
-        className={`${styles.content} ${
-          active === 1 ? styles.contentRight : ""
-        }`}
-      >
+      <div className={`${styles.content} ${contentPositionClass}`}>
         <AnimatePresence mode="popLayout">
           <motion.div
             key={slide.id}
             initial={{
               opacity: 0,
-              x: active === 0 ? -120 : 120,
+              x: isContentRight ? 120 : -120, /* الدخول من الاتجاه الصحيح */
             }}
-            animate={{
-              opacity: 1,
-              x: 0,
-            }}
+            animate={{ opacity: 1, x: 0 }}
             exit={{
               opacity: 0,
-              x: active === 0 ? -60 : 60,
+              x: isContentRight ? 60 : -60,
             }}
-            transition={{
-              duration: 0.8,
-              ease: [0.25, 1, 0.5, 1],
-            }}
+            transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
             className={styles.slideInner}
+            dir={isArabic ? "rtl" : "ltr"} /* نُعطي النصوص الـ dir المناسب لترتيبها الداخلي */
           >
             <div className={styles.eyebrow}>
               <span className={styles.eyebrowLine} />
-
               {t(`${slideKey}.badge`)}
             </div>
 
@@ -237,8 +185,6 @@ export function HeroScrollLock() {
             <p className={styles.desc}>{t(`${slideKey}.description`)}</p>
 
             <div className={styles.ctaRow}>
-              {/* PDF Button */}
-
               <a
                 href="/Files/EGO%20Company%20Profile.pdf"
                 target="_blank"
@@ -246,7 +192,10 @@ export function HeroScrollLock() {
                 className={styles.ctaPrimary}
               >
                 {t("home.hero.primaryButton")}
-                <ArrowRight className={styles.ctaPrimaryIcon} />
+                <ArrowRight 
+                  className={styles.ctaPrimaryIcon} 
+                  style={{ transform: isArabic ? "scaleX(-1)" : "none" }} 
+                />
               </a>
 
               <Link to="/services" className={styles.ctaSecondary}>
@@ -258,8 +207,7 @@ export function HeroScrollLock() {
       </div>
 
       {/* Pagination */}
-
-      <div className={styles.pagination}>
+      <div className={`${styles.pagination} ${isArabic ? styles.paginationArabic : ""}`}>
         {HERO_SLIDES.map((s, i) => (
           <button
             key={s.id}
@@ -269,41 +217,23 @@ export function HeroScrollLock() {
             }}
             className={styles.pageBtn}
           >
-            <span
-              className={
-                i === active ? styles.pageNumActive : styles.pageNumInactive
-              }
-            >
+            <span className={i === active ? styles.pageNumActive : styles.pageNumInactive}>
               {String(i + 1).padStart(2, "0")}
             </span>
-
-            <span
-              className={
-                i === active ? styles.pageLineActive : styles.pageLineInactive
-              }
-            />
+            <span className={i === active ? styles.pageLineActive : styles.pageLineInactive} />
           </button>
         ))}
       </div>
 
       {/* Scroll */}
-
       <motion.div
         className={styles.scrollHint}
-        animate={{
-          y: [0, 6, 0],
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-        }}
+        animate={{ y: [0, 6, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
       >
         <ArrowDown className={styles.scrollIcon} />
-
         <p className={styles.scrollText}>
-          {active < total - 1
-            ? t("home.hero.scrollSwipe")
-            : t("home.hero.continue")}
+          {active < total - 1 ? t("home.hero.scrollSwipe") : t("home.hero.continue")}
         </p>
       </motion.div>
     </section>

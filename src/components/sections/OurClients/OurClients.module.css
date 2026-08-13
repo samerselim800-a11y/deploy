@@ -261,6 +261,25 @@
   .marquee        { animation-duration: 40s; }
   .marquee.reverse { animation-duration: 40s; }
 }
+
+@media (max-width: 480px) {
+  .section { padding: 56px 0; }
+
+  .heading { font-size: 26px; }
+
+  .marqueeContainer::before,
+  .marqueeContainer::after { width: 32px; }
+
+  .marqueeContent { gap: 12px; }
+
+  .logoWrap {
+    min-width: 88px;
+    min-height: 56px;
+    padding: 12px 14px;
+  }
+
+  .logo { height: 30px; }
+}
 /* ─── Header ────────────────────────────────────────────────── */
 .header {
   display: flex;
