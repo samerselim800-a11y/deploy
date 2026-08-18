@@ -5,7 +5,7 @@
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  background-color: var(--background);
+  background-color: var(--background, #000);
 }
 
 .bgWrapper {
@@ -65,7 +65,7 @@
   filter: blur(40px);
 }
 
-/* تحكم Mascot (الشاشات الكبيرة) */
+/* تحكم Mascot (الشاشات الكبيرة الديسك توب العريض) */
 .mascot {
   pointer-events: none;
   position: absolute;
@@ -85,7 +85,7 @@
 }
 
 /* =======================================================
-   منطقة المحتوى والنصوص
+   منطقة المحتوى والنصوص (Desktop)
    ======================================================= */
 .content {
   position: relative;
@@ -155,7 +155,7 @@
 }
 
 .heading {
-  font-family: var(--font-display);
+  font-family: var(--font-display, serif);
   white-space: pre-line;
   font-size: 2.4rem;
   font-weight: 800;
@@ -202,7 +202,7 @@
   padding: 0.9rem 2.25rem;
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--primary-foreground) !important;
+  color: var(--primary-foreground, #000) !important;
   box-shadow: var(--shadow-glow);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
@@ -321,28 +321,150 @@
 }
 
 /* =======================================================
-   Responsive (الموبايل)
+   🎯 Responsive الشاشات المتوسطة والتابلت (769px إلى 1200px)
    ======================================================= */
-@media (max-width: 768px) {
-  .shapes {
+@media (min-width: 769px) and (max-width: 1200px) {
+  .shapes,
+  .pagination,
+  .paginationArabic {
     display: none !important;
   }
 
-  /* توزيع المحتوى بانسيابية في النصف العلوي */
+  .content {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    padding-top: 7rem !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    max-width: 100% !important;
+  }
+
+  .contentLeft,
+  .contentRight {
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .contentLeft .slideInner,
+  .contentRight .slideInner,
+  .slideInner {
+    margin: 0 auto !important;
+    align-items: center !important;
+    text-align: center !important;
+    max-width: 680px !important;
+    width: 100% !important;
+  }
+
+  [dir="rtl"].slideInner,
+  [dir="ltr"].slideInner {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .eyebrow {
+    font-size: 1.05rem !important;
+    letter-spacing: 0.25em !important;
+    margin-bottom: 1.25rem !important;
+    justify-content: center !important;
+  }
+
+  .eyebrowLine {
+    width: 3rem !important;
+    height: 3px !important;
+  }
+
+  .heading,
+  [dir="ltr"] .heading {
+    font-size: clamp(2.3rem, 4.2vw, 3.2rem) !important;
+    line-height: 1.3 !important;
+    font-weight: 800 !important;
+    text-align: center !important;
+    max-width: 650px !important;
+    margin: 0 auto !important;
+  }
+
+  .desc,
+  [dir="ltr"] .desc {
+    font-size: 1.15rem !important;
+    line-height: 1.75 !important;
+    text-align: center !important;
+    margin: 1.25rem auto 0 !important;
+    max-width: 580px !important;
+    color: #e4e4e7 !important;
+  }
+
+  .ctaRow {
+    margin-top: 1.75rem !important;
+    gap: 1.5rem !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .ctaPrimary {
+    padding: 1.1rem 2.6rem !important;
+    font-size: 1.05rem !important;
+  }
+
+  .ctaPrimaryIcon {
+    width: 1.3rem !important;
+    height: 1.3rem !important;
+  }
+
+  .ctaSecondary {
+    padding: 1.1rem 2.6rem !important;
+    font-size: 1rem !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  /* 🎯 وضع الـ Mascot تحت المحتوى مباشرة */
+  .mascot,
+  .mascotLeft {
+    width: clamp(280px, 42vw, 380px) !important;
+    max-width: 380px !important;
+    right: auto !important;
+    left: 50% !important;
+    top: 56% !important;
+    bottom: auto !important;
+    transform: translateX(-50%) !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+  }
+
+  .scrollHint {
+    bottom: 1.5rem !important;
+  }
+}
+
+/* =======================================================
+   🎯 Responsive الموبايل (أقل من 768px)
+   ======================================================= */
+@media (max-width: 768px) {
+  .shapes,
+  .pagination,
+  .paginationArabic {
+    display: none !important;
+  }
+
   .content { 
-    padding-left: 1.25rem; 
-    padding-right: 1.25rem;
+    padding-left: 1.25rem !important; 
+    padding-right: 1.25rem !important;
     justify-content: flex-start !important; 
-    padding-top: 7.5rem !important; 
+    padding-top: 6.5rem !important; 
+    align-items: center !important;
+    max-width: 100% !important;
   }
   
   .contentLeft, .contentRight {
     align-items: center !important;
+    width: 100% !important;
   }
 
-  .contentLeft .slideInner, .contentRight .slideInner {
-    margin-left: auto !important;
-    margin-right: auto !important;
+  .contentLeft .slideInner, .contentRight .slideInner, .slideInner {
+    margin: 0 auto !important;
+    align-items: center !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    z-index: 15;
   }
   
   [dir="rtl"].slideInner, [dir="ltr"].slideInner {
@@ -350,65 +472,251 @@
     text-align: center !important;
   }
 
-  .slideInner { 
-    max-width: 100%;
-    z-index: 15;
+  .eyebrow {
+    font-size: 0.8rem !important;
+    letter-spacing: 0.18em !important;
+    margin-bottom: 0.85rem !important;
+    justify-content: center !important;
+  }
+
+  .eyebrowLine {
+    width: 1.8rem !important;
+    height: 1.5px !important;
   }
 
   .heading { 
-    font-size: 1.65rem; 
-    white-space: pre-line;
-    line-height: 1.25;
+    font-size: 1.65rem !important; 
+    line-height: 1.3 !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    max-width: 330px !important;
   }
 
   [dir="ltr"] .heading {
-    font-size: 1.45rem;
-    line-height: 1.2;
+    font-size: 1.45rem !important;
+    line-height: 1.25 !important;
+    max-width: 310px !important;
   }
 
   .desc {
-    font-size: 0.85rem;
-    margin-top: 0.75rem;
-    max-width: 92%;
-    line-height: 1.5;
+    font-size: 0.9rem !important;
+    margin-top: 0.85rem !important;
+    max-width: 330px !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+    color: var(--muted-foreground, #a1a1aa) !important;
   }
 
   [dir="ltr"] .desc {
-    font-size: 0.8rem;
+    font-size: 0.85rem !important;
+    max-width: 310px !important;
   }
 
   .ctaRow {
-    margin-top: 1.25rem;
-    gap: 0.75rem;
-    justify-content: center;
-    width: 100%;
-    flex-wrap: wrap; 
+    margin-top: 1.25rem !important;
+    gap: 0.75rem !important;
+    justify-content: center !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
   }
 
   .ctaPrimary, .ctaSecondary {
-    padding: 0.7rem 1.25rem;
-    font-size: 0.8rem;
+    padding: 0.75rem 1.4rem !important;
+    font-size: 0.85rem !important;
+    letter-spacing: normal !important;
+    white-space: nowrap !important;
   }
 
-  /* 🎯 تقريب وتكبير الشخصية لملء الفراغ بين الأزرار والسهم */
+  .ctaPrimaryIcon {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
+
+  /* 🎯 إلغاء الفراغ بجعل الـ Mascot يتبع نهاية الأزرار فوراً */
   .mascot, .mascotLeft {
-    width: 68vw !important;
-    max-width: 290px !important;
+    width: clamp(230px, 62vw, 300px) !important;
+    max-width: 300px !important;
+    min-width: 0 !important;
     padding: 0 !important;
     right: auto !important; 
     left: 50% !important;
-    bottom: 12% !important; /* رفع مكان الشخصية لتقليل الفراغ الرأسي */
+    top: 54% !important; /* ملء الفراغ بدقة أسفل الأزرار */
+    bottom: auto !important;
     transform: translateX(-50%) !important; 
-    opacity: 0.95 !important;
+    opacity: 1 !important;
     z-index: 5;
-    pointer-events: none;
-  }
-
-  .pagination, .paginationArabic {
-    display: none !important;
   }
 
   .scrollHint {
-    bottom: 1.5rem;
+    bottom: 1.2rem !important;
+  }
+
+  .scrollIcon {
+    width: 1.3rem !important;
+    height: 1.3rem !important;
+  }
+
+  .scrollText {
+    font-size: 0.68rem !important;
+    letter-spacing: 0.18em !important;
+  }
+}
+/* ──────────────────────────────────────────────
+   🎯 حل مخصص للشاشات الأفقية والقصيرة رأسياً (مثل Nest Hub و Landscape)
+────────────────────────────────────────────── */
+/* ──────────────────────────────────────────────
+   🎯 التوازن المثالي لشاشة Nest Hub (1024×600) والشاشات العريضة القصيرة
+────────────────────────────────────────────── */
+@media (max-height: 680px) and (min-width: 769px) {
+  .shapes,
+  .pagination,
+  .paginationArabic {
+    display: none !important;
+  }
+
+  /* 1. الحاوية: محاذاة لليمين بالعربي وتوسيط رأسي */
+  .content {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    height: 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-top: 4.5rem !important;
+    padding-bottom: 1.5rem !important;
+    padding-right: 5.5rem !important;
+    padding-left: 5.5rem !important;
+  }
+
+  /* 2. كتلة النصوص تشغل النصف الأيمن */
+  .contentLeft,
+  .contentRight {
+    width: 52% !important;
+    max-width: 500px !important;
+    align-items: flex-start !important;
+  }
+
+  .contentLeft .slideInner,
+  .contentRight .slideInner,
+  .slideInner {
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    align-items: flex-start !important;
+    text-align: right !important;
+  }
+
+  [dir="ltr"].slideInner {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  /* البادج */
+  .eyebrow {
+    font-size: 0.85rem !important;
+    letter-spacing: 0.2em !important;
+    margin-bottom: 0.5rem !important;
+    justify-content: flex-start !important;
+  }
+
+  .eyebrowLine {
+    width: 2rem !important;
+    height: 2px !important;
+  }
+
+  /* العنوان عريض ومريح للعين على سطرين */
+  .heading {
+    font-size: 2.1rem !important;
+    line-height: 1.3 !important;
+    font-weight: 800 !important;
+    text-align: right !important;
+    margin: 0 !important;
+    white-space: normal !important;
+  }
+
+  [dir="ltr"] .heading {
+    font-size: 1.85rem !important;
+    line-height: 1.25 !important;
+    text-align: left !important;
+  }
+
+  /* الوصف مفرود بوضوح */
+  .desc {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin: 0.6rem 0 0 !important;
+    text-align: right !important;
+    color: rgba(255, 255, 255, 0.75) !important;
+    max-width: 460px !important;
+    white-space: normal !important;
+  }
+
+  [dir="ltr"] .desc {
+    text-align: left !important;
+  }
+
+  /* الأزرار */
+  .ctaRow {
+    margin-top: 1.25rem !important;
+    gap: 1rem !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+  }
+
+  .ctaPrimary,
+  .ctaSecondary {
+    padding: 0.8rem 1.25rem !important;
+    font-size: 0.77rem !important;
+  }
+
+  /* 3. 🎯 تثبيت المجسم في النصف الأيسر بالكامل (دون تداخل مع السلايدات) */
+  .mascot,
+  .mascotLeft {
+    position: absolute !important;
+    width: 25vw !important;
+    max-width: 240px !important;
+    min-width: 170px !important;
+    left: 8% !important;
+    right: auto !important;
+    top: 52% !important;
+    bottom: auto !important;
+    transform: translateY(-42%) !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    z-index: 5 !important;
+  }
+
+  /* في اللغة الإنجليزية (LTR) يتم عكس الأماكن تلقائياً */
+  [dir="ltr"] .content {
+    align-items: flex-start !important;
+  }
+
+  [dir="ltr"] .contentLeft,
+  [dir="ltr"] .contentRight {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  [dir="ltr"] .mascot,
+  [dir="ltr"] .mascotLeft {
+    left: auto !important;
+    right: 8% !important;
+  }
+
+  .scrollHint {
+    bottom: 0.6rem !important;
+  }
+
+  .scrollIcon {
+    width: 1.1rem !important;
+    height: 1.1rem !important;
+  }
+
+  .scrollText {
+    font-size: 0.6rem !important;
+    margin-top: 0.2rem !important;
   }
 }
