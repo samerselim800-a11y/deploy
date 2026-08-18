@@ -8,7 +8,6 @@
   overflow: visible;
 }
 
-/* دمج مسحة خفيفة من الأزرق المطور في هالة التوهج الخلفية الكبرى للقسم */
 .section::before {
   content: "";
   position: absolute;
@@ -28,62 +27,59 @@
   overflow: visible;
 }
 
-/* ─── Header ────────────────────────────────────────────────── */
+/* ─── Header (توسيط كامل) ────────────────────────────────── */
 .header {
   margin-bottom: 64px;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .titleSection {
-  display: flex;
-  justify-content: start;
-  align-items: start;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: fit-content;
   gap: 0.7rem;
-  padding: 1rem 3rem;
+  padding: 0.9rem 2.8rem;
   border-radius: 999px;
-
   background: transparent;
   border: 2px solid color-mix(in srgb, var(--primary) 35%, transparent);
   color: var(--primary) !important;
-
   font-size: 1rem;
   font-weight: 500;
-  margin-bottom: 23px;
-  margin-left: 0;
+  margin: 0 auto 20px;
   letter-spacing: 0.02em;
   backdrop-filter: blur(10px);
-  transition:
-    background-color 0.3s ease,
-    border-color 0.3s ease,
-
-    box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .titleSection:hover {
-   background-color: rgba(255, 193, 7, 0.08) !important;
+  background-color: rgba(255, 193, 7, 0.08) !important;
   border-color: var(--primary) !important;
   box-shadow: var(--shadow-glow);
 }
+
 .heading {
   font-family: var(--font-display);
-  font-size: clamp(36px, 5vw, 52px);
+  font-size: clamp(32px, 4.2vw, 48px);
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   color: var(--foreground);
   margin: 0 0 16px;
-  line-height: 1.1;
+  line-height: 1.2;
+  text-align: center;
 }
 
 .subheading {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.7;
   color: var(--muted-foreground);
-  max-width: 440px;
-  margin: 0;
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* ─── Grid ──────────────────────────────────────────────────── */
@@ -157,9 +153,8 @@
   border-radius: 14px;
   padding: 1px;
   background: var(--secondary) !important; 
- -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); /* 👈 أضف هذا السطر هنا */
-  
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
@@ -185,30 +180,25 @@
   justify-content: center;
 }
 
+:global([dir="rtl"]) .cardText {
+  border-right: none;
+  border-left: 1px solid var(--border);
+}
+
 .companyHeader {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 10px;
 }
 
 .companyName {
   font-family: var(--font-display);
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--foreground);
   margin: 0;
   letter-spacing: -0.02em;
-}
-
-.logo {
-  width: 46px;
-  height: 46px;
-  object-fit: contain;
-  border-radius: 8px;
-  background: oklch(1 0 0 / 0.08);
-  padding: 5px;
-  border: 1px solid var(--border);
 }
 
 .pill {
@@ -221,6 +211,7 @@
   border-radius: 999px;
   margin-bottom: 12px;
   letter-spacing: 0.02em;
+  width: fit-content;
 }
 
 .desc {
@@ -255,9 +246,19 @@
   border-right: 1px solid var(--border);
 }
 
+:global([dir="rtl"]) .compBefore {
+  border-right: none;
+  border-left: 1px solid var(--border);
+}
+
 .compAfter {
   background: oklch(0.78 0.14 70 / 0.08);
   border-left: 1px solid oklch(0.78 0.14 70 / 0.15);
+}
+
+:global([dir="rtl"]) .compAfter {
+  border-left: none;
+  border-right: 1px solid oklch(0.78 0.14 70 / 0.15);
 }
 
 .compLabel {
@@ -285,20 +286,24 @@
 .arrow {
   width: 44px;
   height: 44px;
-  background: var(--secondary) !important; /* تحويل السهم الدائري للون الأزرق */
+  background: var(--secondary) !important;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff !important;      /* أيقونة السهم بالداخل بيضاء صافية متباينة */
+  color: #ffffff !important;
   font-size: 15px;
   flex-shrink: 0;
   align-self: center;
   margin: 0 -10px;
   position: relative;
   z-index: 2;
-  box-shadow: 0 0 18px rgba(41, 95, 153, 0.6); /* توهج أزرق ناصع وثابت */
+  box-shadow: 0 0 18px rgba(41, 95, 153, 0.6);
   animation: pulse 2.5s ease-in-out infinite;
+}
+
+:global([dir="rtl"]) .arrow svg {
+  transform: scaleX(-1);
 }
 
 @keyframes pulse {
@@ -348,7 +353,6 @@
   gap: 5px;
 }
 
-/* تلوين حواف صناديق الإحصائيات الفردية بالأزرق المطور عند الـ Hover */
 .metric:hover {
   background: oklch(1 0 0 / 0.09);
   transform: translateY(-2px);
@@ -382,7 +386,7 @@
 @media (max-width: 768px) {
   .section { padding: 64px 0; }
   .container { padding: 0 20px; }
-  .heading { font-size: 32px; }
+  .heading { font-size: 30px; }
   .subheading { max-width: 100%; }
   .header { margin-bottom: 40px; }
   .grid { flex-direction: column; gap: 20px; }
@@ -394,6 +398,11 @@
     border-bottom: 1px solid var(--border);
     padding: 20px;
   }
+  
+  :global([dir="rtl"]) .cardText {
+    border-left: none;
+  }
+
   .cardMetrics {
     width: 100%;
     display: grid;

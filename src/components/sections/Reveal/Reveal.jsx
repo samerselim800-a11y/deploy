@@ -23,12 +23,16 @@ export function Reveal({ children, delay = 0, className = "" }) {
 
 export function SectionHeading({ eyebrow, title, desc }) {
   return (
-    <Reveal className="text-center mx-auto max-w-760">
-      <p className={`d-inline-flex align-items-center gap-3 text-uppercase ${styles.eyebrow}`}>
-        <span className={styles.line} /> {eyebrow} <span className={styles.line} />
+    <Reveal className={styles.headingWrapper}>
+      <p className={styles.eyebrow}>
+        <span className={styles.line} />
+        <span className={styles.eyebrowText}>{eyebrow}</span>
+        <span className={styles.line} />
       </p>
-      <h2 className={`display-4 fw-normal ${styles.fontDisplay}`}>{title}</h2>
-      {desc && <p className="mt-3 fs-5 text-muted">{desc}</p>}
+
+      <h2 className={styles.fontDisplay}>{title}</h2>
+
+      {desc && <p className={styles.descriptionText}>{desc}</p>}
     </Reveal>
   );
 }

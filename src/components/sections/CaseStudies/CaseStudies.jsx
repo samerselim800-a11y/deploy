@@ -1,83 +1,72 @@
 import { Trophy, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import OptimizedVideo from "../../../assets/caseS.webp";
 import styles from "./CaseStudies.module.css";
-import logo1 from "@/assets/loooo1.webp";
-import logo2 from "@/assets/loooo2.webp";
-import logo3 from "@/assets/loooo3.webp";
-import logo4 from "@/assets/loooo4.webp";
-import logo5 from "@/assets/loooo5.webp";
 
 const CASES = [
   {
     id: 1,
-    company: "INTEGRATED GROWTH SYSTEM",
-    logo: logo1,
+    company: "Konoz Marshall",
     description:
-      "We engineered an integrated acquisition funnel across various commercial sectors, driving massive volume and capturing extensive business growth data.",
-    before: { label: "Ad Optimization", value: "Data-Driven Funnels" },
-    after: { label: "Trackable Sales", value: "13,700,000+ SAR" },
+      "We built a complete marketing ecosystem that strengthened brand trust and turned interest into real sales opportunities in the furniture and finishing sector.",
+    before: { label: "Performance Improvement", value: "A strategy to turn interest into sales" },
+    after: { label: "Sales Achieved", value: "AED 57,000+" },
     metrics: [
-      { value: "12x – 16x", label: "Avg. ROAS Uplift" },
-      { value: "Multi-Sector", label: "System Scalability" },
-      { value: "High-Intent", label: "Lead Quality" },
+      { value: "AED 15,000", label: "Total Ad Spend" },
+      { value: "3.8X", label: "Return on Ad Spend" },
+      { value: "Qualified Sales Opportunities", label: "Lead Quality" },
     ],
   },
   {
     id: 2,
-    company: "NIBRAS 360",
-    logo: logo2,
+    company: "Saudi Contracting Company",
     description:
-      "Developed a precise visual identity and structured a cohesive brand positioning statement, transforming their market presence into a distinct communication system.",
-    before: { label: "Brand Presence", value: "Fragmented Identity" },
-    after: { label: "Visual System", value: "100% Cohesive Guide" },
+      "We built a complete lead generation ecosystem for a contracting company, establishing trust and delivering results within less than 10 days of launching the ad campaign.",
+    before: { label: "Performance Improvement", value: "A qualified lead generation ecosystem" },
+    after: { label: "Contract Value", value: "SAR 90,000+" },
     metrics: [
-      { value: "Unified", label: "Tone of Voice" },
-      { value: "Premium", label: "Market Positioning" },
-      { value: "Structured", label: "Core Messaging" },
+      { value: "SAR 2,600", label: "Total Ad Spend" },
+      { value: "34X+", label: "Return on Ad Spend" },
+      { value: "20+", label: "Qualified Sales Opportunities" },
     ],
   },
   {
     id: 3,
-    company: "BELT & ROAD TRADING",
-    logo: logo3,
+    company: "Aqua",
     description:
-      "Transformed raw business metrics and data into a highly persuasive 12-page company profile, turning their past delivered work into an active corporate sales tool.",
-    before: { label: "Corporate Presence", value: "Generic Description" },
-    after: { label: "Company Profile", value: "12-Page Sales Tool" },
+      "We rebuilt the marketing strategy and established a professional pricing system, which contributed to doubling monthly sales within a short period.",
+    before: { label: "Campaign Testing", value: "Sustainable growth built on strategy" },
+    after: { label: "Monthly Sales", value: "SAR 380,000" },
     metrics: [
-      { value: "Professional", label: "Service Copywriting" },
-      { value: "Targeted", label: "B2B Credibility" },
-      { value: "Print & Digital", label: "Ready Files" },
+      { value: "120K → 380K", label: "Monthly Sales Growth" },
+      { value: "+216%", label: "Sales Growth Rate" },
+      { value: "90 Days", label: "Time to Achieve Growth" },
     ],
   },
   {
     id: 4,
-    company: "PANDA HOST",
-    logo: logo4,
+    company: "KINGSTR.EG",
     description:
-      "Re-engineered their advertising funnels on Meta, transforming traditional random budget spending into a continuous digital learning and optimization system.",
-    before: { label: "Campaign Testing", value: "Random Ad Spending" },
-    after: { label: "Funnel Conversion", value: "Continuous Learning" },
+      "We helped launch an entirely new brand from the ground up, starting with feasibility studies and pricing, through building the identity and strategy, all the way to launching the brand and achieving its first organic sales.",
+    before: { label: "Brand Launch Ecosystem", value: "From an idea..to organic sales" },
+    after: { label: "Sales Achieved", value: "EGP 30,000" },
     metrics: [
-      { value: "Optimized", label: "Cost Per Lead" },
-      { value: "Full-Funnel", label: "Meta Ad Setup" },
-      { value: "Actionable", label: "Performance Data" },
+      { value: "100%", label: "Launched From Scratch" },
+      { value: "Premium", label: "Sales Without Ad Spend" },
+      { value: "EGP 30,000", label: "Sales Within One Month" },
     ],
   },
   {
     id: 5,
-    company: "AL ASWAR AL SAMEDA CO.",
-    logo: logo5,
+    company: "Restaurant Performance",
     description:
-      "Structured a high-end corporate identity and comprehensive profiling for a premium 7-branch fast-food chain and large infrastructure projects in Tabuk.",
-    before: { label: "Visual System", value: "Standard Outlines" },
-    after: { label: "Corporate Trust", value: "7-Branch Scale" },
+      "We rebuilt the restaurant's marketing ecosystem, connecting content, ads, and offers to achieve clear sales growth at the lowest possible cost.",
+    before: { label: "Performance Improvement", value: "Increasing sales and improving efficiency" },
+    after: { label: "Sales Achieved", value: "EGP 27,000+" },
     metrics: [
-      { value: "Tabuk Sector", label: "Infrastructure" },
-      { value: "Premium", label: "B2B Positioning" },
-      { value: "100% Cohesive", label: "Brand Presence" },
+      { value: "EGP 1,900", label: "Total Ad Spend" },
+      { value: "14.2X", label: "Return on Ad Spend" },
+      { value: "67", label: "Conversations with Potential Customers" },
     ],
   },
 ];
@@ -90,12 +79,12 @@ export default function CaseStudies({ translationPrefix }) {
   const cases = CASES.map((caseItem, index) => ({
     ...caseItem,
     ...(translationPrefix ? translatedCases[index] : {}),
-    logo: caseItem.logo,
   }));
 
   return (
     <section id="case-studies" className={styles.section}>
       <div className={styles.container}>
+        {/* Header متمركز بالكامل في المنتصف */}
         <div className={styles.header}>
           <div className={styles.titleSection}>
             <i>
@@ -107,11 +96,13 @@ export default function CaseStudies({ translationPrefix }) {
                 : "Case Studies"}
             </span>
           </div>
+
           <h2 className={styles.heading}>
             {translationPrefix
               ? t(`${translationPrefix}.title`)
               : "Real Results, Real Success"}
           </h2>
+
           <p className={styles.subheading}>
             {translationPrefix
               ? t(`${translationPrefix}.description`)
@@ -120,9 +111,9 @@ export default function CaseStudies({ translationPrefix }) {
         </div>
 
         <div className={styles.grid}>
+          {/* Video / Sticky Image Column */}
           <div className={styles.videoCol}>
             <div className={styles.videoWrap}>
-              {/* تم إصلاح الخطأ وإضافة قوس الفتح هنا < */}
               <img
                 src={OptimizedVideo}
                 alt="Case studies overview"
@@ -132,17 +123,13 @@ export default function CaseStudies({ translationPrefix }) {
             </div>
           </div>
 
+          {/* Cards Column */}
           <div className={styles.cardsCol}>
             {cases.map((c) => (
               <article key={c.id} className={styles.card}>
                 <div className={styles.cardText}>
                   <div className={styles.companyHeader}>
                     <h3 className={styles.companyName}>{c.company}</h3>
-                    <img
-                      src={c.logo}
-                      alt={`${c.company} logo`}
-                      className={styles.logo}
-                    />
                   </div>
 
                   <span className={styles.pill}>
@@ -180,45 +167,6 @@ export default function CaseStudies({ translationPrefix }) {
                 </div>
               </article>
             ))}
-
-            <div
-              style={{
-                marginTop: "2.5rem",
-                display: "flex",
-                justifyContent: "flex-start",
-              }}
-            >
-              <Link
-                to="/portfolio"
-                className="btn rounded-pill px-4 py-2 text-uppercase fw-semibold"
-                style={{
-                  letterSpacing: "0.08em",
-                  fontSize: "0.85rem",
-                  color: "#ffffff",
-                  background: "#0081d0",
-                  border: "1px solid rgba(255, 255, 255, 0.1)",
-                  boxShadow: "0 4px 15px rgba(41, 95, 153, 0.2)",
-                  transition: "all 0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "#1a96e6";
-                  e.currentTarget.style.transform = "translateY(-2px)";
-                  e.currentTarget.style.boxShadow =
-                    "0 8px 20px rgba(41, 95, 153, 0.4)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background =
-                    "#0081d0"; /* تم تعديل اللون ليرجع للأساسي عند خروج الماوس */
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow =
-                    "0 4px 15px rgba(41, 95, 153, 0.2)";
-                }}
-              >
-                {translationPrefix
-                  ? t(`${translationPrefix}.button`)
-                  : "See All Work"}
-              </Link>
-            </div>
           </div>
         </div>
       </div>

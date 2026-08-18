@@ -1,20 +1,134 @@
+/* Reveal.module.css */
+
+.headingWrapper {
+  max-width: 760px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* 🎯 تنسيق الـ Eyebrow مع اللون الأساسي الذهبي */
 .eyebrow {
-  font-size: 0.75rem;
-  letter-spacing: 0.3em;
-  color: var(--bs-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--primary, #f59e0b) !important;
+  margin: 0 auto 1rem auto;
+  text-align: center;
+}
+
+.eyebrowText {
+  display: inline-block;
+  line-height: 1.4;
+  text-align: center;
 }
 
 .line {
-  height: 1px;
-  width: 32px;
-  background-color: var(--bs-primary);
+  height: 1.5px;
+  width: 28px;
+  background-color: var(--primary, #f59e0b) !important;
+  flex-shrink: 0;
 }
 
+/* العنوان الرئيسي */
 .fontDisplay {
   font-family: var(--font-display, serif);
-  line-height: 1.05;
+  line-height: 1.15;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  color: var(--foreground, #ffffff);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+  text-align: center;
+  width: 100%;
 }
 
-.max-w-760 {
-  max-width: 760px;
+:global([dir="ltr"]) .fontDisplay,
+:global([lang="en"]) .fontDisplay {
+  font-size: clamp(1.75rem, 3.4vw, 2.75rem);
+  line-height: 1.15;
+}
+
+/* الوصف */
+.descriptionText {
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--muted-foreground, rgba(255, 255, 255, 0.7));
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* ──────────────────────────────────────────────
+   RESPONSIVE (توسيط كامل في الموبايل)
+────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .headingWrapper {
+    padding: 0 1rem;
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  .eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    gap: 8px;
+    margin-bottom: 0.75rem;
+    justify-content: center !important;
+    width: 100%;
+  }
+
+  .line {
+    width: 16px;
+  }
+
+  .fontDisplay {
+    font-size: 1.55rem;
+    line-height: 1.25;
+    text-align: center !important;
+  }
+
+  :global([dir="ltr"]) .fontDisplay,
+  :global([lang="en"]) .fontDisplay {
+    font-size: 1.35rem;
+    line-height: 1.2;
+  }
+
+  .descriptionText {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .fontDisplay {
+    font-size: 1.4rem;
+  }
+
+  :global([dir="ltr"]) .fontDisplay,
+  :global([lang="en"]) .fontDisplay {
+    font-size: 1.25rem;
+  }
+
+  .eyebrow {
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+  }
+
+  .line {
+    width: 12px;
+  }
 }

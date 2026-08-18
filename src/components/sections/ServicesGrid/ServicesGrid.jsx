@@ -34,7 +34,7 @@ export function ServicesGrid({ translationPrefix }) {
               ? t(`${translationPrefix}.description`)
               : "We turn marketing into measurable growth through data-driven strategies and optimized funnels."}
           </p>
-          <h4 className={styles.cardsIntro}>
+          <h4 className={styles.cardsIntro} dir="auto">
             {translationPrefix
               ? t(`${translationPrefix}.introCards`)
               : "That's why we built a business model that brings together:"}

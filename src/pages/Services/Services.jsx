@@ -33,12 +33,11 @@ function ServicesPage() {
                 <p className={`mb-3 text-uppercase ${styles.eyebrow}`}>
                   {t("servicesPage.hero.badge")}
                 </p>
-                <h1 className={`display-1 title .main fw-normal mb-0 ${styles.fontDisplay}`}>
+                <h1 className={`fw-normal mb-0 ${styles.fontDisplay}`}>
                   {t("servicesPage.hero.title")}
                   <br />
-                  <span className="titleAccent">
-
-                  {t("servicesPage.hero.titleSecondLine")}
+                  <span className={styles.titleAccent}>
+                    {t("servicesPage.hero.titleSecondLine")}
                   </span>
                 </h1>
                 <p className={`mt-4 text-muted fs-5 mb-0 ${styles.description}`}>
@@ -69,7 +68,7 @@ function ServicesPage() {
       <WhyChooseUs translationPrefix="servicesPage.whyChooseUs" />
 
       {/* Stats / Social Proof */}
-       <div dir="ltr">
+      <div dir="ltr">
         <StatsCounter translationPrefix="home.stats" />
       </div>
 
@@ -77,11 +76,9 @@ function ServicesPage() {
       <ProcessSection translationPrefix="servicesPage.process" />
 
       {/* Client Testimonials */}
-       <div dir="ltr">
-             <Testimonials translationPrefix="home.testimonials" />
-           </div>
-
-      {/* FAQ */}
+      <div dir="ltr">
+        <Testimonials translationPrefix="home.testimonials" />
+      </div>
 
       {/* Call To Action */}
       <CTABanner translationPrefix="aboutPage.cta" />

@@ -1,6 +1,6 @@
-.footer {
- 
+/* Footer.module.css */
 
+.footer {
   background: #1a1204;
   color: #e8d5b0;
   padding: 60px 0 0;
@@ -16,34 +16,54 @@
   transform: translateX(-50%);
   width: 600px;
   height: 200px;
-  background: radial-gradient(ellipse, rgba(255,196,61,.10) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(255, 196, 61, 0.1) 0%, transparent 70%);
   pointer-events: none;
 }
 
-/* التعديل الجديد للوجو */
+/* اللوجو */
 .logo {
-  height: 56px;       /* حجم أكبر ومناسب للـ Layout */
-  width: auto;        /* الحفاظ على أبعاد اللوجو الأصلي بدون تشويه */
+  height: 52px;
+  width: auto;
   display: block;
-  margin-left: -4px;  /* ضبط المحاذاة اليسارية بدقة مع النصوص */
 }
 
+:global([dir="ltr"]) .logo {
+  margin-left: -4px;
+}
+
+:global([dir="rtl"]) .logo {
+  margin-right: -4px;
+}
+
+/* العنوان العربي */
 .headline {
-  font-size: 2.4rem;
+  font-family: var(--font-display, serif);
+  font-size: 2.1rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.3;
   color: var(--primary);
+  margin-bottom: 1.5rem;
 }
 
 .headline span {
   color: var(--secondary) !important;
 }
 
+/* 🎯 ضبط العنوان الإنجليزي ليتناسق في الطول والمظهر مع العربي */
+:global([dir="ltr"]) .headline,
+:global([lang="en"]) .headline {
+  font-size: 1.55rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  max-width: 420px;
+}
+
+/* زر البدء */
 .btnStart {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--secondary);  
+  background: var(--secondary);
   color: #fafafa;
   padding: 12px 24px;
   border-radius: 50px;
@@ -60,12 +80,14 @@
   color: #ffffff;
 }
 
+/* القوائم والروابط */
 .colLabel {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #7a6a4a;
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .links {
@@ -75,7 +97,7 @@
 }
 
 .links li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 
 .links a {
@@ -99,7 +121,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background:var(--primary) !important;
+  background: var(--primary) !important;
   color: #ffffff;
   flex-shrink: 0;
   transition: background 0.25s ease;
@@ -107,11 +129,6 @@
 
 .links a:hover .iconBox {
   background: #f0a646;
-}
-
-.muted {
-  color: #5a4e38;
-  font-size: 0.85rem;
 }
 
 .socialLink {
@@ -129,4 +146,33 @@
 .bottomText {
   font-size: 0.75rem;
   color: #5a4e38;
+}
+
+/* ─────────────────────────
+   Responsive
+───────────────────────── */
+@media (max-width: 991.98px) {
+  .headline {
+    font-size: 1.8rem;
+  }
+
+  :global([dir="ltr"]) .headline,
+  :global([lang="en"]) .headline {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px 0 0;
+  }
+
+  .headline {
+    font-size: 1.6rem;
+  }
+
+  :global([dir="ltr"]) .headline,
+  :global([lang="en"]) .headline {
+    font-size: 1.3rem;
+  }
 }

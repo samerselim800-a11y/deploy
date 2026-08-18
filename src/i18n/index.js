@@ -19,4 +19,18 @@ i18n
     },
   });
 
+const updatePageDirection = (lng) => {
+  const currentLang = lng || i18n.language || "ar";
+  const dir = currentLang.startsWith("ar") ? "rtl" : "ltr";
+  
+  document.documentElement.setAttribute("dir", dir);
+  document.documentElement.setAttribute("lang", currentLang);
+};
+
+updatePageDirection(i18n.language);
+
+i18n.on("languageChanged", (lng) => {
+  updatePageDirection(lng);
+});
+
 export default i18n;

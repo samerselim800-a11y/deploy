@@ -33,15 +33,11 @@ function ContactPage() {
                 <p className={`mb-3 text-uppercase ${styles.eyebrow}`}>
                   {t("contactPage.hero.badge")}
                 </p>
-                <h1 className={`title display-1 fw-normal mb-0 ${styles.fontDisplay } `} 
-                style={{fontSize:"55px",lineHeight:1.3}}
-                >
+                <h1 className={`fw-normal mb-0 ${styles.fontDisplay}`}>
                   {t("contactPage.hero.title")}
                   <br />
-                  <span className="titleAccent" 
-                  style={{fontSize:"54px"}}>
-
-                  {t("contactPage.hero.titleSecondLine")}
+                  <span className={styles.titleAccent}>
+                    {t("contactPage.hero.titleSecondLine")}
                   </span>
                 </h1>
                 <p className={`mt-4 text-muted fs-5 mb-0 ${styles.description}`}>
@@ -64,10 +60,10 @@ function ContactPage() {
           </div>
         </div>
       </section>
-<div dir="ltr">
 
-      <ContactSection sent={sent} onSubmit={onSubmit} />
-</div>
+      <div dir="ltr">
+        <ContactSection sent={sent} onSubmit={onSubmit} />
+      </div>
     </>
   );
 }

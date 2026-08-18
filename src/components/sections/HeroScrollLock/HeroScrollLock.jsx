@@ -18,14 +18,9 @@ export function HeroScrollLock() {
 
   const { t, i18n } = useTranslation();
   
-  // التحقق من اللغة
   const isArabic = i18n.language === "ar";
-  
-  // تحديد مكان المحتوى والشخصية بدقة (Zig-Zag)
   const isContentRight = isArabic ? active === 0 : active === 1;
   const isMascotLeft = isArabic ? active === 0 : active === 1;
-  
-  // اختيار الكلاس المناسب للاتجاه
   const contentPositionClass = isContentRight ? styles.contentRight : styles.contentLeft;
 
   const lastTrigger = useRef(0);
@@ -109,7 +104,7 @@ export function HeroScrollLock() {
     <section
       ref={sectionRef}
       className={styles.section}
-      dir="ltr" /* إجبار السكشن العام ليكون LTR لحماية الأنيميشن */
+      dir="ltr"
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
       onTouchMove={onTouchMove}
@@ -144,7 +139,7 @@ export function HeroScrollLock() {
           alt="The Ego Studio mascot"
           initial={{
             opacity: 0,
-            x: isMascotLeft ? -150 : 150, /* الدخول من الاتجاه الصحيح */
+            x: isMascotLeft ? -150 : 150,
           }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
           exit={{
@@ -164,7 +159,7 @@ export function HeroScrollLock() {
             key={slide.id}
             initial={{
               opacity: 0,
-              x: isContentRight ? 120 : -120, /* الدخول من الاتجاه الصحيح */
+              x: isContentRight ? 120 : -120,
             }}
             animate={{ opacity: 1, x: 0 }}
             exit={{
@@ -173,7 +168,7 @@ export function HeroScrollLock() {
             }}
             transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
             className={styles.slideInner}
-            dir={isArabic ? "rtl" : "ltr"} /* نُعطي النصوص الـ dir المناسب لترتيبها الداخلي */
+            dir={isArabic ? "rtl" : "ltr"}
           >
             <div className={styles.eyebrow}>
               <span className={styles.eyebrowLine} />

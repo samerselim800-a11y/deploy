@@ -1,4 +1,5 @@
-/* قم بإزالة تنسيق body السابق واستبداله بهذا الكلاس */
+/* Portfolio.module.css */
+
 .portfolioPageWrapper {
   width: 100%;
   max-width: 100vw;
@@ -25,14 +26,41 @@
   text-transform: uppercase;
 }
 
+/* العنوان العربي */
 .fontDisplay {
   font-family: var(--font-display, serif);
-  line-height: 1.1;
+  line-height: 1.25;
+  font-size: clamp(32px, 4vw, 52px);
+  color: var(--primary, #f59e0b) !important;
+  letter-spacing: -0.01em;
 }
 
+.titleAccent {
+  color: var(--secondary, #0081d0) !important;
+}
+
+/* 🎯 ضبط العنوان الإنجليزي بنفس أحجام وتناسق صفحة Services */
+:global([dir="ltr"]) .fontDisplay,
+:global([lang="en"]) .fontDisplay {
+  font-size: clamp(24px, 3vw, 40px) !important;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  max-width: 520px;
+}
+
+/* الوصف العربي */
 .description {
   max-width: 520px;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* الوصف الإنجليزي */
+:global([dir="ltr"]) .description,
+:global([lang="en"]) .description {
+  font-size: 0.92rem !important;
   line-height: 1.6;
+  max-width: 480px;
 }
 
 /* IMAGE WRAPPER */
@@ -57,7 +85,7 @@
   box-shadow: 0 40px 100px rgba(255, 166, 72, 0.08), 0 30px 80px rgba(0, 0, 0, 0.6);
 }
 
-/* glow overlay */
+/* GLOW OVERLAY */
 .glow {
   position: absolute;
   inset: 0;
@@ -99,8 +127,22 @@
     padding: 8rem 0 3rem;
   }
 
+  .fontDisplay {
+    font-size: 26px;
+  }
+
+  :global([dir="ltr"]) .fontDisplay,
+  :global([lang="en"]) .fontDisplay {
+    font-size: 22px !important;
+  }
+
   .description {
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+
+  :global([dir="ltr"]) .description,
+  :global([lang="en"]) .description {
+    font-size: 0.85rem !important;
   }
 
   .imageWrapper {

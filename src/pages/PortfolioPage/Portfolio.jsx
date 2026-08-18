@@ -21,7 +21,6 @@ function PortfolioPage() {
   }, [t]);
 
   return (
-    /* تغليف كل محتوى الصفحة داخل wrapper خاص */
     <div className={styles.portfolioPageWrapper}>
       {/* Hero Section */}
       <section
@@ -34,18 +33,14 @@ function PortfolioPage() {
                 <p className={`mb-3 text-uppercase ${styles.eyebrow}`}>
                   {t("portfolioPage.hero.badge")}
                 </p>
-                <h1
-                  className={`display-1 title fw-normal mb-0 ${styles.fontDisplay}`}
-                >
+                <h1 className={`fw-normal mb-0 ${styles.fontDisplay}`}>
                   {t("portfolioPage.hero.title")}
                   <br />
-                  <span className="titleAccent">
+                  <span className={styles.titleAccent}>
                     {t("portfolioPage.hero.titleSecondLine")}
                   </span>
                 </h1>
-                <p
-                  className={`mt-4 text-muted fs-5 mb-0 ${styles.description}`}
-                >
+                <p className={`mt-4 text-muted fs-5 mb-0 ${styles.description}`}>
                   {t("portfolioPage.hero.description")}
                 </p>
               </Reveal>

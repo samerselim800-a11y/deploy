@@ -1,20 +1,11 @@
-/* ──────────────────────────────────────────────
-   AboutUS.module.css
-   نفس ألوان ومتغيرات الثيم الأصلية بدون أي تغيير.
-   التعديلات هنا كلها في المحاذاة والمسافات فقط:
-   1) الـ badge بقى محاذي لبداية النص (مش عايم في النص)
-   2) الفقرة بقت start بدل justify (عشان العربي ميبقاش متباعد بشكل غريب)
-   3) شيلنا الإزاحة العشوائية (left: -8%) اللي كانت بتخلي الصورة
-      حاسة إنها طايرة مش متمركزة جوه عمودها
-   ────────────────────────────────────────────── */
+/* AboutUS.module.css */
 
 /* ── Layout ── */
-
 .section {
   position: relative;
   overflow: hidden;
   background: var(--background);
-  padding: 6rem 0 5rem;
+  padding: clamp(4rem, 8vw, 6rem) 0;
 }
 
 .glow {
@@ -25,14 +16,12 @@
   width: 700px;
   height: 700px;
   border-radius: 50%;
-
   background: radial-gradient(
     circle,
     rgba(255, 166, 72, 0.25),
     rgba(255, 193, 7, 0.10),
     transparent 70%
   );
-
   filter: blur(70px);
   animation: glowPulse 7s ease-in-out infinite;
   pointer-events: none;
@@ -50,26 +39,22 @@
   position: absolute;
   inset: -30%;
   pointer-events: none;
-
   background: radial-gradient(circle at 25% 30%, rgba(255, 166, 72, 0.18), transparent 45%),
               radial-gradient(circle at 70% 60%, rgba(0, 129, 208, 0.16), transparent 50%),
               radial-gradient(circle at 50% 90%, rgba(255, 193, 7, 0.08), transparent 55%);
-
   filter: blur(90px);
   opacity: 0.9;
-
   animation: auroraMove 14s ease-in-out infinite alternate;
 }
 
 .container {
   position: relative;
   z-index: 1;
-  max-width: 1200px;
+  width: min(1200px, 92%);
   margin: 0 auto;
   padding: 0;
   text-align: center;
 }
-
 
 .badge {
   display: inline-flex;
@@ -77,25 +62,22 @@
   justify-content: center;
   width: fit-content;
   gap: 0.7rem;
-  padding: 1rem 3rem;
+  padding: 0.85rem 2.5rem;
   border-radius: 999px;
-
   background: transparent;
   border: 2px solid color-mix(in srgb, var(--primary) 35%, transparent);
   color: var(--primary) !important;
-
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-
-  margin: 0 auto 1.75rem; /* هنا التعديل */
-  
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin: 0 auto 2.5rem;
   backdrop-filter: blur(10px);
   transition:
     background-color 0.3s ease,
     border-color 0.3s ease,
     box-shadow 0.3s ease;
 }
+
 .badge:hover {
   background-color: rgba(255, 193, 7, 0.08) !important;
   border-color: var(--primary) !important;
@@ -103,82 +85,73 @@
 }
 
 .badgeIcon {
-  size: 2.2rem;
   color: var(--primary);
 }
 
 /* ── Content grid ── */
 .contentGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 3rem;
   align-items: center;
-}
-
-@media (max-width: 768px) {
-  .contentGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .rightCol {
-    order: -1;
-  }
 }
 
 /* ── Left column ── */
 .leftCol {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
-  gap: 1.4rem;
-  font-family: 'Montserrat', sans-serif;
+  gap: 1.5rem;
+  text-align: start;
 }
 
+:global([dir="rtl"]) .leftCol {
+  align-items: flex-start;
+  text-align: right;
+}
+
+/* العنوان العربي الافتراضي */
 .heading {
-  font-size: 55px;
+  font-size: clamp(32px, 3.8vw, 46px);
   font-weight: 800;
-  line-height: 1.2;
-  text-transform: uppercase;
+  line-height: 1.25;
   color: var(--primary);
   margin: 0;
-  letter-spacing: 0.05em;
-  text-align: start;
-
-
+  letter-spacing: -0.01em;
 }
 
 .headingAccent {
-  background: var(--secondary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-display: flex;
-font-size: 55px;
-  text-align: start;
+  color: var(--secondary) !important;
+  display: inline-block;
+  font-size: inherit;
 }
 
-/* الفقرة: start بدل justify، عشان النص ميبقاش فيه فراغات غريبة بين
-   الكلمات (المشكلة دي بتبان بشكل واضح جدًا في العربي). */
+/* ضبط العنوان باللغة الإنجليزية في الديسك توب */
+:global([dir="ltr"]) .heading,
+:global([lang="en"]) .heading {
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  max-width: 500px;
+}
+
+/* الفقرة العربية */
 .body {
-  font-size: 0.95rem;
-  line-height: 1.75;
-  color: #fafafa !important;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #e5e7eb !important;
   font-weight: 400;
   max-width: 520px;
   margin: 0;
-  text-transform: none;
-  letter-spacing: 0.02em;
-  text-align: start;
 }
 
-/* النص الإنجليزي بطبعه بياخد كلمات ومساحة أكتر من العربي لنفس المعنى.
-   بنصغّر شوية هنا (حجم الخط + تباعد الأسطر) عشان الفقرتين يتقاربوا في
-   الطول من غير ما نلمس أي لون أو نضطر نختصر النص أكتر من كده. */
-.body:lang(en) {
-  font-size: 0.88rem;
+/* ضبط الفقرة الإنجليزية */
+:global([dir="ltr"]) .body,
+:global([lang="en"]) .body {
+  font-size: 0.92rem;
   line-height: 1.65;
-  letter-spacing: 0.01em;
+  max-width: 480px;
 }
 
 /* ── Text reveal animations ── */
@@ -205,12 +178,9 @@ font-size: 55px;
   }
 }
 
-/* ── Right column / image ──
-   شيلنا left:-8% اللي كانت بتسحب الصورة برا عمودها وتخليها حاسة
-   إنها طايرة/مش متمركزة صح جوه الجريد. */
+/* ── Right column / image ── */
 .rightCol {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -219,169 +189,164 @@ font-size: 55px;
   position: relative;
   width: 100%;
   max-width: 420px;
-  aspect-ratio: 1 / 1.2;
-  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image {
-  height: 100%;
   width: 100%;
-  object-fit: cover;
-  border-radius: 1.25rem;
+  max-width: 380px;
+  height: auto;
+  object-fit: contain;
   display: block;
-}
-
-.imageRing {
-  position: absolute;
-  top: 0;
-  inset: -6px;
-  border-radius: 1.6rem;
-  pointer-events: none;
 }
 
 /* ─────────────────────────
    Tablet
 ───────────────────────── */
-
 @media (max-width: 1024px) {
   .section {
-    padding: 5rem 1.5rem;
-  }
-
-  .container {
-    padding: 0 1rem;
+    padding: 4.5rem 0;
   }
 
   .contentGrid {
     gap: 2rem;
-    align-items: center;
   }
 
   .heading {
-    font-size: 36px;
+    font-size: 34px;
+  }
+
+  :global([dir="ltr"]) .heading,
+  :global([lang="en"]) .heading {
+    font-size: 28px;
   }
 
   .body {
-    max-width: 100%;
-    font-size: .92rem;
+    font-size: 0.92rem;
+  }
+
+  :global([dir="ltr"]) .body,
+  :global([lang="en"]) .body {
+    font-size: 0.85rem;
   }
 
   .imageWrap {
-    max-width: 360px;
-    margin-inline: auto;
-  }
-
-  .glow {
-    width: 550px;
-    height: 550px;
+    max-width: 320px;
   }
 }
 
 /* ─────────────────────────
-   Mobile
+   Mobile (النصوص أولاً ثم الصورة)
 ───────────────────────── */
-
 @media (max-width: 768px) {
   .section {
-    padding: 4rem 1rem;
+    padding: 3.5rem 0 4rem;
   }
 
-  /* على الموبايل كل حاجة متمركزة، فالـ badge برضه بيترجع يتمركز */
   .badge {
-    padding: .85rem 1.8rem;
-    font-size: .9rem;
-    margin: 0 auto 2rem;
+    padding: 0.7rem 1.8rem;
+    font-size: 0.82rem;
+    margin-bottom: 1.75rem;
   }
 
   .contentGrid {
     grid-template-columns: 1fr;
-    gap: 3rem;
-    text-align: center;
+    gap: 2.5rem;
   }
 
+  /* 🎯 1. النصوص في الأعلى */
   .leftCol {
-    order: 2;
-    align-items: center;
-    text-align: center;
-  }
-
-  .rightCol {
-    order: 1;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .heading {
-    font-size: 32px;
-    line-height: 1.2;
-  }
-
-  .body {
-    max-width: 100%;
-    text-align: center;
-    font-size: .92rem;
-    line-height: 1.8;
-  }
-
-  .imageWrap {
-    width: 100%;
-    max-width: 300px;
-    margin: auto;
-    aspect-ratio: 1 / 1.2;
-  }
-
-  .image {
-    width: 100%;
-  }
-
-  .glow {
-    width: 420px;
-    height: 420px;
-    filter: blur(60px);
-  }
-
-  .aurora {
-    inset: -50%;
-  }
-}
-
-/* ─────────────────────────
-   Small Phones
-───────────────────────── */
-
-@media (max-width: 480px) {
-  .section {
-    padding: 3rem 1rem;
-  }
-
-  .badge {
-    padding: .75rem 1.3rem;
-    font-size: .8rem;
-    gap: .5rem;
-  }
-
-  .badgeIcon {
-    width: 18px;
-    height: 18px;
+    order: 1 !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 1.25rem;
   }
 
   .heading {
     font-size: 26px;
-    letter-spacing: .03em;
+    line-height: 1.3;
+    text-align: center !important;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  :global([dir="ltr"]) .heading,
+  :global([lang="en"]) .heading {
+    font-size: 22px;
+    line-height: 1.25;
+    text-align: center !important;
+    max-width: 310px;
+  }
+
+  .headingAccent {
+    font-size: inherit;
+    display: inline;
   }
 
   .body {
-    font-size: .88rem;
-    line-height: 1.7;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    text-align: center !important;
+    max-width: 340px;
+    margin: 0 auto;
+    color: #d1d5db !important;
+  }
+
+  :global([dir="ltr"]) .body,
+  :global([lang="en"]) .body {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    max-width: 320px;
+  }
+
+  /* 🎯 2. الصورة في الأسفل */
+  .rightCol {
+    order: 2 !important;
+    margin-top: 0.5rem;
   }
 
   .imageWrap {
     max-width: 250px;
+    margin: 0 auto;
   }
 
-  .glow {
-    width: 320px;
-    height: 320px;
+  .image {
+    max-width: 230px;
+  }
+}
+
+@media (max-width: 480px) {
+  .badge {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.78rem;
+  }
+
+  .imageWrap {
+    max-width: 210px;
+  }
+
+  .image {
+    max-width: 190px;
+  }
+
+  .heading {
+    font-size: 23px;
+  }
+
+  :global([dir="ltr"]) .heading,
+  :global([lang="en"]) .heading {
+    font-size: 20px;
+  }
+
+  .body {
+    font-size: 0.84rem;
+  }
+
+  :global([dir="ltr"]) .body,
+  :global([lang="en"]) .body {
+    font-size: 0.78rem;
   }
 }
 

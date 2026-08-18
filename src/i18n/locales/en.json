@@ -35,8 +35,8 @@
       "slides": {
         "strategy": {
           "badge": "THE EGO STUDIO",
-          "title": "Where Strategy Meets Creativity..\nAnd Marketing Becomes Integrated Growth.",
-          "description": "We work with companies looking for measurable results, not just a presence on social media."
+          "title": "Where strategy meets creativity\nand marketing becomes full-scale growth.",
+          "description": "We partner with companies seeking measurable results, not just a presence on social media."
         },
         "social": {
           "badge": "02 — Social",
@@ -154,18 +154,18 @@
     },
     "intro": {
       "badge": "WHO WE ARE",
-      "title": "Performance-Driven",
-      "titleHighlight": "Marketing Partner",
-      "description": "We're not just a traditional marketing agency.. We're your strategic partner in building a strong brand and an integrated marketing system that turns opportunities into measurable growth. At The EGO Studio, marketing isn't a set of separate services — it's one system: understand the market, build the brand, deliver real growth. We combine strategy, creativity, and performance to help businesses decide clearer, build a stronger presence, and turn opportunities into real results. We work with companies looking for more than content or ad campaigns — but for a partner who understands their goals and builds a marketing system for long-term growth.",
+      "title": "We're not just a traditional",
+      "titleHighlight": "marketing agency",
+      "description": "We are your strategic partner in building a strong brand, developing a complete marketing ecosystem, and turning opportunities into measurable growth. By combining strategy, creativity, and performance, we help you achieve sustainable business results.",
       "imageAlt": "Ego Studio Team"
     },
     "stats": {
       "items": [
         {
-          "label": "Core services built"
+          "label": "Core Services Delivered"
         },
         {
-          "label": "Avg. ROAS uplift"
+          "label": "Average Ad Return Improvement"
         },
         {
           "label": "Trackable Sales (SAR)"
@@ -175,167 +175,164 @@
         }
       ]
     },
-
-  "values": {
-    "badge": "How We Work",
-    "title": "Because we believe the problem is not a lack of marketing tools",
-    "titleSecondLine": "",
-    "description": "We believe the problem isn't a lack of marketing tools, but the absence of a clear vision that connects those tools to a single business objective. Without that, results remain out of reach. That's why we built our approach around:",
-      "introCards": "That's why we built a business model that brings together:",
-
-    "items": {
-      "salesFirst": {
-        "title": "Strategy",
-        "titleSecondLine": "& Growth",
-        "description": "We lay the right foundation by analyzing the market, studying competitors, developing a clear strategy, and building a sustainable growth plan."
-      },
-      "dataDriven": {
-        "title": "Brand",
-        "titleSecondLine": "& Digital Identity",
-        "description": "We build a cohesive brand identity and a compelling message that reflects your brand's value across every customer touchpoint."
-      },
-      "fastExecution": {
-        "title": "Advertising",
-        "titleSecondLine": "& Performance",
-        "description": "We execute data-driven marketing campaigns that increase conversions and sales while delivering measurable results."
+    "values": {
+      "badge": "How We Work",
+      "title": "We believe the problem isn't a lack of marketing tools,",
+      "titleSecondLine": "",
+      "description": "but the absence of a vision that connects them to one clear business goal, and that's what leads to weak results.",
+      "introCards": "That's why we created a business model that brings together:",
+      "items": {
+        "salesFirst": {
+          "title": "Strategy",
+          "titleSecondLine": "& Growth",
+          "description": "We lay the right foundation from the start through market analysis, competitor research, strategy development, and building a clear growth plan."
+        },
+        "dataDriven": {
+          "title": "Brand",
+          "titleSecondLine": "& Digital Identity",
+          "description": "We build integrated identity and a strong message that reflects your brand's value at every touchpoint."
+        },
+        "fastExecution": {
+          "title": "Advertising Campaigns",
+          "titleSecondLine": "& Performance",
+          "description": "We run data-driven marketing campaigns to increase conversions and sales, delivering measurable results."
+        }
       }
-    }
-
-},
+    },
     "caseStudies": {
       "badge": "Case Studies",
       "title": "Real Results, Real Success",
-      "description": "Explore how our performance-driven strategies helped brands increase revenue, generate qualified leads, and scale their digital growth.",
+      "description": "Every case study here is proof that real marketing starts with a strong strategy..and ends with real results.",
       "pill": "Performance Case Study",
       "button": "See All Work",
       "items": [
         {
-          "company": "INTEGRATED GROWTH SYSTEM",
-          "description": "We engineered an integrated acquisition funnel across various commercial sectors, driving massive volume and capturing extensive business growth data.",
+          "company": "Konoz Marshall",
+          "description": "We built a complete marketing ecosystem that strengthened brand trust and turned interest into real sales opportunities in the furniture and finishing sector.",
           "before": {
-            "label": "Ad Optimization",
-            "value": "Data-Driven Funnels"
+            "label": "Performance Improvement",
+            "value": "A strategy to turn interest into sales"
           },
           "after": {
-            "label": "Trackable Sales",
-            "value": "13,700,000+ SAR"
+            "label": "Sales Achieved",
+            "value": "AED 57,000+"
           },
           "metrics": [
             {
-              "value": "12x – 16x",
-              "label": "Avg. ROAS Uplift"
+              "value": "AED 15,000",
+              "label": "Total Ad Spend"
             },
             {
-              "value": "Multi-Sector",
-              "label": "System Scalability"
+              "value": "3.8X",
+              "label": "Return on Ad Spend"
             },
             {
-              "value": "High-Intent",
+              "value": "Qualified Sales Opportunities",
               "label": "Lead Quality"
             }
           ]
         },
         {
-          "company": "NIBRAS 360",
-          "description": "Developed a precise visual identity and structured a cohesive brand positioning statement, transforming their market presence into a distinct communication system.",
+          "company": "Saudi Contracting Company",
+          "description": "We built a complete lead generation ecosystem for a contracting company, establishing trust and delivering results within less than 10 days of launching the ad campaign.",
           "before": {
-            "label": "Brand Presence",
-            "value": "Fragmented Identity"
+            "label": "Performance Improvement",
+            "value": "A qualified lead generation ecosystem"
           },
           "after": {
-            "label": "Visual System",
-            "value": "100% Cohesive Guide"
+            "label": "Contract Value",
+            "value": "SAR 90,000+"
           },
           "metrics": [
             {
-              "value": "Unified",
-              "label": "Tone of Voice"
+              "value": "SAR 2,600",
+              "label": "Total Ad Spend"
             },
             {
-              "value": "Premium",
-              "label": "Market Positioning"
+              "value": "34X+",
+              "label": "Return on Ad Spend"
             },
             {
-              "value": "Structured",
-              "label": "Core Messaging"
+              "value": "20+",
+              "label": "Qualified Sales Opportunities"
             }
           ]
         },
         {
-          "company": "BELT & ROAD TRADING",
-          "description": "Transformed raw business metrics and data into a highly persuasive 12-page company profile, turning their past delivered work into an active corporate sales tool.",
-          "before": {
-            "label": "Corporate Presence",
-            "value": "Generic Description"
-          },
-          "after": {
-            "label": "Company Profile",
-            "value": "12-Page Sales Tool"
-          },
-          "metrics": [
-            {
-              "value": "Professional",
-              "label": "Service Copywriting"
-            },
-            {
-              "value": "Targeted",
-              "label": "B2B Credibility"
-            },
-            {
-              "value": "Print & Digital",
-              "label": "Ready Files"
-            }
-          ]
-        },
-        {
-          "company": "PANDA HOST",
-          "description": "Re-engineered their advertising funnels on Meta, transforming traditional random budget spending into a continuous digital learning and optimization system.",
+          "company": "Aqua",
+          "description": "We rebuilt the marketing strategy and established a professional pricing system, which contributed to doubling monthly sales within a short period.",
           "before": {
             "label": "Campaign Testing",
-            "value": "Random Ad Spending"
+            "value": "Sustainable growth built on strategy"
           },
           "after": {
-            "label": "Funnel Conversion",
-            "value": "Continuous Learning"
+            "label": "Monthly Sales",
+            "value": "SAR 380,000"
           },
           "metrics": [
             {
-              "value": "Optimized",
-              "label": "Cost Per Lead"
+              "value": "120K → 380K",
+              "label": "Monthly Sales Growth"
             },
             {
-              "value": "Full-Funnel",
-              "label": "Meta Ad Setup"
+              "value": "+216%",
+              "label": "Sales Growth Rate"
             },
             {
-              "value": "Actionable",
-              "label": "Performance Data"
+              "value": "90 Days",
+              "label": "Time to Achieve Growth"
             }
           ]
         },
         {
-          "company": "AL ASWAR AL SAMEDA CO.",
-          "description": "Structured a high-end corporate identity and comprehensive profiling for a premium 7-branch fast-food chain and large infrastructure projects in Tabuk.",
+          "company": "KINGSTR.EG",
+          "description": "We helped launch an entirely new brand from the ground up, starting with feasibility studies and pricing, through building the identity and strategy, all the way to launching the brand and achieving its first organic sales.",
           "before": {
-            "label": "Visual System",
-            "value": "Standard Outlines"
+            "label": "Brand Launch Ecosystem",
+            "value": "From an idea..to organic sales"
           },
           "after": {
-            "label": "Corporate Trust",
-            "value": "7-Branch Scale"
+            "label": "Sales Achieved",
+            "value": "EGP 30,000"
           },
           "metrics": [
             {
-              "value": "Tabuk Sector",
-              "label": "Infrastructure"
+              "value": "100%",
+              "label": "Launched From Scratch"
             },
             {
               "value": "Premium",
-              "label": "B2B Positioning"
+              "label": "Sales Without Ad Spend"
             },
             {
-              "value": "100% Cohesive",
-              "label": "Brand Presence"
+              "value": "EGP 30,000",
+              "label": "Sales Within One Month"
+            }
+          ]
+        },
+        {
+          "company": "Restaurant Performance",
+          "description": "We rebuilt the restaurant's marketing ecosystem, connecting content, ads, and offers to achieve clear sales growth at the lowest possible cost.",
+          "before": {
+            "label": "Performance Improvement",
+            "value": "Increasing sales and improving efficiency"
+          },
+          "after": {
+            "label": "Sales Achieved",
+            "value": "EGP 27,000+"
+          },
+          "metrics": [
+            {
+              "value": "EGP 1,900",
+              "label": "Total Ad Spend"
+            },
+            {
+              "value": "14.2X",
+              "label": "Return on Ad Spend"
+            },
+            {
+              "value": "67",
+              "label": "Conversations with Potential Customers"
             }
           ]
         }
@@ -343,20 +340,20 @@
     },
     "whyChooseUs": {
       "badge": "Why Our Clients Trust Us",
-      "title": "Partner With A Measurable Success Team",
-      "description": "Choosing EGO STUDIO means working with a growth partner that transforms marketing into a structured system, driving real and trackable commercial development.",
+      "title": "We think like business owners, not a marketing agency.",
+      "description": "We follow a complete marketing methodology that helps companies build stronger brands and achieve strong, measurable results.",
       "items": [
         {
           "title": "We Think Strategy Before Marketing",
-          "description": "We don't start with posts or ads. We first build a marketing strategy suited to your audience and target market to drive real sales."
+          "description": "We don't start with posts or ads. Instead, we first build a marketing strategy tailored to your audience and target market, to achieve real sales."
         },
         {
-          "title": "One Team, One Integrated System",
-          "description": "From brand strategy to identity, content, ads, and digital solutions.. all our services work in harmony to support your business growth."
+          "title": "A Team Working as One Integrated System, Under One Roof",
+          "description": "From brand strategy to identity, content, advertising, and digital solutions..all our services work in harmony to support your business growth."
         },
         {
-          "title": "Results Driven By Data",
-          "description": "We rely on continuous analysis and performance measurement to improve decisions, maximize returns, and turn data into growth opportunities."
+          "title": "Data-Driven Results",
+          "description": "We rely on continuous analysis and performance tracking to improve decisions, maximize returns, and turn data into growth opportunities."
         }
       ]
     },
@@ -396,45 +393,46 @@
         }
       ]
     },
+     
     "faq": {
-      "badge": "Frequent Questions",
-      "title": "Frequently Asked Questions",
-      "description": "Find detailed answers about our integrated growth systems, performance tracking, and how we deliver measurable commercial outcomes.",
-      "items": [
-        {
-          "question": "What makes EGO STUDIO different from traditional agencies?",
-          "answer": "We are not just an execution agency; we are a growth partner. We do not treat marketing as disconnected posts and ads. Instead, we build a complete, integrated system where content supports ads, ads drive communication, and communication directly secures sales."
-        },
-        {
-          "question": "What core areas does your integrated system cover?",
-          "answer": "Our system bridges three main disciplines under one roof: Business Strategy, Content Matrix, and Paid Media & Performance."
-        },
-        {
-          "question": "How do you measure campaign and business success?",
-          "answer": "We focus on metrics that impact commercial objectives: lead quality, trackable conversion paths, and actual sales opportunities created."
-        },
-        {
-          "question": "What commercial sectors do you specialize in?",
-          "answer": "We custom-scope our systems for high-intent sectors including clinics, real estate, digital products, premium local brands, and business providers."
-        },
-        {
-          "question": "Do you help with existing corporate profiles and materials?",
-          "answer": "Yes. We convert raw business metrics and delivered projects into active corporate sales tools, professional profiles, and simplified case studies."
-        },
-        {
-          "question": "How do your WhatsApp and sales communication services work?",
-          "answer": "We map the customer path from ad click to closing chat, then improve welcome flows, qualification sequences, and objection reply matrices."
-        },
-        {
-          "question": "What is your working philosophy on content creation?",
-          "answer": "Every piece of creative content must serve a clear objective across educational, sales, and conversion stages of the customer journey."
-        },
-        {
-          "question": "How do we get started with EGO STUDIO?",
-          "answer": "It starts with a direct consultation call where we analyze your situation, identify opportunities, and recommend the right growth system."
-        }
-      ]
+  "badge": "FAQ",
+  "title": "Frequently Asked Questions",
+  "description": "Find answers about our service systems, performance tracking, and commercial outcomes.",
+  "items": [
+    {
+      "question": "What Makes EGO STUDIO Different From Traditional Agencies?",
+      "answer": "We are a complete growth partner that combines strategy, brand building, content, digital marketing, advertising, and websites and digital systems. We build an integrated ecosystem that serves your business goals, not just separate, disconnected services."
+    },
+    {
+      "question": "Do You Work Only With Established Companies, or With New Projects Too?",
+      "answer": "We work with both. Whether you're launching a project from scratch or running an established company looking to develop your brand, boost performance, or build a more efficient marketing system, we start from your current position and identify exactly what your business really needs."
+    },
+    {
+      "question": "How Do You Know What My Project Needs?",
+      "answer": "We don't start by assuming the solution is a paid ad or new content. We first take the time to understand your business, market, audience, competitors, offer, and business goal. Then we define priorities and build the right strategy for your project based on data and insights."
+    },
+    {
+      "question": "How Do You Measure Marketing Success?",
+      "answer": "We don't measure success by follower count or likes alone. We tie performance to your business goals — lead quality, customer acquisition cost, conversion rates, sales, return on ad spend, and customer retention — depending on your project's nature and objectives."
+    },
+    {
+      "question": "Do You Guarantee Increased Sales?",
+      "answer": "We don't sell unrealistic marketing promises. We build the strategy, define performance indicators, then test, analyze, and optimize based on results. Our goal is to build a marketing system that supports long-term growth and profitability, not just achieve temporary numbers."
+    },
+    {
+      "question": "Do You Work With a Specific Sector or Industry?",
+      "answer": "We work across different sectors and industries, because our approach starts by understanding the nature of your business, market, audience, and company goals, rather than applying a ready-made marketing template to every project."
+    },
+    {
+      "question": "Can You Rebuild Our Brand If Our Current Identity Doesn't Reflect the Company's Value?",
+      "answer": "Yes. And the solution isn't always a complete identity overhaul, sometimes a brand simply needs repositioning, a refined message, or an updated identity that fits the company's new stage of growth."
+    },
+    {
+      "question": "How Do I Start My Project With EGO Studio?",
+      "answer": "Through a free initial consultation. We listen to your goals and challenges, understand your project's current situation, then identify the right priorities and growth opportunities. If we find that EGO Studio is the right partner for you, we move forward to building the right action plan for your project."
     }
+  ]
+}
   },
   "aboutPage": {
     "meta": {
@@ -443,41 +441,41 @@
     },
     "intro": {
       "badge": "WHO WE ARE",
-      "title": "Performance-Driven",
-      "titleHighlight": "Marketing Partner",
-      "description": "We're not just a traditional marketing agency.. We're your strategic partner in building a strong brand and an integrated marketing system that turns opportunities into measurable growth. At The EGO Studio, marketing isn't a set of separate services — it's one system: understand the market, build the brand, deliver real growth. We combine strategy, creativity, and performance to help businesses decide clearer, build a stronger presence, and turn opportunities into real results. We work with companies looking for more than content or ad campaigns — but for a partner who understands their goals and builds a marketing system for long-term growth.",
+      "title": "We're not just a traditional",
+      "titleHighlight": "marketing agency",
+      "description": "We are your strategic partner in building a strong brand, developing a complete marketing ecosystem, and turning opportunities into measurable growth. By combining strategy, creativity, and performance, we help you achieve sustainable business results.",
       "imageAlt": "Ego Studio Team"
     },
     "values": {
       "badge": "How We Work",
-      "title": "Marketing That",
-      "titleSecondLine": "Drives Revenue",
-      "description": "We turn marketing into measurable growth through data-driven strategies and optimized funnels.",
+      "title": "We believe the problem isn't a lack of marketing tools,",
+      "titleSecondLine": "but the absence of a vision that connects them to one clear business goal, and that's what leads to weak results.",
+      "description": "That's why we created a business model that brings together:",
       "items": {
         "salesFirst": {
-          "title": "Sales-First",
-          "titleSecondLine": "Approach",
-          "description": "We prioritize real revenue and profitability over vanity metrics like impressions or likes."
+          "title": "Strategy",
+          "titleSecondLine": "& Growth",
+          "description": "We lay the right foundation from the start through market analysis, competitor research, strategy development, and building a clear growth plan."
         },
         "dataDriven": {
-          "title": "Data-Driven",
-          "titleSecondLine": "Decisions",
-          "description": "All strategies rely on performance data and conversions."
+          "title": "Brand",
+          "titleSecondLine": "& Digital Identity",
+          "description": "We build integrated identity and a strong message that reflects your brand's value at every touchpoint."
         },
         "fastExecution": {
-          "title": "Fast Execution",
-          "titleSecondLine": "& Optimization",
-          "description": "Campaigns launch fast and are continuously optimized."
+          "title": "Advertising Campaigns",
+          "titleSecondLine": "& Performance",
+          "description": "We run data-driven marketing campaigns to increase conversions and sales, delivering measurable results."
         }
       }
     },
     "stats": {
       "items": [
         {
-          "label": "Core services built"
+          "label": "Core Services Delivered"
         },
         {
-          "label": "Avg. ROAS uplift"
+          "label": "Average Ad Return Improvement"
         },
         {
           "label": "Trackable Sales (SAR)"
@@ -515,11 +513,11 @@
       ]
     },
     "cta": {
-      "eyebrow": "Ready when you are",
+      "eyebrow": "Ready When You Are",
       "title": "Every great brand..",
       "titleHighlight": "starts with the right decision",
       "description": "Start your growth and success story today with The Ego Studio!",
-      "button": "Book your free consultation"
+      "button": "Book Your Free Consultation"
     }
   },
   "servicesPage": {
@@ -528,10 +526,10 @@
       "description": "Strategy, social, paid media, branding, web, and growth systems under one roof."
     },
     "hero": {
-      "badge": "What we do",
-      "title": "Full-service.",
-      "titleSecondLine": "Senior craft.",
-      "description": "Six disciplines, one team. We bring strategy and execution under the same roof — so the work is connected, the speed is real, and the results are measurable.",
+      "badge": "What We Offer?",
+      "title": "We Don't Sell Services",
+      "titleSecondLine": "We Build Growth Ecosystems",
+      "description": "We don't offer separate services — we build a complete ecosystem that combines strategy, creativity, marketing, and digital technologies to deliver real results that support your business growth.",
       "imageAlt": "Senior craft team working together on strategy and execution"
     },
     "filters": {
@@ -553,48 +551,48 @@
     "items": {
       "marketingStrategy": {
         "title": "Marketing Strategy",
-        "short": "We don't launch random campaigns. We build a solid strategic foundation for every project to direct your marketing budget toward the best possible return on investment.",
-        "long": "We build a solid strategic foundation for every project to direct your marketing budget toward the best possible return on investment, instead of launching random campaigns with no clear goal.",
+        "short": "We don't launch random campaigns. Instead, for every project, we build a solid strategic foundation to direct your marketing budget toward the best possible return on investment.",
+        "long": "For every project, we build a solid strategic foundation to direct your marketing budget toward the best possible return on investment, instead of launching random campaigns with no clear goal.",
         "features": [
-          "Current business & brand situation review",
-          "Marketing & commercial objective definition",
-          "Target audience & priority segment mapping",
-          "Core messaging and content direction",
-          "Channel recommendations based on business type"
+          "Reviewing your business and brand status",
+          "Defining marketing and business goals",
+          "Mapping the audience and priority segments",
+          "Defining messaging and content direction",
+          "Channel recommendations based on your business type"
         ],
         "when": [
           "Launching a new business or service",
-          "Content and ads exist without clear direction",
-          "Entering a new market, city, or audience segment"
+          "Content and ads with no clear direction",
+          "Entering a new market, city, or segment"
         ]
       },
       "businessDevelopment": {
         "title": "Market Entry & Expansion",
-        "short": "We build a complete roadmap for launching new products or services, or expanding your existing brand into new markets with the lowest risk and highest operating efficiency.",
-        "long": "We build a complete roadmap for launching new products or services, or expanding your existing brand into new markets with the lowest possible risk and the highest operating efficiency.",
+        "short": "Building a complete roadmap for launching new products or services, or expanding your existing brand into new markets with minimal risk and maximum operational efficiency.",
+        "long": "We build a complete roadmap for launching new products or services, or expanding your existing brand into new markets with minimal risk and maximum operational efficiency.",
         "features": [
-          "Service or product model analysis",
-          "Growth and improvement opportunity identification",
-          "Service and package presentation development",
-          "Commercial messaging and offer improvement",
-          "Alignment between marketing, sales, and operations"
+          "Analyzing the service or product model",
+          "Identifying growth and improvement opportunities",
+          "Developing service offerings and packages",
+          "Optimizing messaging and commercial offers",
+          "Aligning marketing, sales, and operations"
         ],
         "when": [
-          "Services are strong but poorly presented",
-          "Business wants higher client value or better lead quality",
-          "Packages or sales paths need development"
+          "Your services are strong, but the offer is weak",
+          "Wanting higher customer value or better customer quality",
+          "Needing to develop packages or sales journeys"
         ]
       },
       "marketAnalysis": {
         "title": "Market & Competitor Research",
-        "short": "An in-depth study of your target market size and consumer behavior, identifying the strengths and weaknesses of direct and indirect competitors to secure a clear competitive edge.",
-        "long": "We conduct an in-depth study of your target market size and consumer behavior, and identify the strengths and weaknesses of direct and indirect competitors, to secure a clear competitive advantage.",
+        "short": "An in-depth study of target market size, consumer behavior, and the strengths and weaknesses of direct and indirect competitors, ensuring a clear competitive advantage.",
+        "long": "We conduct in-depth research on target market size and consumer behavior, and identify the strengths and weaknesses of direct and indirect competitors, ensuring a clear competitive advantage.",
         "features": [
-          "Direct and indirect competitor review",
-          "Analysis of service presentation, pricing, and messaging",
-          "Market strengths and weaknesses identification",
-          "Gap definition for brand differentiation",
-          "Content and ad angle extraction from analysis"
+          "Reviewing direct and indirect competitors",
+          "Analyzing service offerings, pricing, and messaging",
+          "Identifying market strengths and weaknesses",
+          "Identifying brand differentiation gaps",
+          "Extracting content and advertising angles"
         ],
         "when": [
           "Before launching major campaigns",
@@ -604,218 +602,218 @@
       },
       "brandPositioning": {
         "title": "Brand Positioning & Value Proposition",
-        "short": "We craft your brand's mental identity and the unique value that sets it apart, defining exactly why a customer should buy from you and not your competitors.",
-        "long": "We craft your brand's mental identity and the unique value that sets it apart from others, while clearly defining the answer to: why should a customer buy from you specifically, and not from your competitors?",
+        "short": "Crafting your brand image and the unique value that sets it apart, defining exactly \"why customers should buy from you and not your competitors?\"",
+        "long": "We craft your brand image and the unique value that sets it apart, with a clear answer to one key question: why should customers buy from you and not your competitors?",
         "features": [
-          "Clear positioning statement development",
-          "Core and secondary message definition",
-          "Suitable tone of voice development",
-          "Marketing promise writing without exaggeration",
-          "Turning features into customer-relevant benefits"
+          "Developing a clear positioning statement",
+          "Defining core and supporting messages",
+          "Developing an appropriate brand voice",
+          "Writing an honest, non-exaggerated marketing promise",
+          "Turning features into benefits that matter to customers"
         ],
         "when": [
-          "Brand message is unclear or generic",
-          "Content looks similar to competitors",
-          "Before building website content or ad campaigns"
+          "Your brand message is unclear or generic",
+          "Your content looks similar to competitors",
+          "Before building website content or campaigns"
         ]
       },
       "contentStrategy": {
-        "title": "Content Strategy & Plan",
-        "short": "We build the strategy around defining the customer persona and brand tone, with an integrated monthly content plan balancing educational, sales, and engagement content.",
-        "long": "We build the strategy based on defining the customer persona and the brand's tone of voice, crafting an integrated monthly content plan that varies between educational, sales, and engagement content to ensure marketing objectives are met.",
+        "title": "Content Strategy & Planning",
+        "short": "Building a strategy based on defining your customer persona and brand voice, along with a complete monthly content plan that balances awareness, sales, and engagement content to achieve your marketing goals.",
+        "long": "We build a strategy based on defining your customer persona and brand voice, along with a complete monthly content plan that balances awareness, sales, and engagement content to achieve your marketing goals.",
         "features": [
-          "Content pillar definition",
-          "Separation of educational, sales, and conversion content",
-          "Content angles based on customer stages",
-          "Platform-specific content direction",
-          "Connection between content, campaigns, and conversion paths"
+          "Defining content pillars",
+          "Separating educational, sales, and conversion content",
+          "Content angles based on customer journey stages",
+          "Platform-appropriate content direction",
+          "Connecting content to campaigns and conversion paths"
         ],
         "when": [
-          "Many posts with no clear impact",
-          "Content must support both sales and trust",
-          "Preparing for a launch or rebuilding digital presence"
+          "Frequent posts with no clear impact",
+          "Content needs to build sales support and trust",
+          "Preparing to launch or rebuild your digital presence"
         ]
       },
       "contentWriting": {
         "title": "Creative Content Writing",
-        "short": "We write engaging ad and sales copy that fits the customer journey, and craft scripts for short reels ads or long-form YouTube videos.",
-        "long": "We write engaging ad and sales copy that fits the customer journey, and craft scripts for short reels ad videos or long-form YouTube videos.",
+        "short": "Writing compelling ad and sales copy tailored to the customer journey, along with crafting scripts for short reels ads or long-form YouTube videos.",
+        "long": "We write creative ad and sales copy tailored to the customer journey, along with scripts for short reels and long-form YouTube videos.",
         "features": [
-          "Social media caption writing",
-          "Video and reels script writing",
-          "Strong hook development",
-          "Post and campaign idea generation",
-          "Creative direction based on message"
+          "Writing social media captions",
+          "Writing video and reels scripts",
+          "Developing strong hooks",
+          "Generating post and campaign ideas",
+          "Creative direction based on your message"
         ],
         "when": [
-          "Designs are good but messaging is weak",
-          "Stronger ad content is needed",
-          "Building a multi-service or offer-based campaign"
+          "The design is strong, but the message is weak",
+          "Needing stronger ad content",
+          "Building a multi-service or multi-offer campaign"
         ]
       },
       "brandIdentity": {
-        "title": "Brand Identity & Corporate Design",
-        "short": "We design your brand's unique visual identity from scratch, from the logo and color palette to typography, ensuring a consistent image in your audience's mind.",
-        "long": "We design your brand's unique visual identity from scratch — including logo design, expressive color palette selection, and official typography — to ensure a cohesive, unified brand image. We also translate your identity into tangible assets through company profiles, presentations, and official print materials.",
+        "title": "Visual Identity & Corporate Design",
+        "short": "We design your brand's unique visual identity from scratch, from the logo and colors to the fonts, ensuring a unified, cohesive image in your audience's mind.",
+        "long": "We design your brand's unique visual identity from scratch, including logo design, an expressive color palette, and official brand fonts, to build a unified, cohesive image in your audience's mind. We also translate your identity into tangible assets through company profile design, presentations, and official print materials.",
         "features": [
           "Logo design from scratch",
-          "Expressive color palette selection",
-          "Official brand typography",
+          "Selecting an expressive color palette",
+          "Defining official brand fonts",
           "Company profile and presentation design",
-          "Official print material design"
+          "Official print materials design"
         ],
         "when": [
-          "Brand has no clear visual identity",
-          "Need for a unified brand image across touchpoints",
+          "Your brand has no clear visual identity",
+          "Needing a unified image in front of your audience",
           "Before launching a new website, campaign, or profile"
         ]
       },
       "socialMediaDesign": {
-        "title": "Social Media Design & Video Production",
-        "short": "We create eye-catching creative designs for social platforms, along with ad videos, motion graphics, and short-form reels.",
-        "long": "We create eye-catching creative designs for social media platforms, along with ad video production, motion graphics, AI-generated videos, and short-form social media (reels) videos.",
+        "title": "Social Media Designs & Videos Production",
+        "short": "We create compelling, creative designs for social media platforms, along with producing advertising videos, motion graphics, and short-form reels videos.",
+        "long": "We create compelling, creative designs for social media platforms, along with producing advertising videos, motion graphics, AI-generated videos, and short-form social media videos (reels).",
         "features": [
-          "Social media post design",
-          "Ad video production",
+          "Social media posts design",
+          "Advertising videos production",
           "Motion graphics",
           "AI-generated videos",
-          "Short-form reels video production"
+          "Short-form reels production"
         ],
         "when": [
-          "Current design doesn't reflect the brand's level",
-          "Need for professional video content",
-          "Building a consistent visual presence across platforms"
+          "Current design doesn't reflect your brand's level",
+          "Needing professional video content",
+          "Building a complete visual presence across platforms"
         ]
       },
       "webDevStores": {
-        "title": "Website & Store Development",
-        "short": "We build and design complete websites and online stores, delivering a smooth UI/UX experience to increase sales.",
-        "long": "We build and design complete websites and online stores, delivering a smooth UI/UX experience to increase sales.",
+        "title": "Website & E-Commerce Development",
+        "short": "We build and design complete websites and online stores, delivering a smooth user experience to increase sales.",
+        "long": "We build and design complete websites and online stores, delivering a smooth user experience (UI/UX) to increase sales.",
         "features": [
-          "Website programming and design",
-          "Online store programming and design",
+          "Website development and design",
+          "E-commerce store development and design",
           "UI/UX design",
-          "Interface optimization for higher conversion",
-          "Payment and tracking system integration"
+          "Interface optimization to increase conversion",
+          "Integrating the website with payment and tracking systems"
         ],
         "when": [
-          "No professional website or online store exists",
-          "Poor user experience on the current website",
-          "Need for an online store to increase sales"
+          "No professional website or online store",
+          "Poor user experience on your current website",
+          "Needing an online store to increase sales"
         ]
       },
       "metaAds": {
         "title": "Meta & TikTok Ads Management",
-        "short": "We launch precisely targeted, paid ad campaigns on Meta and TikTok to reach the ideal audience and achieve the highest possible return on ad spend.",
-        "long": "We launch precisely targeted, paid ad campaigns on TikTok & Meta to reach the ideal audience and achieve the highest possible return on ad spend.",
+        "short": "We launch precisely targeted, paid ad campaigns on (Meta & TikTok) to reach your ideal audience and achieve the highest return on ad spend.",
+        "long": "We launch precisely targeted, paid ad campaigns on TikTok & Meta to reach your ideal audience and achieve the highest return on ad spend.",
         "features": [
-          "Right campaign objective selection",
-          "Campaign structure based on business stage",
-          "Awareness, Traffic, Leads & Conversion campaigns",
-          "Retargeting and custom audience setup",
-          "Performance monitoring and continuous optimization"
+          "Selecting the right campaign objective",
+          "Structuring campaigns based on business stage",
+          "Awareness, traffic, leads, and conversion campaigns",
+          "Setting up retargeting and custom audiences",
+          "Performance tracking and continuous optimization"
         ],
         "when": [
           "Launching a service or offer",
-          "Business needs messages, bookings, or leads",
-          "Campaigns are running but result quality is weak"
+          "Needing messages, bookings, or leads",
+          "Campaigns are running, but results quality is weak"
         ]
       },
       "campaignOptimization": {
-        "title": "Ads Analysis & Continuous Optimization",
-        "short": "We translate your campaign numbers into periodic reports showing spend, sales achieved, and cost per customer acquired, with continuous result optimization.",
-        "long": "We translate your campaign numbers into periodic reports that show you the spend level, the sales achieved, and the cost of acquiring each customer, while continuously optimizing results.",
+        "title": "Ad Analysis & Continuous Optimization",
+        "short": "We turn your campaign numbers into regular reports that show your ad spend, achieved sales, and cost per customer, while continuously improving your results.",
+        "long": "We turn your campaign numbers into regular reports that show your ad spend, achieved sales, and cost per customer, while continuously improving your results.",
         "features": [
-          "Campaign logic and structure definition",
-          "Angle and message testing",
-          "CTR, CPM, CPC and quality metric reading",
-          "Creative, audience, and offer weakness identification",
-          "Clear optimization decision making"
+          "Defining campaign logic and structure",
+          "Testing angles and messaging",
+          "Reading CTR, CPM, CPC, and quality metrics",
+          "Identifying weaknesses in creative, audience, or offer",
+          "Clear optimization decisions"
         ],
         "when": [
-          "After the first campaign running period",
+          "After the initial launch period",
           "When cost per result increases",
-          "Many results but few actual sales or bookings"
+          "High volume of results, but low sales or bookings"
         ]
       },
       "socialMedia": {
-        "title": "Social Media Platform Management",
-        "short": "Full management of Facebook, Instagram, Snapchat, TikTok, and YouTube, including regular posting, trend monitoring, and audience engagement.",
-        "long": "Full management of your platforms (Facebook - Instagram - Snapchat - TikTok - YouTube), including regular content publishing, trend monitoring, and audience engagement through replies to messages and comments.",
+        "title": "Social Media Management",
+        "short": "Full management of your platforms (Facebook, Instagram, Snapchat, TikTok, and YouTube), including regular content publishing, trend monitoring, and audience engagement through replies to messages and comments.",
+        "long": "Full management of your platforms (Facebook, Instagram, Snapchat, TikTok, and YouTube), including regular content publishing, trend monitoring, and audience engagement through replies to messages and comments.",
         "features": [
-          "Bio and CTA optimization",
-          "Highlights and profile structure organization",
-          "Content scheduling and publishing",
-          "Message consistency monitoring",
-          "User experience improvement suggestions"
+          "Optimizing bio and CTA",
+          "Organizing highlights and page structure",
+          "Scheduling and publishing content",
+          "Ensuring message consistency",
+          "Recommending page experience improvements"
         ],
         "when": [
-          "Launching or restructuring a social page",
-          "Content is good but page is not organized",
+          "Launching or reorganizing a social page",
+          "Good content, but a disorganized page",
           "Social media is a key conversion point"
         ]
       },
       "customerJourney": {
-        "title": "Sales Channels & Customer Acquisition Paths",
-        "short": "We design the complete customer journey, from first learning about the brand to becoming a lead, then a repeat customer through proven, automated sales paths.",
-        "long": "We design the complete customer journey, from the moment they first learn about the brand, through becoming a lead, to becoming an actual repeat customer via proven, automated sales paths.",
+        "title": "Sales Channels & Customer Acquisition Funnels",
+        "short": "Designing the complete customer journey, from first brand awareness to becoming a lead, then a repeat customer, through proven, automated sales funnels.",
+        "long": "We design the complete customer journey, from first brand awareness to becoming a lead, then a repeat customer, through proven, automated sales funnels.",
         "features": [
-          "Current touchpoint analysis",
-          "Customer stage mapping from awareness to decision",
-          "Landing path or WhatsApp path recommendations",
-          "Message separation by customer or service type",
-          "CTA and qualification question improvement"
+          "Analyzing current touchpoints",
+          "Mapping customer stages from awareness to decision",
+          "Landing page or WhatsApp funnel recommendations",
+          "Segmenting messages by customer or service type",
+          "Optimizing CTAs and qualifying questions"
         ],
         "when": [
-          "Visits or messages without conversion",
-          "Different customer types and services exist",
-          "Lead or booking quality needs improvement"
+          "Visits or messages with no conversion",
+          "Multiple customer types and services",
+          "Needing to improve lead or booking quality"
         ]
       },
       "reporting": {
-        "title": "Periodic Reports & Performance Review",
-        "short": "We track the numbers closely through periodic reports that ensure continuous improvement at every step of your marketing plan.",
-        "long": "We track the numbers closely through periodic reports that ensure continuous improvement at every step.",
+        "title": "Regular Reporting & Performance Review",
+        "short": "We track your numbers closely through regular reports that ensure continuous improvement at every step.",
+        "long": "We track your numbers closely through regular reports that ensure continuous improvement at every step.",
         "features": [
           "Monthly or bi-weekly reports",
-          "Content and campaign performance review",
-          "Result quality analysis, not just volume",
-          "Improvement and weakness reason identification",
-          "Optimization recommendations for next stage"
+          "Reviewing content and campaign performance",
+          "Analyzing result quality, not just volume",
+          "Identifying reasons behind growth or decline",
+          "Optimization recommendations for the next phase"
         ],
         "when": [
           "Campaigns or content are running continuously",
-          "Spend and results need evaluation",
-          "Plan should develop based on real data"
+          "Needing to evaluate spend and results",
+          "Your plan needs to evolve based on real data"
         ]
       }
     },
     "whyChooseUs": {
       "badge": "Why Our Clients Trust Us",
-      "title": "Partner With A Measurable Success Team",
-      "description": "Choosing EGO STUDIO means working with a growth partner that transforms marketing into a structured system, driving real and trackable commercial development.",
+      "title": "We think like business owners, not a marketing agency.",
+      "description": "We follow a complete marketing methodology that helps companies build stronger brands and achieve strong, measurable results.",
       "items": [
         {
           "title": "We Think Strategy Before Marketing",
-          "description": "We don't start with posts or ads. We first build a marketing strategy suited to your audience and target market to drive real sales."
+          "description": "We don't start with posts or ads. Instead, we first build a marketing strategy tailored to your audience and target market, to achieve real sales."
         },
         {
-          "title": "One Team, One Integrated System",
-          "description": "From brand strategy to identity, content, ads, and digital solutions.. all our services work in harmony to support your business growth."
+          "title": "A Team Working as One Integrated System, Under One Roof",
+          "description": "From brand strategy to identity, content, advertising, and digital solutions..all our services work in harmony to support your business growth."
         },
         {
-          "title": "Results Driven By Data",
-          "description": "We rely on continuous analysis and performance measurement to improve decisions, maximize returns, and turn data into growth opportunities."
+          "title": "Data-Driven Results",
+          "description": "We rely on continuous analysis and performance tracking to improve decisions, maximize returns, and turn data into growth opportunities."
         }
       ]
     },
     "stats": {
       "items": [
         {
-          "label": "Core services built"
+          "label": "Core Services Delivered"
         },
         {
-          "label": "Avg. ROAS uplift"
+          "label": "Average Ad Return Improvement"
         },
         {
           "label": "Trackable Sales (SAR)"
@@ -825,33 +823,33 @@
         }
       ]
     },
-  "process": {
-    "eyebrow": "How we work",
-    "title": "A process built",
-    "titleSecondLine": "on momentum.",
-    "items": [
-      {
-        "step": "01",
-        "title": "Strategy before execution",
-        "desc": "We don't start any project before studying the market and the business goal."
-      },
-      {
-        "step": "02",
-        "title": "Data before assumptions",
-        "desc": "Our decisions are built on analysis, not guesswork."
-      },
-      {
-        "step": "03",
-        "title": "Quality before quantity",
-        "desc": "We believe the right creative idea is stronger than dozens of posts."
-      },
-      {
-        "step": "04",
-        "title": "Growth before everything",
-        "desc": "We measure success by results and our clients' business growth, not by the number of campaigns we run."
-      }
-    ]
-},  
+    "process": {
+      "eyebrow": "What Makes Our Thinking Different?",
+      "title": "A process built",
+      "titleSecondLine": "on momentum.",
+      "items": [
+        {
+          "step": "01",
+          "title": "Strategy Before Execution",
+          "desc": "We don't start any project without studying the market and the business goal."
+        },
+        {
+          "step": "02",
+          "title": "Data Before Assumptions",
+          "desc": "Our decisions are based on analysis, not guesswork."
+        },
+        {
+          "step": "03",
+          "title": "Quality Before Quantity",
+          "desc": "We believe the right creative idea is stronger than dozens of posts."
+        },
+        {
+          "step": "04",
+          "title": "Growth Above All",
+          "desc": "Our success is measured by our clients' results and business growth, not by the number of campaigns we run."
+        }
+      ]
+    },
     "testimonials": {
       "badge": "Testimonials",
       "title": "What Our Clients Say",
@@ -888,39 +886,14 @@
         }
       ]
     },
-    "faq": {
-      "badge": "FAQ",
-      "title": "Frequently Asked Questions",
-      "description": "Find answers about our service systems, performance tracking, and commercial outcomes.",
-      "items": [
-        {
-          "question": "What makes EGO STUDIO different?",
-          "answer": "We build a complete integrated growth system, not disconnected posts and ads."
-        },
-        {
-          "question": "What areas do your services cover?",
-          "answer": "Strategy, content, paid media, customer journeys, WhatsApp sales flows, reporting, and growth systems."
-        },
-        {
-          "question": "How do you measure success?",
-          "answer": "We focus on lead quality, conversion paths, real sales opportunities, and measurable commercial results."
-        },
-        {
-          "question": "Can you work with existing material?",
-          "answer": "Yes. We restructure profiles, portfolios, previous work, and campaign assets into stronger sales tools."
-        },
-        {
-          "question": "How do we start?",
-          "answer": "We begin with a consultation, then recommend the right service mix for your growth stage."
-        }
-      ]
-    },
+
+
     "cta": {
-      "eyebrow": "Ready when you are",
+      "eyebrow": "Ready When You Are",
       "title": "Every great brand..",
       "titleHighlight": "starts with the right decision.",
       "description": "Start your growth and success story today with The Ego Studio!",
-      "button": "Book your free consultation"
+      "button": "Book Your Free Consultation"
     }
   },
   "portfolioPage": {
@@ -930,9 +903,9 @@
     },
     "hero": {
       "badge": "Selected work",
-      "title": "Case studies",
-      "titleSecondLine": "& growth.",
-      "description": "Real businesses, trackable outcomes. Every layer here turns raw commercial metrics into a practical system designed for structural expansion.",
+      "title": "Our Work Isn't Just Projects",
+      "titleSecondLine": "It's a Growth System Built on Strategy, Data, and Precise Execution.",
+      "description": "We Don't Showcase What We Designed — We Showcase the Real Impact We Created.",
       "imageAlt": "EGO STUDIO Portfolio Analytics"
     },
     "filters": {
@@ -1084,10 +1057,10 @@
     "stats": {
       "items": [
         {
-          "label": "Core services built"
+          "label": "Core Services Delivered"
         },
         {
-          "label": "Avg. ROAS uplift"
+          "label": "Average Ad Return Improvement"
         },
         {
           "label": "Trackable Sales (SAR)"
@@ -1099,138 +1072,138 @@
     },
     "caseStudies": {
       "badge": "Case Studies",
-      "title": "Real Results, Real Success",
-      "description": "Explore how our performance-driven strategies helped brands increase revenue, generate qualified leads, and scale their digital growth.",
+      "title": "Every case study here",
+      "description": " is proof that real marketing starts with a strong strategy..and ends with real results.",
       "pill": "Performance Case Study",
       "button": "See All Work",
       "items": [
         {
-          "company": "INTEGRATED GROWTH SYSTEM",
-          "description": "We engineered an integrated acquisition funnel across various commercial sectors, driving massive volume and capturing extensive business growth data.",
+          "company": "Konoz Marshall",
+          "description": "We built a complete marketing ecosystem that strengthened brand trust and turned interest into real sales opportunities in the furniture and finishing sector.",
           "before": {
-            "label": "Ad Optimization",
-            "value": "Data-Driven Funnels"
+            "label": "Performance Improvement",
+            "value": "A strategy to turn interest into sales"
           },
           "after": {
-            "label": "Trackable Sales",
-            "value": "13,700,000+ SAR"
+            "label": "Sales Achieved",
+            "value": "AED 57,000+"
           },
           "metrics": [
             {
-              "value": "12x – 16x",
-              "label": "Avg. ROAS Uplift"
+              "value": "AED 15,000",
+              "label": "Total Ad Spend"
             },
             {
-              "value": "Multi-Sector",
-              "label": "System Scalability"
+              "value": "3.8X",
+              "label": "Return on Ad Spend"
             },
             {
-              "value": "High-Intent",
+              "value": "Qualified Sales Opportunities",
               "label": "Lead Quality"
             }
           ]
         },
         {
-          "company": "NIBRAS 360",
-          "description": "Developed a precise visual identity and structured a cohesive brand positioning statement, transforming their market presence into a distinct communication system.",
+          "company": "Saudi Contracting Company",
+          "description": "We built a complete lead generation ecosystem for a contracting company, establishing trust and delivering results within less than 10 days of launching the ad campaign.",
           "before": {
-            "label": "Brand Presence",
-            "value": "Fragmented Identity"
+            "label": "Performance Improvement",
+            "value": "A qualified lead generation ecosystem"
           },
           "after": {
-            "label": "Visual System",
-            "value": "100% Cohesive Guide"
+            "label": "Contract Value",
+            "value": "SAR 90,000+"
           },
           "metrics": [
             {
-              "value": "Unified",
-              "label": "Tone of Voice"
+              "value": "SAR 2,600",
+              "label": "Total Ad Spend"
             },
             {
-              "value": "Premium",
-              "label": "Market Positioning"
+              "value": "34X+",
+              "label": "Return on Ad Spend"
             },
             {
-              "value": "Structured",
-              "label": "Core Messaging"
+              "value": "20+",
+              "label": "Qualified Sales Opportunities"
             }
           ]
         },
         {
-          "company": "BELT & ROAD TRADING",
-          "description": "Transformed raw business metrics and data into a highly persuasive 12-page company profile, turning their past delivered work into an active corporate sales tool.",
-          "before": {
-            "label": "Corporate Presence",
-            "value": "Generic Description"
-          },
-          "after": {
-            "label": "Company Profile",
-            "value": "12-Page Sales Tool"
-          },
-          "metrics": [
-            {
-              "value": "Professional",
-              "label": "Service Copywriting"
-            },
-            {
-              "value": "Targeted",
-              "label": "B2B Credibility"
-            },
-            {
-              "value": "Print & Digital",
-              "label": "Ready Files"
-            }
-          ]
-        },
-        {
-          "company": "PANDA HOST",
-          "description": "Re-engineered their advertising funnels on Meta, transforming traditional random budget spending into a continuous digital learning and optimization system.",
+          "company": "Aqua",
+          "description": "We rebuilt the marketing strategy and established a professional pricing system, which contributed to doubling monthly sales within a short period.",
           "before": {
             "label": "Campaign Testing",
-            "value": "Random Ad Spending"
+            "value": "Sustainable growth built on strategy"
           },
           "after": {
-            "label": "Funnel Conversion",
-            "value": "Continuous Learning"
+            "label": "Monthly Sales",
+            "value": "SAR 380,000"
           },
           "metrics": [
             {
-              "value": "Optimized",
-              "label": "Cost Per Lead"
+              "value": "120K → 380K",
+              "label": "Monthly Sales Growth"
             },
             {
-              "value": "Full-Funnel",
-              "label": "Meta Ad Setup"
+              "value": "+216%",
+              "label": "Sales Growth Rate"
             },
             {
-              "value": "Actionable",
-              "label": "Performance Data"
+              "value": "90 Days",
+              "label": "Time to Achieve Growth"
             }
           ]
         },
         {
-          "company": "AL ASWAR AL SAMEDA CO.",
-          "description": "Structured a high-end corporate identity and comprehensive profiling for a premium 7-branch fast-food chain and large infrastructure projects in Tabuk.",
+          "company": "KINGSTR.EG",
+          "description": "We helped launch an entirely new brand from the ground up, starting with feasibility studies and pricing, through building the identity and strategy, all the way to launching the brand and achieving its first organic sales.",
           "before": {
-            "label": "Visual System",
-            "value": "Standard Outlines"
+            "label": "Brand Launch Ecosystem",
+            "value": "From an idea..to organic sales"
           },
           "after": {
-            "label": "Corporate Trust",
-            "value": "7-Branch Scale"
+            "label": "Sales Achieved",
+            "value": "EGP 30,000"
           },
           "metrics": [
             {
-              "value": "Tabuk Sector",
-              "label": "Infrastructure"
+              "value": "100%",
+              "label": "Launched From Scratch"
             },
             {
               "value": "Premium",
-              "label": "B2B Positioning"
+              "label": "Sales Without Ad Spend"
             },
             {
-              "value": "100% Cohesive",
-              "label": "Brand Presence"
+              "value": "EGP 30,000",
+              "label": "Sales Within One Month"
+            }
+          ]
+        },
+        {
+          "company": "Restaurant Performance",
+          "description": "We rebuilt the restaurant's marketing ecosystem, connecting content, ads, and offers to achieve clear sales growth at the lowest possible cost.",
+          "before": {
+            "label": "Performance Improvement",
+            "value": "Increasing sales and improving efficiency"
+          },
+          "after": {
+            "label": "Sales Achieved",
+            "value": "EGP 27,000+"
+          },
+          "metrics": [
+            {
+              "value": "EGP 1,900",
+              "label": "Total Ad Spend"
+            },
+            {
+              "value": "14.2X",
+              "label": "Return on Ad Spend"
+            },
+            {
+              "value": "67",
+              "label": "Conversations with Potential Customers"
             }
           ]
         }
@@ -1273,11 +1246,11 @@
       ]
     },
     "cta": {
-      "eyebrow": "Ready when you are",
+      "eyebrow": "Ready When You Are",
       "title": "Every great brand..",
       "titleHighlight": "starts with the right decision.",
       "description": "Start your growth and success story today with The Ego Studio!",
-      "button": "Book your free consultation"
+      "button": "Book Your Free Consultation"
     }
   },
   "contactPage": {
@@ -1286,10 +1259,10 @@
       "description": "Tell us about your project. We typically reply within one business day."
     },
     "hero": {
-      "badge": "Get in touch",
-      "title": "Let's talk",
-      "titleSecondLine": "about your brand",
-      "description": "Because your brand deserves more than just a marketing campaign. Share your goals with us, and let's build together a strategy that turns ambition into measurable results.",
+      "badge": "Contact Us",
+      "title": "Because Your Brand Deserves",
+      "titleSecondLine": "More Than Just a Marketing Campaign",
+      "description": "Share your goals with us, and let's build a strategy together that turns ambition into measurable results.",
       "imageAlt": "Contact THE EGO STUDIO"
     },
     "info": {
@@ -1308,8 +1281,8 @@
     }
   },
   "footer": {
-    "description": "Where strategy meets creativity..",
-    "descriptionHighlight": "and marketing becomes integrated growth.",
+    "description": "Where strategy meets creativity",
+    "descriptionHighlight": "and marketing becomes full-scale growth.",
     "startProject": "Start Your Project",
     "quickLinks": "Studio",
     "services": "Services",
