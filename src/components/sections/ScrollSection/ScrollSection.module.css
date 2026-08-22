@@ -9,13 +9,13 @@
   flex-direction: column;
 }
 
-/* Badge */
+/* 🎯 Badge الأصلي في مكانه السليم */
 .badge {
   position: absolute;
   top: 24px;                
   left: 50%;
   transform: translateX(-50%);
-  z-index: 5;
+  z-index: 20;
 
   display: inline-flex;
   align-items: center;
@@ -125,9 +125,8 @@
 /* ─── Left content ──────────────────────────────────────────── */
 .content {
   width: 50%;
-  color: var(--foreground);
+  color: #fafafa !important;
   text-align: start;
-  color: #fafafa!important;
 }
 
 .serviceNumber {
@@ -167,7 +166,7 @@
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 18px;
-  color:#fafafa;
+  color: #fafafa;
 }
 
 .underline {
@@ -182,16 +181,15 @@
 .description {
   font-size: 16px;
   line-height: 1.7;
-  color: var(--muted-foreground);
+  color: #fafafa !important;
   margin-bottom: 32px;
   max-width: 480px;
   letter-spacing: 0.02em;
   text-align: start;
   font-family: 'Montserrat', sans-serif;
-  color: #fafafa!important;
 }
 
-.ampersand{
+.ampersand {
   color: var(--foreground) !important;
   font-weight: 700;
   font-size: 40px;
@@ -217,7 +215,7 @@
 
 .checkIcon {
   color: var(--primary) !important;
-  background:#232323;
+  background: #232323;
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -225,7 +223,7 @@
 /* ─── Right image ───────────────────────────────────────────── */
 .imageContainer {
   width: 45%;
-  height: 60vh;              
+  height: 60vh;                
   max-height: 500px;         
   border: 0.1px solid #ffa74854;
   border-radius: 16px;
@@ -241,7 +239,7 @@
   width: 100%;
   height: 100%;
   border-radius: 16px;
-  object-fit: cover; /* تم تغييره لـ cover ليملأ المربع بشياكة */
+  object-fit: cover;
 }
 
 .ctaContainer {
@@ -266,11 +264,11 @@
 }
 
 .ctaSecondary:hover {
-  background:  var(--secondaryHover);
+  background: var(--secondaryHover);
   box-shadow: 0 15px 35px rgba(43, 110, 194, 0.4);
 }
 
-/* ─── Responsive (تعديلات الموبايل لضبط الصورة والنصوص) ─────── */
+/* ─── Responsive (تعديلات الموبايل والتابلت) ─────────────────── */
 @media (max-width: 900px) {
   .inner {
     padding: 0 32px;
@@ -283,25 +281,23 @@
 
 @media (max-width: 768px) {
   .inner {
-    flex-direction: column-reverse; /* الصورة فوق والنص تحت */
+    flex-direction: column-reverse;
     justify-content: center;
     padding: 80px 24px 32px;
     gap: 24px;
   }
 
-  /* جعل قسم النصوص يأخذ عرض الشاشة بالكامل ويكون منسقاً */
   .content {
     width: 100%;
-    align-items: flex-start; /* إلغاء الـ center المزعج للحفاظ على ترتيب القائمة */
+    align-items: flex-start;
     text-align: start;
     display: flex;
     flex-direction: column;
   }
 
-  /* حل مشكلة الصورة المضغوطة بإعطائها العرض الكامل */
   .imageContainer {
     width: 100%;
-    height: 35vh; /* تقليل الارتفاع على الموبايل ليتيح مساحة للنص */
+    height: 35vh;
     max-height: 300px;
   }
 
@@ -341,6 +337,6 @@
     font-size: 34px;
   }
   .imageContainer {
-    height: 30vh; /* تصغير الصورة قليلاً في الشاشات الصغيرة جداً */
+    height: 30vh;
   }
 }

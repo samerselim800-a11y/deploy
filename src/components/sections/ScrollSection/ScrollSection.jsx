@@ -61,84 +61,80 @@ export default function ScrollSection() {
   const { t, i18n } = useTranslation();
 
   return (
-    <>
-      <section id="services" className={styles.section}>
-        {SERVICES.map((service, i) => (
-          <div
-            key={service.number}
-            className={`${styles.panel} ${service.panelClass}`}
-            style={{
-              zIndex: i + 1,
-              top: `${i * 20}px`,
-            }}
-          >
-            {/* Badge shows only inside the first panel */}
-            {i === 0 && (
-              <div className={`${styles.badge} mt-4`}>
-                <span>{t("home.scrollSection.cta")}</span>
-              </div>
-            )}
+    <section id="services" className={styles.section}>
+      {/* البادج العلوي الثابت في مكانه الصحيح */}
+      <div className={styles.badge}>
+        <span>{t("home.scrollSection.cta")}</span>
+      </div>
 
-            <div className={styles.inner}>
-              <div className={styles.content}>
-                <h1 className={styles.title}>
-                  <span className={styles.serviceNumber}>
-                    {Number(service.number).toLocaleString(
-                      i18n.language === "ar" ? "ar-EG" : "en-US"
-                    )}
-                  </span>
-
-                  {t(`home.scrollSection.items.${service.key}.title`)}
-
-                  <br />
-
-                  <span className={styles.ampersand}>&</span>{" "}
-                  <span className={styles.titleAccent}>
-                    {t(`home.scrollSection.items.${service.key}.accent`)}
-                  </span>
-                </h1>
-
-                <span className={styles.subtitle}>
-                  {t(`home.scrollSection.items.${service.key}.subtitle`)}
+      {SERVICES.map((service, i) => (
+        <div
+          key={service.number}
+          className={`${styles.panel} ${service.panelClass}`}
+          style={{
+            zIndex: i + 1,
+            top: `${i * 15}px`,
+          }}
+        >
+          <div className={styles.inner}>
+            {/* قسم المحتوى والنصوص */}
+            <div className={styles.content}>
+              <h2 className={styles.title}>
+                <span className={styles.serviceNumber}>
+                  {Number(service.number).toLocaleString(
+                    i18n.language === "ar" ? "ar-EG" : "en-US"
+                  )}
                 </span>
 
-                <div className={styles.underline} />
+                {t(`home.scrollSection.items.${service.key}.title`)}
 
-                <p className={styles.description}>
-                  {t(`home.scrollSection.items.${service.key}.description`)}
-                </p>
+                <br />
 
-                <ul className={styles.features}>
-                  {t(`home.scrollSection.items.${service.key}.features`, {
-                    returnObjects: true,
-                  }).map((feat) => (
-                    <li key={feat} className={styles.featureItem}>
-                      <FaCheckCircle className={styles.checkIcon} size={18} />
-                      <span>{feat}</span>
-                    </li>
-                  ))}
-                </ul>
+                <span className={styles.ampersand}>&</span>{" "}
+                <span className={styles.titleAccent}>
+                  {t(`home.scrollSection.items.${service.key}.accent`)}
+                </span>
+              </h2>
 
-                <div className={styles.ctaContainer}>
-                  <Link to="/services" className={styles.ctaSecondary}>
-                    {t("home.scrollSection.cta")}
-                  </Link>
-                </div>
-              </div>
+              <span className={styles.subtitle}>
+                {t(`home.scrollSection.items.${service.key}.subtitle`)}
+              </span>
 
-              <div className={styles.imageContainer}>
-                <img
-                  className={styles.image}
-                  src={service.image}
-                  alt={service.imageAlt}
-                  loading={i === 0 ? "eager" : "lazy"}
-                  draggable={false}
-                />
+              <p className={styles.description}>
+                {t(`home.scrollSection.items.${service.key}.description`)}
+              </p>
+
+              <ul className={styles.features}>
+                {t(`home.scrollSection.items.${service.key}.features`, {
+                  returnObjects: true,
+                }).map((feat) => (
+                  <li key={feat} className={styles.featureItem}>
+                    <FaCheckCircle className={styles.checkIcon} size={16} />
+                    <span>{feat}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className={styles.ctaContainer}>
+                <Link to="/services" className={styles.ctaSecondary}>
+                  {t("home.scrollSection.cta")}
+                </Link>
               </div>
             </div>
+
+            {/* قسم الصورة */}
+            <div className={styles.imageContainer}>
+              <img
+                className={styles.image}
+                src={service.image}
+                alt={service.imageAlt}
+                loading={i === 0 ? "eager" : "lazy"}
+                draggable={false}
+              />
+            </div>
           </div>
-        ))}
-      </section>
-    </>
+        </div>
+      ))}
+    </section>
   );
 }

@@ -1,13 +1,13 @@
 /* ──────────────────────────────────────────────
-   PROCESS SECTION (DESKTOP & MOBILE CENTERED)
+   PROCESS SECTION
 ────────────────────────────────────────────── */
-
 .section {
   position: relative;
   padding: clamp(70px, 9vw, 110px) 0;
   background: var(--background, #000);
   color: #fff;
   overflow: hidden;
+  width: 100%;
 }
 
 .container {
@@ -27,15 +27,14 @@
   justify-content: center;
 }
 
-/* 🎯 لون الـ Primary للبادج والخطوط الجانبية */
 .eyebrow {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--primary, #f59e0b) !important;
   margin: 0 auto 16px;
@@ -47,22 +46,18 @@
   height: 2px;
   background-color: var(--primary, #f59e0b) !important;
   display: inline-block;
+  flex-shrink: 0;
 }
 
 .heading {
   font-family: var(--font-display, serif);
-  font-size: clamp(28px, 4vw, 48px);
+  font-size: clamp(28px, 4vw, 44px);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.25;
   color: var(--foreground, #fff);
   margin: 0 auto;
   max-width: 750px;
   text-align: center;
-}
-
-:global([dir="ltr"]) .heading,
-:global([lang="en"]) .heading {
-  font-size: clamp(24px, 3.4vw, 40px);
 }
 
 /* TIMELINE (DESKTOP) */
@@ -72,14 +67,15 @@
   gap: 28px;
   position: relative;
   margin-top: 40px;
+  width: 100%;
 }
 
 .timeline::before {
   content: "";
   position: absolute;
   top: 32px;
-  left: 10%;
-  right: 10%;
+  left: 8%;
+  right: 8%;
   height: 2px;
   background: rgba(255, 255, 255, 0.12);
   z-index: 1;
@@ -89,9 +85,20 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: right;
   position: relative;
   z-index: 2;
-  
+}
+
+/* ضبط المحاذاة حسب لغة الصفحة */
+[dir="rtl"] .stepItem {
+  align-items: flex-start;
+  text-align: right;
+}
+
+[dir="ltr"] .stepItem {
+  align-items: flex-start;
+  text-align: left;
 }
 
 .stepNumber {
@@ -99,7 +106,7 @@
   height: 64px;
   border-radius: 50%;
   background: var(--primary, #f59e0b);
-  color: var(--foreground, #fff);
+  color: #000;
   font-family: var(--font-display, serif);
   font-size: 1.35rem;
   font-weight: 800;
@@ -108,7 +115,7 @@
   justify-content: center;
   margin-bottom: 24px;
   box-shadow: 0 0 25px rgba(245, 158, 11, 0.35);
-  transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .stepTitle {
@@ -120,21 +127,15 @@
   line-height: 1.35;
 }
 
-:global([dir="ltr"]) .stepTitle,
-:global([lang="en"]) .stepTitle {
-  font-size: 1.1rem;
-  line-height: 1.3;
-}
-
 .stepDesc {
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 0.92rem;
+  line-height: 1.65;
   color: var(--muted-foreground, rgba(255, 255, 255, 0.7));
   margin: 0;
 }
 
 /* ──────────────────────────────────────────────
-   RESPONSIVE (توسيط كامل في الموبايل والتابلت)
+   RESPONSIVE (التابلت والموبايل)
 ────────────────────────────────────────────── */
 @media (max-width: 991.98px) {
   .timeline {
@@ -153,35 +154,31 @@
   }
 
   .header {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
 
-  /* 🎯 إلغاء الخط وتوسيط الحاوية بالكامل */
   .timeline {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: center !important;
-    gap: 40px !important;
+    gap: 36px !important;
     width: 100% !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
   }
 
   .timeline::before {
     display: none !important;
   }
 
-  /* 🎯 توسيط كل خطوة داخل الموبايل في المنتصف تماماً */
   .stepItem {
-    display: flex !important;
-    flex-direction: column !important;
     align-items: center !important;
-    justify-content: center !important;
     text-align: center !important;
-    width: 100% !important;
     max-width: 320px !important;
-    margin: 0 auto !important;
+  }
+
+  [dir="rtl"] .stepItem,
+  [dir="ltr"] .stepItem {
+    align-items: center !important;
+    text-align: center !important;
   }
 
   .stepNumber {
@@ -190,28 +187,196 @@
     font-size: 1.15rem;
     margin: 0 auto 16px auto !important;
   }
+}/* ──────────────────────────────────────────────
+   PROCESS SECTION
+────────────────────────────────────────────── */
 
-  .stepTitle {
+.section {
+  position: relative;
+  padding: clamp(70px, 8vw, 110px) 0;
+  background: var(--background, #000);
+  color: #fff;
+  overflow: hidden;
+  width: 100%;
+}
+
+.container {
+  width: min(1280px, 92%);
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--primary, #f59e0b) !important;
+  margin: 0 auto 16px;
+  text-align: center;
+}
+
+.line {
+  width: 24px;
+  height: 2px;
+  background-color: var(--primary, #f59e0b) !important;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.heading {
+  font-family: var(--font-display, serif);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--foreground, #fff);
+  margin: 0 auto;
+  max-width: 750px;
+  text-align: center;
+}
+
+.headingSecondLine {
+  display: inline;
+}
+
+/* TIMELINE (DESKTOP) */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  position: relative;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 32px;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.12);
+  z-index: 1;
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+/* ضبط المحاذاة حسب الاتجاه */
+[dir="rtl"] .stepItem {
+  align-items: flex-start;
+  text-align: right;
+}
+
+[dir="ltr"] .stepItem {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.stepNumber {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--primary, #f59e0b);
+  color: #fafafa;
+  font-family: var(--font-display, serif);
+  font-size: 1.35rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.35);
+  flex-shrink: 0;
+}
+
+.stepTitle {
+  font-family: var(--font-display, serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--foreground, #fff);
+  margin: 0 0 10px;
+  line-height: 1.35;
+}
+
+.stepDesc {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--muted-foreground, rgba(255, 255, 255, 0.7));
+  margin: 0;
+}
+
+/* ──────────────────────────────────────────────
+   RESPONSIVE (التابلت والموبايل)
+────────────────────────────────────────────── */
+@media (max-width: 991.98px) {
+  .timeline {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 24px;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .header {
+    margin-bottom: 35px;
+  }
+
+  .timeline {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 36px !important;
+    width: 100% !important;
+  }
+
+  .timeline::before {
+    display: none !important;
+  }
+
+  .stepItem {
+    align-items: center !important;
+    text-align: center !important;
+    max-width: 320px !important;
+  }
+
+  [dir="rtl"] .stepItem,
+  [dir="ltr"] .stepItem {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .stepNumber {
+    width: 56px;
+    height: 56px;
     font-size: 1.15rem;
-    text-align: center !important;
-    margin-bottom: 8px;
-    width: 100%;
-  }
-
-  .stepDesc {
-    font-size: 0.88rem;
-    line-height: 1.55;
-    text-align: center !important;
-    width: 100%;
-  }
-
-  .eyebrow {
-    font-size: 0.7rem;
-    letter-spacing: 0.16em;
-    gap: 8px;
-  }
-
-  .line {
-    width: 16px;
+    margin: 0 auto 16px auto !important;
   }
 }

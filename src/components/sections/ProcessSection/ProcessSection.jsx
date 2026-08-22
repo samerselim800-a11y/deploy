@@ -2,54 +2,41 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./ProcessSection.module.css";
 
-export function ProcessSection({ translationPrefix }) {
-  const { t } = useTranslation();
+export function ProcessSection({ translationPrefix = "servicesPage.process" }) {
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
 
-  const steps = [
-    {
-      number: "01",
-      title: t(`${translationPrefix}.steps.step1.title`, "Strategy Before Execution"),
-      desc: t(`${translationPrefix}.steps.step1.description`, "We don't start any project without studying the market and the business goal."),
-    },
-    {
-      number: "02",
-      title: t(`${translationPrefix}.steps.step2.title`, "Data Before Assumptions"),
-      desc: t(`${translationPrefix}.steps.step2.description`, "Our decisions are based on analysis, not guesswork."),
-    },
-    {
-      number: "03",
-      title: t(`${translationPrefix}.steps.step3.title`, "Quality Before Quantity"),
-      desc: t(`${translationPrefix}.steps.step3.description`, "We believe the right creative idea is stronger than dozens of posts."),
-    },
-    {
-      number: "04",
-      title: t(`${translationPrefix}.steps.step4.title`, "Growth Above All"),
-      desc: t(`${translationPrefix}.steps.step4.description`, "Our success is measured by our clients' results and business growth, not by the number of campaigns we run."),
-    },
-  ];
+  // جلب مصفوفة الخطوات من ملف الترجمة
+  const items = t(`${translationPrefix}.items`, { returnObjects: true });
+  const steps = Array.isArray(items) ? items : [];
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} dir={isArabic ? "rtl" : "ltr"}>
       <div className={styles.container}>
         
         {/* الهيدر العلوي */}
         <div className={styles.header}>
           <p className={styles.eyebrow}>
             <span className={styles.line} />
-            {t(`${translationPrefix}.badge`, "WHAT MAKES OUR THINKING DIFFERENT?")}
+            <span className={styles.eyebrowText}>{t(`${translationPrefix}.eyebrow`)}</span>
             <span className={styles.line} />
           </p>
 
           <h2 className={styles.heading}>
-            {t(`${translationPrefix}.title`, "A process built on momentum.")}
+            {t(`${translationPrefix}.title`)}{" "}
+            {t(`${translationPrefix}.titleSecondLine`) && (
+              <span className={styles.headingSecondLine}>
+                {t(`${translationPrefix}.titleSecondLine`)}
+              </span>
+            )}
           </h2>
         </div>
 
         {/* شبكة الخطوات الأربعة */}
         <div className={styles.timeline}>
-          {steps.map((step) => (
-            <div key={step.number} className={styles.stepItem}>
-              <div className={styles.stepNumber}>{step.number}</div>
+          {steps.map((step, index) => (
+            <div key={step.step || index} className={styles.stepItem}>
+              <div className={styles.stepNumber}>{step.step || `0${index + 1}`}</div>
               <h3 className={styles.stepTitle}>{step.title}</h3>
               <p className={styles.stepDesc}>{step.desc}</p>
             </div>
