@@ -62,7 +62,6 @@ export default function ScrollSection() {
 
   return (
     <section id="services" className={styles.section}>
-      {/* البادج العلوي الثابت في مكانه الصحيح */}
       <div className={styles.badge}>
         <span>{t("home.scrollSection.cta")}</span>
       </div>
@@ -77,7 +76,6 @@ export default function ScrollSection() {
           }}
         >
           <div className={styles.inner}>
-            {/* قسم المحتوى والنصوص */}
             <div className={styles.content}>
               <h2 className={styles.title}>
                 <span className={styles.serviceNumber}>
@@ -99,6 +97,8 @@ export default function ScrollSection() {
               <span className={styles.subtitle}>
                 {t(`home.scrollSection.items.${service.key}.subtitle`)}
               </span>
+
+              <div className={styles.underline} />
 
               <p className={styles.description}>
                 {t(`home.scrollSection.items.${service.key}.description`)}
@@ -122,7 +122,6 @@ export default function ScrollSection() {
               </div>
             </div>
 
-            {/* قسم الصورة */}
             <div className={styles.imageContainer}>
               <img
                 className={styles.image}
