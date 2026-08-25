@@ -62,10 +62,6 @@ export default function ScrollSection() {
 
   return (
     <section id="services" className={styles.section}>
-      <div className={styles.badge}>
-        <span>{t("home.scrollSection.cta")}</span>
-      </div>
-
       {SERVICES.map((service, i) => (
         <div
           key={service.number}
@@ -75,6 +71,13 @@ export default function ScrollSection() {
             top: `${i * 15}px`,
           }}
         >
+          {/* 🎯 يظهر البادج فقط في أول شريحة فوق الكارت مباشرة */}
+          {i === 0 && (
+            <div className={styles.badge}>
+              <span>{t("home.scrollSection.cta")}</span>
+            </div>
+          )}
+
           <div className={styles.inner}>
             <div className={styles.content}>
               <h2 className={styles.title}>
@@ -83,11 +86,8 @@ export default function ScrollSection() {
                     i18n.language === "ar" ? "ar-EG" : "en-US"
                   )}
                 </span>
-
                 {t(`home.scrollSection.items.${service.key}.title`)}
-
                 <br />
-
                 <span className={styles.ampersand}>&</span>{" "}
                 <span className={styles.titleAccent}>
                   {t(`home.scrollSection.items.${service.key}.accent`)}

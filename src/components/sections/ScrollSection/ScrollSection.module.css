@@ -9,30 +9,32 @@
   flex-direction: column;
 }
 
-/* 🎯 Badge الأصلي في مكانه السليم */
+/* ─── Badge (موضع أعلى الكارت مباشرة في أول شريحة) ────────── */
 .badge {
   position: absolute;
-  top: 24px;                
+  top: 35px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 20;
+  z-index: 10;
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.7rem;
 
-  padding: 1rem 3.5rem;
+  padding: 0.75rem 2.8rem;
   white-space: nowrap;
 
   border-radius: 999px;
-  border: 2px solid color-mix(in srgb, var(--primary) 35%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary) 35%, transparent);
 
-  background: transparent;
+  background: rgba(14, 15, 18, 0.85);
   color: var(--primary);
 
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+  font-size: 0.88rem;
+  font-weight: 600;
 }
 
 .badge:hover {
@@ -41,26 +43,20 @@
   box-shadow: var(--shadow-glow);
 }
 
-@media (max-width: 768px) {
-  .badge {
-    top: 16px;
-    padding: 0.7rem 1.6rem;
-  }
-}
-
-/* ─── Individual panel ──────────────────────────────────────── */
+/* ─── Individual Panel (Desktop) ───────────────────────────── */
 .panel {
   position: sticky;  
   top: 0;
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   will-change: transform;
 }
 
-/* ─── Per-slide backgrounds ─────────────────────────────────── */
+/* ─── Per-slide Backgrounds ─────────────────────────────────── */
 .panel1 { background: var(--background); }
 .panel1::before {
   content: ""; position: absolute; inset: 0;
@@ -109,7 +105,7 @@
   pointer-events: none; z-index: 0;
 }
 
-/* ─── Inner layout ──────────────────────────────────────────── */
+/* ─── Inner Layout (Desktop) ───────────────────────────────── */
 .inner {
   position: relative;
   z-index: 1;
@@ -122,7 +118,7 @@
   gap: 40px;
 }
 
-/* ─── Left content ──────────────────────────────────────────── */
+/* ─── Left Content ─────────────────────────────────────────── */
 .content {
   width: 50%;
   color: #fafafa !important;
@@ -195,7 +191,7 @@
   font-size: 40px;
 }
 
-/* ─── Features list ─────────────────────────────────────────── */
+/* ─── Features List ────────────────────────────────────────── */
 .features {
   display: flex;
   flex-direction: column;
@@ -220,7 +216,7 @@
   flex-shrink: 0;
 }
 
-/* ─── Right image ───────────────────────────────────────────── */
+/* ─── Right Image ──────────────────────────────────────────── */
 .imageContainer {
   width: 45%;
   height: 60vh;                
@@ -267,19 +263,128 @@
   background: var(--secondaryHover);
   box-shadow: 0 15px 35px rgba(43, 110, 194, 0.4);
 }
-/* ──────────────────────────────────────────────
-   RESPONSIVE (تنسيق احترافي ونظيف جداً للموبايل)
-────────────────────────────────────────────── */
 
-@media (max-width: 900px) {
+/* ──────────────────────────────────────────────
+   TABLET RESPONSIVE (iPad Mini 768px & iPad Air 820px)
+────────────────────────────────────────────── */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .panel {
+    position: sticky !important;
+    top: 0 !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+  }
+
+  .badge {
+    position: absolute !important;
+    top: 80px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    padding: 0.65rem 2.2rem !important;
+    font-size: 0.85rem !important;
+    z-index: 15 !important;
+  }
+
   .inner {
-    padding: 28px;
-    gap: 24px;
+    flex-direction: row !important;
+    width: 92% !important;
+    max-width: 780px !important;
+    padding: 24px 26px !important;
+    background: #0f1013 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 22px !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.55) !important;
+    gap: 28px !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  .content {
+    flex: 1 1 54% !important;
+    width: auto !important;
+    padding: 0 !important;
+    text-align: start !important;
+  }
+
+  .serviceNumber {
+    font-size: 30px !important;
+    margin-inline-end: 6px !important;
+  }
+
+  .title {
+    font-size: 21px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .ampersand {
+    font-size: 20px !important;
+  }
+
+  .subtitle {
+    font-size: 13px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .underline {
+    width: 75px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .description {
+    font-size: 12px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 12px !important;
+    max-width: 100% !important;
+  }
+
+  .features {
+    gap: 6px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .featureItem {
+    font-size: 12px !important;
+    gap: 8px !important;
+  }
+
+  .ctaContainer {
+    margin-top: 6px !important;
+  }
+
+  .ctaSecondary {
+    padding: 0.65rem 1.6rem !important;
+    font-size: 0.78rem !important;
+  }
+
+  .imageContainer {
+    flex: 0 0 42% !important;
+    width: 42% !important;
+    max-width: 300px !important;
+    height: auto !important;
+    max-height: none !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 18px !important;
+    border: 1px solid rgba(255, 166, 72, 0.25) !important;
+    overflow: hidden !important;
+    background: #000000;
+  }
+
+  .image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
   }
 }
 
-@media (max-width: 768px) {
-  /* 🎯 إلغاء الـ sticky المزعج في الموبايل لتتدفق البطاقات بسلاسة */
+/* ──────────────────────────────────────────────
+   MOBILE RESPONSIVE (أقل من 768px)
+────────────────────────────────────────────── */
+@media (max-width: 767px) {
   .panel {
     position: sticky !important;
     top: 0 !important;
@@ -303,16 +408,15 @@
 
   .badge {
     position: relative !important;
-    top: 120px !important;
+    top: 0 !important;
     left: 0 !important;
     transform: none !important;
-    margin: 40px auto 20px auto !important;
-    padding: 1.2rem 2em;
+    margin: 20px auto 20px auto !important;
+    padding: 0.65rem 2rem !important;
     font-size: 0.85rem;
     display: table;
   }
 
-  /* الصورة في قمة الكارت */
   .imageContainer {
     width: 100% !important;
     height: 190px !important;
@@ -381,6 +485,7 @@
   .inner {
     padding: 18px !important;
     border-radius: 20px;
+    gap: 12px;
   }
 
   .imageContainer {

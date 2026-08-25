@@ -31,9 +31,9 @@ function Counter({ to, suffix }) {
   }, [inView, to]);
 
   return (
-    <span ref={ref}>
+    <span ref={ref} className={styles.counterNumber}>
       {Number.isInteger(to) ? val.toFixed(0) : val.toFixed(1)}
-      {suffix}
+      {suffix && <span className={styles.counterSuffix}>{suffix}</span>}
     </span>
   );
 }
@@ -43,17 +43,20 @@ export function StatsCounter({ translationPrefix }) {
 
   return (
     <section className={styles.statsSection}>
-      {/* استخدام حاويات بوتستراب القياسية للتخطيط السلس */}
       <div className="container">
-        <div className="row g-4 justify-content-center">
+        <div className="row g-4 g-lg-5 justify-content-center">
           {STATS.map((s, i) => (
-            <div key={s.label} className="col-6 col-md-3 text-center">
-              <div className={styles.counterValue}>
-                <Counter to={s.value} suffix={s.suffix} />
+            <div key={s.label} className="col-6 col-lg-3 text-center">
+              <div className={styles.statCard}>
+                <div className={styles.counterValue}>
+                  <Counter to={s.value} suffix={s.suffix} />
+                </div>
+                <p className={styles.counterLabel}>
+                  {translationPrefix
+                    ? t(`${translationPrefix}.items.${i}.label`)
+                    : s.label}
+                </p>
               </div>
-              <p className={styles.counterLabel}>
-                {translationPrefix ? t(`${translationPrefix}.items.${i}.label`) : s.label}
-              </p>
             </div>
           ))}
         </div>
