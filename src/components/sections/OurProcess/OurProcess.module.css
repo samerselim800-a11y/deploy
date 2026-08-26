@@ -311,3 +311,19 @@ var(--secondaryHover)
     max-width: 400px;
   }
 }
+.fadeBottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 220px; /* زيادة الارتفاع ليغطي الركن */
+  z-index: 15;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    #000000 0%,
+    rgba(0, 0, 0, 0.95) 45%,
+    rgba(0, 0, 0, 0.6) 75%,
+    transparent 100%
+  );
+}

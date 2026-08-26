@@ -21,15 +21,18 @@
 
 /* العنوان العربي */
 .fontDisplay {
-  font-family: var(--font-display, serif);
+   font-size: clamp(32px, 3.8vw, 46px);
+  font-weight: 800;
   line-height: 1.25;
-  font-size: clamp(32px, 4vw, 52px);
   color: var(--primary);
+  margin: 0;
   letter-spacing: -0.01em;
 }
 
 .titleAccent {
-  color: var(--secondary, #0081d0);
+  color: var(--secondary) !important;
+  display: inline-block;
+  font-size: inherit;
 }
 
 /* 🎯 ضبط العنوان الإنجليزي ليتناسق تماماً مع حجم ومساحة العربي */

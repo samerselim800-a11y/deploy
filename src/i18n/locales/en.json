@@ -40,8 +40,8 @@
         },
         "social": {
           "badge": "02 — Social",
-          "title": "We Design Brands\nThat Stand Out",
-          "description": "Branding · Content Strategy · Paid advertisements · Meta Ads · Company Profiles"
+          "title": "We Build Brands\nThat Are Seen, Remembered, and Chosen",
+          "description": "From brand strategy and positioning, to visual identity, to building a complete presence that reflects its value in the market."
         }
       }
     },
@@ -49,106 +49,106 @@
       "cta": "Our services",
       "items": {
         "marketingGrowth": {
-          "title": "Marketing Growth",
-          "accent": "Strategy",
-          "subtitle": "Brand Positioning & Market Analysis",
-          "description": "We define the overall marketing direction, analyze market gaps, and craft core messaging matrices to turn your business presence into a measurable acquisition system.",
+          "title": "Brand Positioning",
+          "accent": " Strategy",
+          "subtitle": "Defining Your Unique Market Value",
+          "description": "We craft your brand image and the unique value that sets it apart, defining exactly why customers should buy from you and not your competitors.",
           "features": [
-            "Market Competitor Analysis",
-            "Brand Positioning Statements",
-            "Channel Recommendations"
+            "Defining core and supporting marketing messages",
+            "Selecting the right brand voice",
+            "Developing the visual identity"
           ]
         },
         "contentStrategy": {
-          "title": "Content Strategy",
-          "accent": "Creative Direction",
-          "subtitle": "Persuasive Copywriting & Storytelling",
-          "description": "We turn content from regular posting into a strategic tool serving awareness, trust, and sales through structured content pillars and engaging hooks.",
+          "title": "Marketing Strategy",
+          "accent": " Planning",
+          "subtitle": "Guiding Budget Toward Best Return",
+          "description": "We don't launch random campaigns. Instead, for every project, we build a strategic foundation that directs your budget toward the best possible return.",
           "features": [
-            "Content Pillars Definition",
-            "Video & Reels Scripting",
-            "Social Media Copywriting"
+            "Defining marketing and business goals",
+            "Researching your target audience and competitors",
+            "Defining messaging and content direction"
           ]
         },
         "metaAds": {
-          "title": "Meta Ads Campaign",
-          "accent": "Optimization",
-          "subtitle": "Performance Media Buying",
-          "description": "We manage paid advertising as a performance system. Testing creative angles, monitoring core metrics, and optimizing budgets to turn ad spend into clear commercial growth.",
+          "title": "Creative Content Writing",
+          "accent": " & Storytelling",
+          "subtitle": "Persuasive Ad Copy & Video Scripts",
+          "description": "We write creative ad and sales copy tailored to the customer journey, along with scripts for reels and various video formats.",
           "features": [
-            "Targeted Lead Generation",
-            "Retargeting & Custom Audiences",
-            "Performance Data Analysis"
+            "Writing post and ad campaign ideas",
+            "Writing video and reels scripts",
+            "Directing creative content to align with your brand goals"
           ]
         },
         "conversionPaths": {
-          "title": "Conversion Paths",
-          "accent": "Customer Journeys",
-          "subtitle": "Optimizing Touchpoints & Funnels",
-          "description": "We map the exact path customers take from first exposure directly to inquiry, building tailored landing and interaction paths to reduce customer confusion.",
+          "title": "Visual Identity",
+          "accent": "Corporate Design",
+          "subtitle": "Cohesive Visual Brand Systems",
+          "description": "We design your brand's unique visual identity, from the logo and colors to the right fonts, ensuring a unified, cohesive image in your audience's mind.",
           "features": [
-            "Touchpoint Analysis",
-            "Landing Path Engineering",
-            "Qualification Flow Tuning"
+            "Designing company and corporate profiles",
+            "Designing official print materials",
+            "Designing social media posts"
           ]
         },
         "whatsappSales": {
-          "title": "WhatsApp Sales",
-          "accent": "Communication",
-          "subtitle": "Lead Qualification & Closing Support",
-          "description": "We structure early client chat conversations. Crafting professional welcome setups and objection reply frameworks to help sales teams communicate uniformly and close fast.",
+          "title": "Meta & TikTok Ads",
+          "accent": "Management",
+          "subtitle": "High-ROAS Paid Campaigns",
+          "description": "We launch precisely targeted, paid ad campaigns on Meta & TikTok to reach your ideal audience and achieve the highest return on ad spend.",
           "features": [
-            "Welcome Flow Automation",
-            "Objection Reply Frameworks",
-            "Unified Team Communication"
+            "Structuring campaigns based on customer funnel",
+            "Selecting the right campaign objectives",
+            "Monitoring performance and continuous optimization"
           ]
         },
         "webDev": {
-          "title": "Web Dev Interface",
-          "accent": "UI/UX",
-          "subtitle": "High-Converting Digital Products",
-          "description": "We design and engineer speed-optimized, responsive web interfaces and landing pages. Built specifically to handle campaign traffic and convert interest into real opportunities.",
+          "title": "Website & E-Commerce",
+          "accent": "Development",
+          "subtitle": "High-Converting Digital Interfaces",
+          "description": "We build and design complete websites and online stores, delivering a smooth user experience to increase sales.",
           "features": [
-            "UI/UX Interface Design",
-            "Responsive Web Development",
-            "Funnels & Form Integrations"
+            "Website development and design",
+            "E-commerce store development and design",
+            "UI/UX design"
           ]
         }
       }
     },
     "clients": {
       "badge": "Our Clients",
-      "title": "Brands That",
-      "titleHighlight": "Believe in Our Work",
-      "description": "At EGO STUDIO, we build trusted partnerships across diverse commercial sectors, transforming collaboration into trackable market expansion."
+      "title": "Your Brand Could Be",
+      "titleHighlight": "Our Next Success Story",
+      "description": "We're proud of our partnerships with brands across different sectors and markets — brands that chose to treat marketing as an investment in growth, not just a cost."
     },
     "process": {
       "loading": "Loading System Engine...",
       "scrollHint": "Scroll to view system layers",
       "steps": {
         "analysis": {
-          "title": "Analysis & Research",
-          "description": "We begin by deep-diving into your business, reading your specific market gaps, and mapping out your exact target audience segments."
+          "title": "Strategy & Direction",
+          "description": "We understand the market, your customer, and your competitors to define where your brand should go and how to get there."
         },
         "positioning": {
-          "title": "Positioning & Messaging",
-          "description": "We craft a clear positioning statement and core messaging matrix, shaping a credible brand promise that sets you apart from competitors."
+          "title": "Brand & Identity",
+          "description": "We build a clear, distinctive, and trustworthy brand."
         },
         "system": {
-          "title": "System & Architecture",
-          "description": "Our team designs the complete growth architecture, connecting your structured content pillars to targeted advertising funnels and web paths."
+          "title": "Ideas & Content",
+          "description": "We turn strategy into ideas and content that create a real presence in your customer's mind."
         },
         "execution": {
-          "title": "Structured Execution",
-          "description": "We launch performance-driven media campaigns, deploy responsive landing sequences, and implement automated qualification support on WhatsApp."
+          "title": "Advertising & Performance",
+          "description": "We turn presence into real action through campaigns, ads, and the right channels to achieve your goals."
         },
         "review": {
-          "title": "Review & Insights",
-          "description": "We analyze raw performance numbers to measure result quality, translating weekly data patterns into actionable insights for future growth."
+          "title": "Data & Optimization",
+          "description": "We read the results, identify what's working, and optimize every step based on data."
         },
         "optimization": {
-          "title": "Optimization & Scaling",
-          "description": "We continuously adjust and optimize based on real performance memory, scaling budgets safely to maximize your market traction."
+          "title": "Expansion & Growth",
+          "description": "We turn marketing into a complete growth ecosystem."
         }
       }
     },
@@ -393,46 +393,45 @@
         }
       ]
     },
-     
     "faq": {
-  "badge": "FAQ",
-  "title": "Frequently Asked Questions",
-  "description": "Find answers about our service systems, performance tracking, and commercial outcomes.",
-  "items": [
-    {
-      "question": "What Makes EGO STUDIO Different From Traditional Agencies?",
-      "answer": "We are a complete growth partner that combines strategy, brand building, content, digital marketing, advertising, and websites and digital systems. We build an integrated ecosystem that serves your business goals, not just separate, disconnected services."
-    },
-    {
-      "question": "Do You Work Only With Established Companies, or With New Projects Too?",
-      "answer": "We work with both. Whether you're launching a project from scratch or running an established company looking to develop your brand, boost performance, or build a more efficient marketing system, we start from your current position and identify exactly what your business really needs."
-    },
-    {
-      "question": "How Do You Know What My Project Needs?",
-      "answer": "We don't start by assuming the solution is a paid ad or new content. We first take the time to understand your business, market, audience, competitors, offer, and business goal. Then we define priorities and build the right strategy for your project based on data and insights."
-    },
-    {
-      "question": "How Do You Measure Marketing Success?",
-      "answer": "We don't measure success by follower count or likes alone. We tie performance to your business goals — lead quality, customer acquisition cost, conversion rates, sales, return on ad spend, and customer retention — depending on your project's nature and objectives."
-    },
-    {
-      "question": "Do You Guarantee Increased Sales?",
-      "answer": "We don't sell unrealistic marketing promises. We build the strategy, define performance indicators, then test, analyze, and optimize based on results. Our goal is to build a marketing system that supports long-term growth and profitability, not just achieve temporary numbers."
-    },
-    {
-      "question": "Do You Work With a Specific Sector or Industry?",
-      "answer": "We work across different sectors and industries, because our approach starts by understanding the nature of your business, market, audience, and company goals, rather than applying a ready-made marketing template to every project."
-    },
-    {
-      "question": "Can You Rebuild Our Brand If Our Current Identity Doesn't Reflect the Company's Value?",
-      "answer": "Yes. And the solution isn't always a complete identity overhaul, sometimes a brand simply needs repositioning, a refined message, or an updated identity that fits the company's new stage of growth."
-    },
-    {
-      "question": "How Do I Start My Project With EGO Studio?",
-      "answer": "Through a free initial consultation. We listen to your goals and challenges, understand your project's current situation, then identify the right priorities and growth opportunities. If we find that EGO Studio is the right partner for you, we move forward to building the right action plan for your project."
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "description": "Find answers about our service systems, performance tracking, and commercial outcomes.",
+      "items": [
+        {
+          "question": "What Makes EGO STUDIO Different From Traditional Agencies?",
+          "answer": "We are a complete growth partner that combines strategy, brand building, content, digital marketing, advertising, and websites and digital systems. We build an integrated ecosystem that serves your business goals, not just separate, disconnected services."
+        },
+        {
+          "question": "Do You Work Only With Established Companies, or With New Projects Too?",
+          "answer": "We work with both. Whether you're launching a project from scratch or running an established company looking to develop your brand, boost performance, or build a more efficient marketing system, we start from your current position and identify exactly what your business really needs."
+        },
+        {
+          "question": "How Do You Know What My Project Needs?",
+          "answer": "We don't start by assuming the solution is a paid ad or new content. We first take the time to understand your business, market, audience, competitors, offer, and business goal. Then we define priorities and build the right strategy for your project based on data and insights."
+        },
+        {
+          "question": "How Do You Measure Marketing Success?",
+          "answer": "We don't measure success by follower count or likes alone. We tie performance to your business goals — lead quality, customer acquisition cost, conversion rates, sales, return on ad spend, and customer retention — depending on your project's nature and objectives."
+        },
+        {
+          "question": "Do You Guarantee Increased Sales?",
+          "answer": "We don't sell unrealistic marketing promises. We build the strategy, define performance indicators, then test, analyze, and optimize based on results. Our goal is to build a marketing system that supports long-term growth and profitability, not just achieve temporary numbers."
+        },
+        {
+          "question": "Do You Work With a Specific Sector or Industry?",
+          "answer": "We work across different sectors and industries, because our approach starts by understanding the nature of your business, market, audience, and company goals, rather than applying a ready-made marketing template to every project."
+        },
+        {
+          "question": "Can You Rebuild Our Brand If Our Current Identity Doesn't Reflect the Company's Value?",
+          "answer": "Yes. And the solution isn't always a complete identity overhaul, sometimes a brand simply needs repositioning, a refined message, or an updated identity that fits the company's new stage of growth."
+        },
+        {
+          "question": "How Do I Start My Project With EGO Studio?",
+          "answer": "Through a free initial consultation. We listen to your goals and challenges, understand your project's current situation, then identify the right priorities and growth opportunities. If we find that EGO Studio is the right partner for you, we move forward to building the right action plan for your project."
+        }
+      ]
     }
-  ]
-}
   },
   "aboutPage": {
     "meta": {
@@ -886,8 +885,6 @@
         }
       ]
     },
-
-
     "cta": {
       "eyebrow": "Ready When You Are",
       "title": "Every great brand..",

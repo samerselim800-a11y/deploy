@@ -88,7 +88,7 @@ export default function ScrollSection() {
                 </span>
                 {t(`home.scrollSection.items.${service.key}.title`)}
                 <br />
-                <span className={styles.ampersand}>&</span>{" "}
+                <span className={styles.ampersand}></span>{" "}
                 <span className={styles.titleAccent}>
                   {t(`home.scrollSection.items.${service.key}.accent`)}
                 </span>
