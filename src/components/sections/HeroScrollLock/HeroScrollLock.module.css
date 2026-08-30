@@ -330,10 +330,28 @@
     display: none !important;
   }
 
+  /* ✅ خلي الـ section نفسه flex column: ده بيسمحلنا نرتب المحتوى
+     والـ mascot بصريًا بـ order، فيتبع بعضه في الـ flow الطبيعي
+     بدل ما يتحسب موضعه كنسبة من طول الشاشة (اللي كانت بتغلط
+     على أي شاشة نسبتها مختلفة). العناصر التانية (bgWrapper, shapes,
+     pagination, scrollHint) لسه absolute فمش بتتأثر بالـ flex ده. */
+  .section {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding-top: 4.5rem !important;
+    padding-bottom: 2.5rem !important;
+    gap: 0 !important;
+  }
+
   .content {
+    position: relative !important;
+    height: auto !important;
+    order: 1 !important;
     padding-left: 2rem !important;
     padding-right: 2rem !important;
-    padding-top: 7rem !important;
+    padding-top: 0 !important;
     justify-content: flex-start !important;
     align-items: center !important;
     max-width: 100% !important;
@@ -416,22 +434,33 @@
     letter-spacing: 0.12em !important;
   }
 
-  /* 🎯 وضع الـ Mascot تحت المحتوى مباشرة */
+  /* 🎯 الـ Mascot بقى عنصر عادي في الـ flow (مش absolute)، وترتيبه
+     بصريًا بعد الـ content بـ order — يعني هيفضل دايمًا مباشرة تحت
+     الأزرار بمسافة margin ثابتة، مهما كان طول الشاشة أو نسبتها.
+     ده اللي بيمنع الفراغ الكبير أو التصادم مع النص في نفس الوقت. */
   .mascot,
   .mascotLeft {
-    width: clamp(280px, 42vw, 380px) !important;
-    max-width: 380px !important;
+    position: relative !important;
+    order: 2 !important;
+    width: clamp(280px, 40vw, 400px) !important;
+    max-width: 400px !important;
     right: auto !important;
-    left: 50% !important;
-    top: 56% !important;
+    left: auto !important;
+    top: auto !important;
     bottom: auto !important;
-    transform: translateX(-50%) !important;
+    transform: none !important;
+    margin: 1.25rem auto 0 auto !important;
     padding: 0 !important;
     opacity: 1 !important;
   }
 
   .scrollHint {
-    bottom: 1.5rem !important;
+    position: relative !important;
+    order: 3 !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin-top: 1.25rem !important;
   }
 }
 
@@ -445,11 +474,27 @@
     display: none !important;
   }
 
+  /* ✅ نفس فكرة التابلت: الـ section بقى flex column، والمحتوى
+     والـ mascot بيترتبوا بصريًا بـ order بدل ما الـ mascot يتحسب
+     موضعه من نسبة مئوية لطول الشاشة. كده مفيش فراغ زيادة ولا تصادم
+     على أي مقاس موبايل أو تابلت مهما كانت نسبة الشاشة غريبة. */
+  .section {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding-top: 4.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
   .content { 
+    position: relative !important;
+    height: auto !important;
+    order: 1 !important;
     padding-left: 1.25rem !important; 
     padding-right: 1.25rem !important;
+    padding-top: 0 !important; 
     justify-content: flex-start !important; 
-    padding-top: 6.5rem !important; 
     align-items: center !important;
     max-width: 100% !important;
   }
@@ -534,23 +579,33 @@
     height: 1rem !important;
   }
 
-  /* 🎯 إلغاء الفراغ بجعل الـ Mascot يتبع نهاية الأزرار فوراً */
+  /* 🎯 الـ Mascot عنصر عادي في الـ flow دلوقتي (مش absolute)، وبيتبع
+     الأزرار مباشرة بمسافة margin ثابتة — نفس المسافة على أي موبايل
+     أو تابلت مهما اختلف طول الشاشة، من غير فراغ زيادة أو تصادم */
   .mascot, .mascotLeft {
-    width: clamp(230px, 62vw, 300px) !important;
+    position: relative !important;
+    order: 2 !important;
+    width: clamp(230px, 58vw, 300px) !important;
     max-width: 300px !important;
     min-width: 0 !important;
     padding: 0 !important;
     right: auto !important; 
-    left: 50% !important;
-    top: 54% !important; /* ملء الفراغ بدقة أسفل الأزرار */
+    left: auto !important;
+    top: auto !important;
     bottom: auto !important;
-    transform: translateX(-50%) !important; 
+    transform: none !important; 
+    margin: 0.75rem auto 0 auto !important;
     opacity: 1 !important;
     z-index: 5;
   }
 
   .scrollHint {
-    bottom: 1.2rem !important;
+    position: relative !important;
+    order: 3 !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin-top: 1rem !important;
   }
 
   .scrollIcon {
@@ -563,6 +618,12 @@
     letter-spacing: 0.18em !important;
   }
 }
+
+/* ──────────────────────────────────────────────
+   🎯 حماية إضافية: شاشات ضيقة العرض وقصيرة الطول في نفس الوقت
+   (زي Surface Duo مطوي، أو أي فون بشاشة قصيرة نسبيًا)
+   بيقلل حجم الـ mascot ويقرب مسافته عشان يفضل فيه فراغ آمن دايمًا
+────────────────────────────────────────────── */
 /* ──────────────────────────────────────────────
    🎯 حل مخصص للشاشات الأفقية والقصيرة رأسياً (مثل Nest Hub و Landscape)
 ────────────────────────────────────────────── */
