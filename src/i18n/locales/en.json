@@ -50,7 +50,7 @@
       "items": {
         "marketingGrowth": {
           "title": "Brand Positioning",
-          "accent": " Strategy",
+          "accent": "Strategy",
           "subtitle": "Defining Your Unique Market Value",
           "description": "We craft your brand image and the unique value that sets it apart, defining exactly why customers should buy from you and not your competitors.",
           "features": [
@@ -61,7 +61,7 @@
         },
         "contentStrategy": {
           "title": "Marketing Strategy",
-          "accent": " Planning",
+          "accent": "Planning",
           "subtitle": "Guiding Budget Toward Best Return",
           "description": "We don't launch random campaigns. Instead, for every project, we build a strategic foundation that directs your budget toward the best possible return.",
           "features": [
@@ -72,7 +72,7 @@
         },
         "metaAds": {
           "title": "Creative Content Writing",
-          "accent": " & Storytelling",
+          "accent": "& Storytelling",
           "subtitle": "Persuasive Ad Copy & Video Scripts",
           "description": "We write creative ad and sales copy tailored to the customer journey, along with scripts for reels and various video formats.",
           "features": [
@@ -908,9 +908,7 @@
     "filters": {
       "all": "All",
       "branding": "Branding",
-      "identityGuide": "Identity Guide",
       "socialMedia": "Social Media",
-      "paidAds": "Paid Ads",
       "companyProfiles": "Company Profiles"
     },
     "projects": {
@@ -923,331 +921,59 @@
         "whatWeDid": "What we did"
       },
       "items": {
-        "nibras": {
-          "title": "Nibras 360 Visual Identity",
-          "description": "A complete visual identity system built from the ground up — logo, color palette, typography, and brand guidelines that communicate precision and trust across all touchpoints.",
-          "services": [
-            "Brand Strategy",
-            "Logo Design",
-            "Visual Identity System",
-            "Brand Guidelines"
-          ],
-          "results": [
-            {
-              "label": "Brand consistency"
-            },
-            {
-              "label": "Assets delivered"
-            },
-            {
-              "label": "Turnaround"
-            }
-          ]
+        "sadanah": {
+          "title": "Sadanah Visual Identity",
+          "description": "A comprehensive visual identity system communicating luxury and authenticity."
         },
-        "nurtureNature": {
-          "title": "Nurture Nature's Touch",
-          "description": "A comprehensive identity guide that documented every aspect of the brand — voice, tone, visual rules, and usage standards to ensure consistency across all team members and channels.",
-          "services": [
-            "Identity Guidelines",
-            "Brand Voice",
-            "Typography System",
-            "Color Usage Rules"
-          ],
-          "results": [
-            {
-              "label": "Pages delivered"
-            },
-            {
-              "label": "Brand elements"
-            },
-            {
-              "label": "Team adoption"
-            }
-          ]
+        "myHerb": {
+          "title": "My Herb Identity Guide",
+          "description": "Nature-inspired visual identity manual crafted for premium herbal products."
+        },
+        "novo": {
+          "title": "NOVO Brand Identity",
+          "description": "Modern branding framework representing movement, trust, and market distinction."
         },
         "ippo": {
-          "title": "Ippo Child Foot Branding",
-          "description": "A playful yet professional branding system for a children's footwear brand — crafted to appeal to both parents and kids while building strong shelf and digital presence.",
-          "services": [
-            "Brand Identity",
-            "Packaging Direction",
-            "Social Media Visual Style",
-            "Brand Story"
-          ],
-          "results": [
-            {
-              "label": "Market reception"
-            },
-            {
-              "label": "SKUs branded"
-            },
-            {
-              "label": "Launch timeline"
-            }
-          ]
+          "title": "IPPO Identity Guide",
+          "description": "Playful yet structured brand guidelines designed for a children's footwear brand."
         },
-        "packgo": {
-          "title": "PACKGO Social Campaign",
-          "description": "A structured social media campaign designed to build awareness, drive engagement, and convert followers into paying customers — combining content pillars with a clear posting strategy.",
-          "services": [
-            "Content Strategy",
-            "Caption Writing",
-            "Creative Direction",
-            "Campaign Planning"
-          ],
-          "results": [
-            {
-              "label": "Engagement rate"
-            },
-            {
-              "label": "Posts delivered"
-            },
-            {
-              "label": "Follower growth"
-            }
-          ]
+        "sevenTerritory": {
+          "title": "Seven Territory Studies Center",
+          "description": "Corporate visual identity design for a leading strategic research & consulting institution."
         },
-        "aquaCool": {
-          "title": "Aqua Cool Paid Ads",
-          "description": "A full Meta ads system built from scratch — from campaign architecture and audience segmentation to creative testing and ongoing optimization that turned ad spend into measurable monthly revenue.",
-          "services": [
-            "Meta Ads Management",
-            "Campaign Structure",
-            "Audience Targeting",
-            "Performance Optimization"
-          ],
-          "results": [
-            {
-              "label": "ROAS achieved"
-            },
-            {
-              "label": "Monthly sales"
-            },
-            {
-              "label": "Growth period"
-            }
-          ]
+        "khususiTeacher": {
+          "title": "Khususi Teacher Campaign",
+          "description": "Targeted social media creatives tailored for educational bookings and parent acquisition."
         },
-        "beltRoad": {
-          "title": "Belt & Road Company Profile",
-          "description": "A professional company profile that transformed raw business data into a persuasive sales document — designed to open doors with corporate clients and communicate credibility at first glance.",
-          "services": [
-            "Copywriting",
-            "Profile Design Direction",
-            "Case Study Writing",
-            "Service Presentation"
-          ],
-          "results": [
-            {
-              "label": "Pages designed"
-            },
-            {
-              "label": "Client feedback"
-            },
-            {
-              "label": "Deals influenced"
-            }
-          ]
+        "kedaElShamal": {
+          "title": "Keda El Shamal Contracting",
+          "description": "High-impact social media creatives designed for heavy equipment and construction works."
+        },
+        "traventure": {
+          "title": "Traventure Tourism Campaign",
+          "description": "Social media creatives highlighting curated adventures, team certificates, and packages."
+        },
+        "pandaHost": {
+          "title": "Panda Host Paid Ads",
+          "description": "Performance ad designs boosting conversions and local payment solutions for web hosting."
+        },
+        "qitaProfile": {
+          "title": "Qita Company Profile",
+          "description": "A luxury catalog and profile designed for event organization and exhibition management."
+        },
+        "akwanProfile": {
+          "title": "Akwan Alufuq Profile",
+          "description": "Corporate profile outlining modern operational methodologies and integrated solutions."
+        },
+        "qudrahProfile": {
+          "title": "Qudrah Company Profile",
+          "description": "Corporate presentation document built to elevate digital transformation partnerships."
+        },
+        "eliteStonesProfile": {
+          "title": "Elite Stones Profile",
+          "description": "Premium corporate catalog showcasing natural marble supply and architectural projects."
         }
       }
-    },
-    "stats": {
-      "items": [
-        {
-          "label": "Core Services Delivered"
-        },
-        {
-          "label": "Average Ad Return Improvement"
-        },
-        {
-          "label": "Trackable Sales (SAR)"
-        },
-        {
-          "label": "Team Experience"
-        }
-      ]
-    },
-    "caseStudies": {
-      "badge": "Case Studies",
-      "title": "Every case study here",
-      "description": " is proof that real marketing starts with a strong strategy..and ends with real results.",
-      "pill": "Performance Case Study",
-      "button": "See All Work",
-      "items": [
-        {
-          "company": "Konoz Marshall",
-          "description": "We built a complete marketing ecosystem that strengthened brand trust and turned interest into real sales opportunities in the furniture and finishing sector.",
-          "before": {
-            "label": "Performance Improvement",
-            "value": "A strategy to turn interest into sales"
-          },
-          "after": {
-            "label": "Sales Achieved",
-            "value": "AED 57,000+"
-          },
-          "metrics": [
-            {
-              "value": "AED 15,000",
-              "label": "Total Ad Spend"
-            },
-            {
-              "value": "3.8X",
-              "label": "Return on Ad Spend"
-            },
-            {
-              "value": "Qualified Sales Opportunities",
-              "label": "Lead Quality"
-            }
-          ]
-        },
-        {
-          "company": "Saudi Contracting Company",
-          "description": "We built a complete lead generation ecosystem for a contracting company, establishing trust and delivering results within less than 10 days of launching the ad campaign.",
-          "before": {
-            "label": "Performance Improvement",
-            "value": "A qualified lead generation ecosystem"
-          },
-          "after": {
-            "label": "Contract Value",
-            "value": "SAR 90,000+"
-          },
-          "metrics": [
-            {
-              "value": "SAR 2,600",
-              "label": "Total Ad Spend"
-            },
-            {
-              "value": "34X+",
-              "label": "Return on Ad Spend"
-            },
-            {
-              "value": "20+",
-              "label": "Qualified Sales Opportunities"
-            }
-          ]
-        },
-        {
-          "company": "Aqua",
-          "description": "We rebuilt the marketing strategy and established a professional pricing system, which contributed to doubling monthly sales within a short period.",
-          "before": {
-            "label": "Campaign Testing",
-            "value": "Sustainable growth built on strategy"
-          },
-          "after": {
-            "label": "Monthly Sales",
-            "value": "SAR 380,000"
-          },
-          "metrics": [
-            {
-              "value": "120K → 380K",
-              "label": "Monthly Sales Growth"
-            },
-            {
-              "value": "+216%",
-              "label": "Sales Growth Rate"
-            },
-            {
-              "value": "90 Days",
-              "label": "Time to Achieve Growth"
-            }
-          ]
-        },
-        {
-          "company": "KINGSTR.EG",
-          "description": "We helped launch an entirely new brand from the ground up, starting with feasibility studies and pricing, through building the identity and strategy, all the way to launching the brand and achieving its first organic sales.",
-          "before": {
-            "label": "Brand Launch Ecosystem",
-            "value": "From an idea..to organic sales"
-          },
-          "after": {
-            "label": "Sales Achieved",
-            "value": "EGP 30,000"
-          },
-          "metrics": [
-            {
-              "value": "100%",
-              "label": "Launched From Scratch"
-            },
-            {
-              "value": "Premium",
-              "label": "Sales Without Ad Spend"
-            },
-            {
-              "value": "EGP 30,000",
-              "label": "Sales Within One Month"
-            }
-          ]
-        },
-        {
-          "company": "Restaurant Performance",
-          "description": "We rebuilt the restaurant's marketing ecosystem, connecting content, ads, and offers to achieve clear sales growth at the lowest possible cost.",
-          "before": {
-            "label": "Performance Improvement",
-            "value": "Increasing sales and improving efficiency"
-          },
-          "after": {
-            "label": "Sales Achieved",
-            "value": "EGP 27,000+"
-          },
-          "metrics": [
-            {
-              "value": "EGP 1,900",
-              "label": "Total Ad Spend"
-            },
-            {
-              "value": "14.2X",
-              "label": "Return on Ad Spend"
-            },
-            {
-              "value": "67",
-              "label": "Conversations with Potential Customers"
-            }
-          ]
-        }
-      ]
-    },
-    "testimonials": {
-      "badge": "Testimonials",
-      "title": "What Our Clients Say",
-      "items": [
-        {
-          "text": "Aero Marketing transformed our online presence completely.",
-          "name": "Ahmed Mohammed",
-          "role": "CEO, PACKGO"
-        },
-        {
-          "text": "Working with Aero Marketing was the best decision.",
-          "name": "Sarah Al-Rashid",
-          "role": "Marketing Director, SHAHY"
-        },
-        {
-          "text": "The team's creativity and professionalism is unmatched.",
-          "name": "Khalid Al-Fahad",
-          "role": "Founder, LEATHER MATE"
-        },
-        {
-          "text": "Strategic approach boosted our visibility.",
-          "name": "Mohammed Al-Saud",
-          "role": "CEO, AQUA COOL"
-        },
-        {
-          "text": "Exceptional service and outstanding results.",
-          "name": "Fatima Al-Omar",
-          "role": "Director, SAMA ACADEMY"
-        },
-        {
-          "text": "They became true partners in growth.",
-          "name": "Omar Al-Harbi",
-          "role": "Business Owner, PACKGO"
-        }
-      ]
-    },
-    "cta": {
-      "eyebrow": "Ready When You Are",
-      "title": "Every great brand..",
-      "titleHighlight": "starts with the right decision.",
-      "description": "Start your growth and success story today with The Ego Studio!",
-      "button": "Book Your Free Consultation"
     }
   },
   "contactPage": {

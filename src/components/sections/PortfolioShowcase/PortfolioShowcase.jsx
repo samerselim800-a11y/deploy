@@ -1,3 +1,4 @@
+// PortfolioShowcase.jsx
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ArrowUpRight, X } from "lucide-react";
@@ -6,34 +7,12 @@ import { PORTFOLIO } from "@/lib/content";
 import { Reveal } from "@/components/sections/Reveal/Reveal";
 import styles from "./PortfolioShowcase.module.css";
 
-const PROJECT_KEYS = [
-  "nibras",
-  "nurtureNature",
-  "ippo",
-  "packgo",
-  "aquaCool",
-  "beltRoad",
-];
-
 const CATEGORY_KEYS = {
   All: "all",
   Branding: "branding",
-  "Identity Guide": "identityGuide",
   "Social Media": "socialMedia",
-  "Paid Ads": "paidAds",
   "Company Profiles": "companyProfiles",
 };
-
-// ─── Gallery placeholder helper ───
-const GALLERY_COUNT = 7;
-const GALLERY_HEIGHTS = [420, 560, 480, 640, 400, 520, 460];
-
-function buildGallery(seed) {
-  return Array.from({ length: GALLERY_COUNT }, (_, i) => ({
-    id: `${seed}-${i}`,
-    src: `https://picsum.photos/seed/${seed}-${i}/600/${GALLERY_HEIGHTS[i % GALLERY_HEIGHTS.length]}`,
-  }));
-}
 
 // ─── Modal Component ───
 function ProjectModal({ project, onClose, labels }) {
@@ -47,7 +26,10 @@ function ProjectModal({ project, onClose, labels }) {
     };
   }, [onClose]);
 
-  const gallery = project.gallery || buildGallery(project.id);
+  const gallery =
+    project.gallery && project.gallery.length > 0
+      ? project.gallery
+      : [{ id: `${project.id}-cover`, src: project.image }];
 
   return (
     <div className={styles.backdrop} onClick={onClose}>
@@ -206,32 +188,30 @@ export function PortfolioShowcase({ limit }) {
   const { t } = useTranslation();
   const [selected, setSelected] = useState(null);
 
-  const translatedProjects = PORTFOLIO.map((project, index) => {
-    const key = PROJECT_KEYS[index] || `project_${project.id}`;
+  const translatedProjects = PORTFOLIO.map((project) => {
     return {
       ...project,
-      title: t(`portfolioPage.projects.items.${key}.title`, {
-        defaultValue: project.title,
+      title: t(`portfolioPage.projects.items.${project.key}.title`, {
+        defaultValue: project.title || project.key,
       }),
       categoryValue: project.category,
       categoryLabel: CATEGORY_KEYS[project.category]
         ? t(`portfolioPage.filters.${CATEGORY_KEYS[project.category]}`)
         : project.category,
-      description: t(`portfolioPage.projects.items.${key}.description`, {
-        defaultValue: project.description,
+      description: t(`portfolioPage.projects.items.${project.key}.description`, {
+        defaultValue: "",
       }),
     };
   });
 
   const brandingProjects = translatedProjects.filter(
-    (p) =>
-      p.categoryValue === "Branding" || p.categoryValue === "Identity Guide",
+    (p) => p.categoryValue === "Branding"
   );
   const socialMediaProjects = translatedProjects.filter(
-    (p) => p.categoryValue === "Social Media" || p.categoryValue === "Paid Ads",
+    (p) => p.categoryValue === "Social Media"
   );
   const companyProfilesProjects = translatedProjects.filter(
-    (p) => p.categoryValue === "Company Profiles",
+    (p) => p.categoryValue === "Company Profiles"
   );
 
   const modalLabels = {
@@ -247,24 +227,47 @@ export function PortfolioShowcase({ limit }) {
       style={{ backgroundColor: "#050505" }}
     >
       <div className="container">
-        
-        {/* 
-          تم الاستغناء عن المكون SectionHeading هنا 
-          وقمنا ببناء الهيدر بأنفسنا لضمان تلوين الخطوط باللون primary 100% 
-        */}
         <Reveal>
           <div className="text-center mb-5 pb-3">
-            
-            {/* الكلمة والخطين (تم إعطاؤهم اللون المباشر var(--primary)) */}
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "16px", marginBottom: "1.5rem" }}>
-              <span style={{ display: "block", height: "1px", width: "40px", backgroundColor: "var(--primary)" }}></span>
-              <span style={{ color: "var(--primary)", fontWeight: "600", fontSize: "0.85rem", letterSpacing: "0.15em" }}>
-                {t("portfolioPage.projects.badge", { defaultValue: "أعمال مختارة" })}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "16px",
+                marginBottom: "1.5rem",
+              }}
+            >
+              <span
+                style={{
+                  display: "block",
+                  height: "1px",
+                  width: "40px",
+                  backgroundColor: "var(--primary)",
+                }}
+              ></span>
+              <span
+                style={{
+                  color: "var(--primary)",
+                  fontWeight: "600",
+                  fontSize: "0.85rem",
+                  letterSpacing: "0.15em",
+                }}
+              >
+                {t("portfolioPage.projects.badge", {
+                  defaultValue: "أعمال مختارة",
+                })}
               </span>
-              <span style={{ display: "block", height: "1px", width: "40px", backgroundColor: "var(--primary)" }}></span>
+              <span
+                style={{
+                  display: "block",
+                  height: "1px",
+                  width: "40px",
+                  backgroundColor: "var(--primary)",
+                }}
+              ></span>
             </div>
 
-            {/* العنوان الرئيسي (أبيض ناصع) */}
             <h3 className="lh-base m-0 fw-bold">
               <span
                 className="d-block mb-2"
@@ -333,7 +336,6 @@ export function PortfolioShowcase({ limit }) {
       </AnimatePresence>
 
       <style jsx global>{`
-        /* ضبط حجم الكروت بين الموبايل والشاشات الكبيرة */
         .portfolio-card-item {
           width: calc(50% - 0.625rem);
         }

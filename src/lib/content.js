@@ -1,29 +1,186 @@
+// src/lib/content.js
 import strategy from "@/assets/hero-strategy.jpg";
 import social from "@/assets/hero-social.jpg";
-import w1 from "@/assets/Sadanah/Sadanah Guideline_Page_01.jpg";
 import w2 from "@/assets/work-2.jpg";
 import w3 from "@/assets/work-3.jpg";
-import w4 from "@/assets/work-4.jpg";
-import w5 from "@/assets/work-5.jpg";
-import w6 from "@/assets/work-6.jpg";
 
-// 1. قمنا بتعريف الجاليري هنا أولاً لكي نتمكن من استخدامه داخل مصفوفة الـ PORTFOLIO بالأسفل
-const nibrasGallery = Object.entries(
-  import.meta.glob("@/assets/Sadanah/Sadanah Guideline_Page_*.jpg", {
-    eager: true,
-    import: "default",
-  })
-)
-  .sort(([a], [b]) => {
-    const numA = Number(a.match(/Page_(\d+)/)?.[1]);
-    const numB = Number(b.match(/Page_(\d+)/)?.[1]);
-    return numA - numB;
-  })
-  .slice(1, 32)
-  .map(([_, src], index) => ({
-    id: `nibras-${index + 2}`,
-    src,
-  }));
+function loadFolderGallery(globRecord, prefix) {
+  return Object.entries(globRecord)
+    .sort(([pathA], [pathB]) => {
+      const numA = parseInt(pathA.match(/(\d+)(?=\.[a-zA-Z]+$)/)?.[1] || "0", 10);
+      const numB = parseInt(pathB.match(/(\d+)(?=\.[a-zA-Z]+$)/)?.[1] || "0", 10);
+      if (numA !== numB) return numA - numB;
+      return pathA.localeCompare(pathB, undefined, { numeric: true });
+    })
+    .map(([_, src], index) => ({
+      id: `${prefix}-${index + 1}`,
+      src,
+    }));
+}
+
+// ─── 1. Branding Folders ───
+const sadanahImages = loadFolderGallery(
+  import.meta.glob("@/assets/Branding/Sadanah/*.{jpg,png,webp,jpeg}", { eager: true, import: "default" }),
+  "sadanah"
+);
+const brandingCard1 = loadFolderGallery(
+  import.meta.glob("@/assets/Branding/Branding/card-1/*.{jpg,png,webp,jpeg}", { eager: true, import: "default" }),
+  "myherb"
+);
+const brandingCard2 = loadFolderGallery(
+  import.meta.glob("@/assets/Branding/Branding/card-2/*.{jpg,png,webp,jpeg}", { eager: true, import: "default" }),
+  "novo"
+);
+const brandingCard3 = loadFolderGallery(
+  import.meta.glob("@/assets/Branding/Branding/card-3/*.{jpg,png,webp,jpeg}", { eager: true, import: "default" }),
+  "ippo"
+);
+const brandingCard4 = loadFolderGallery(
+  import.meta.glob("@/assets/Branding/Branding/card-4/*.{jpg,png,webp,jpeg}", { eager: true, import: "default" }),
+  "seven-territory"
+);
+
+// ─── 2. Social Media Folders ───
+const socialCard5 = loadFolderGallery(
+  import.meta.glob("@/assets/Social Media/Social Media/card-5/*.{jpg,png,webp,jpeg}", { eager: true, import: "default" }),
+  "khususi"
+);
+const socialCard6 = loadFolderGallery(
+  import.meta.glob("@/assets/Social Media/Social Media/card-6/*.{jpg,png,webp,jpeg}", { eager: true, import: "default" }),
+  "kedaelshamal"
+);
+const socialCard7 = loadFolderGallery(
+  import.meta.glob("@/assets/Social Media/Social Media/card-7/*.{jpg,png,webp,jpeg}", { eager: true, import: "default" }),
+  "traventure"
+);
+const socialCard8 = loadFolderGallery(
+  import.meta.glob("@/assets/Social Media/Social Media/card-8/*.{jpg,png,webp,jpeg}", { eager: true, import: "default" }),
+  "pandahost"
+);
+
+// ─── 3. Profile Folders ───
+const profileCard9 = loadFolderGallery(
+  import.meta.glob("@/assets/Profile/Profile/card-9/*.{jpg,png,webp,jpeg}", { eager: true, import: "default" }),
+  "qita"
+);
+const profileCard10 = loadFolderGallery(
+  import.meta.glob("@/assets/Profile/Profile/card-10/*.{jpg,png,webp,jpeg}", { eager: true, import: "default" }),
+  "akwan"
+);
+const profileCard11 = loadFolderGallery(
+  import.meta.glob("@/assets/Profile/Profile/card-11/*.{jpg,png,webp,jpeg}", { eager: true, import: "default" }),
+  "qudrah"
+);
+const profileCard12 = loadFolderGallery(
+  import.meta.glob("@/assets/Profile/Profile/card-12/*.{jpg,png,webp,jpeg}", { eager: true, import: "default" }),
+  "elitestones"
+);
+
+export const PORTFOLIO = [
+  // ─── قسم الهوية التجارية ───
+  {
+    id: 1,
+    key: "sadanah",
+    category: "Branding",
+    image: sadanahImages[0]?.src,
+    gallery: sadanahImages,
+  },
+  {
+    id: 2,
+    key: "myHerb",
+    category: "Branding",
+    image: brandingCard1[0]?.src,
+    gallery: brandingCard1,
+  },
+  {
+    id: 3,
+    key: "novo",
+    category: "Branding",
+    image: brandingCard2[0]?.src,
+    gallery: brandingCard2,
+  },
+  {
+    id: 4,
+    key: "ippo",
+    category: "Branding",
+    image: brandingCard3[0]?.src,
+    gallery: brandingCard3,
+  },
+  {
+    id: 5,
+    key: "sevenTerritory",
+    category: "Branding",
+    image: brandingCard4[0]?.src,
+    gallery: brandingCard4,
+  },
+
+  // ─── قسم السوشيال ميديا ───
+  {
+    id: 6,
+    key: "khususiTeacher",
+    category: "Social Media",
+    image: socialCard5[0]?.src,
+    gallery: socialCard5,
+  },
+  {
+    id: 7,
+    key: "kedaElShamal",
+    category: "Social Media",
+    image: socialCard6[0]?.src,
+    gallery: socialCard6,
+  },
+  {
+    id: 8,
+    key: "traventure",
+    category: "Social Media",
+    image: socialCard7[0]?.src,
+    gallery: socialCard7,
+  },
+  {
+    id: 9,
+    key: "pandaHost",
+    category: "Social Media",
+    image: socialCard8[0]?.src,
+    gallery: socialCard8,
+  },
+
+  // ─── قسم بروفايلات الشركات ───
+  {
+    id: 10,
+    key: "qitaProfile",
+    category: "Company Profiles",
+    image: profileCard9[0]?.src,
+    gallery: profileCard9,
+  },
+  {
+    id: 11,
+    key: "akwanProfile",
+    category: "Company Profiles",
+    image: profileCard10[0]?.src,
+    gallery: profileCard10,
+  },
+  {
+    id: 12,
+    key: "qudrahProfile",
+    category: "Company Profiles",
+    image: profileCard11[0]?.src,
+    gallery: profileCard11,
+  },
+  {
+    id: 13,
+    key: "eliteStonesProfile",
+    category: "Company Profiles",
+    image: profileCard12[0]?.src,
+    gallery: profileCard12,
+  },
+];
+
+export const PORTFOLIO_CATEGORIES = [
+  "All",
+  "Branding",
+  "Social Media",
+  "Company Profiles",
+];
 
 export const HERO_SLIDES = [
   {
@@ -101,132 +258,6 @@ export const SERVICES = [
   },
 ];
 
-// احتفظ بكل السطور العلوية الخاصة بعمليات الـ Import والـ nibrasGallery كما هي في ملفك
-
-export const PORTFOLIO = [
-  // ─── قسم الهوية التجارية (5 كروت) ───
-  {
-    id: 1, title: "Nibras 360 Visual Identity", category: "Branding", image: w1,
-    client: "Nibras 360", year: "2024",
-    description: "A complete visual identity system built from the ground up.",
-    services: ["Brand Strategy", "Logo Design", "Visual Identity System", "Brand Guidelines"],
-    results: [{ label: "Brand consistency", value: "100%" }, { label: "Assets delivered", value: "40+" }],
-    gallery: nibrasGallery, // الجاليري الحقيقي الخاص بك
-  },
-  {
-    id: 2, title: "Nurture Nature's Touch", category: "Identity Guide", image: w2,
-    client: "Nurture Nature", year: "2024",
-    description: "A comprehensive identity guide that documented every aspect of the brand.",
-    services: ["Identity Guidelines", "Brand Voice", "Typography System"],
-    results: [{ label: "Pages delivered", value: "28" }, { label: "Team adoption", value: "Full" }],
-  },
-  {
-    id: 3, title: "Ippo Child Foot Branding", category: "Branding", image: w3,
-    client: "Ippo", year: "2023",
-    description: "A playful yet professional branding system for a children's footwear brand.",
-    services: ["Brand Identity", "Packaging Direction", "Brand Story"],
-    results: [{ label: "Market reception", value: "Positive" }, { label: "Launch timeline", value: "4 weeks" }],
-  },
-  {
-    id: 4, title: "AquaCool Rebranding", category: "Branding", image: w4,
-    client: "AquaCool", year: "2023",
-    description: "Modernizing a legacy brand to appeal to a younger demographic.",
-    services: ["Rebranding", "Visual System", "Stationery"],
-    results: [{ label: "Brand awareness", value: "+45%" }],
-  },
-  {
-    id: 5, title: "Belt & Road Identity", category: "Identity Guide", image: w5,
-    client: "Belt & Road", year: "2024",
-    description: "Corporate identity system for a global logistics company.",
-    services: ["Corporate Identity", "Brand Manual"],
-    results: [{ label: "Global branches applied", value: "12" }],
-  },
-
-  // ─── قسم السوشيال ميديا (5 كروت) ───
-  {
-    id: 6, title: "TechNova Social Strategy", category: "Social Media", image: w6,
-    client: "TechNova", year: "2024",
-    description: "Engaging social media strategy focused on educational tech content.",
-    services: ["Content Creation", "Grid Design", "Copywriting"],
-    results: [{ label: "Follower growth", value: "+12K" }],
-  },
-  {
-    id: 7, title: "FreshBite Ad Campaign", category: "Paid Ads", image: w2,
-    client: "FreshBite", year: "2024",
-    description: "High-converting Meta ads for a food delivery service.",
-    services: ["Meta Ads", "Creative Design", "A/B Testing"],
-    results: [{ label: "ROAS", value: "3.2x" }],
-  },
-  {
-    id: 8, title: "Lumina Instagram Revamp", category: "Social Media", image: w3,
-    client: "Lumina", year: "2023",
-    description: "Complete overhaul of the Instagram visual feed.",
-    services: ["Visual Direction", "Highlight Covers", "Reels Strategy"],
-    results: [{ label: "Engagement rate", value: "8.5%" }],
-  },
-  {
-    id: 9, title: "FitCore Lead Generation", category: "Paid Ads", image: w4,
-    client: "FitCore", year: "2024",
-    description: "Targeted lead generation campaign for a premium gym.",
-    services: ["Lead Generation", "Ad Copy", "Landing Page UI"],
-    results: [{ label: "Cost per Lead", value: "-30%" }],
-  },
-  {
-    id: 10, title: "EcoLife Awareness", category: "Social Media", image: w5,
-    client: "EcoLife", year: "2023",
-    description: "A viral awareness campaign focusing on sustainability.",
-    services: ["Campaign Strategy", "Influencer Collaboration", "Social Media Design"],
-    results: [{ label: "Total Reach", value: "2.1M" }],
-  },
-
-  // ─── قسم بروفايلات الشركات (5 كروت) ───
-  {
-    id: 11, title: "Apex Corp Profile", category: "Company Profiles", image: w6,
-    client: "Apex Corp", year: "2024",
-    description: "A professional and sleek corporate profile designed for B2B pitching.",
-    services: ["Copywriting", "Layout Design", "Print Ready"],
-    results: [{ label: "Pages", value: "32" }],
-  },
-  {
-    id: 12, title: "Zenith Real Estate", category: "Company Profiles", image: w2,
-    client: "Zenith", year: "2023",
-    description: "A luxurious company profile highlighting premium properties and firm history.",
-    services: ["Editorial Design", "Information Architecture"],
-    results: [{ label: "Client acquisitions", value: "+15%" }],
-  },
-  {
-    id: 13, title: "NexGen IT Portfolio", category: "Company Profiles", image: w3,
-    client: "NexGen", year: "2024",
-    description: "A dynamic portfolio and company profile for a software agency.",
-    services: ["Digital Profile", "Case Study Formatting"],
-    results: [{ label: "Sales cycle reduction", value: "20%" }],
-  },
-  {
-    id: 14, title: "UrbanBuild Pitch Deck", category: "Company Profiles", image: w4,
-    client: "UrbanBuild", year: "2024",
-    description: "Investor-focused company profile and pitch deck.",
-    services: ["Pitch Deck Design", "Financial Visualization"],
-    results: [{ label: "Funds raised", value: "$1.2M" }],
-  },
-  {
-    id: 15, title: "MediCare Annual Report", category: "Company Profiles", image: w5,
-    client: "MediCare", year: "2023",
-    description: "A comprehensive annual profile combining achievements and future roadmap.",
-    services: ["Annual Report Design", "Data Graphics"],
-    results: [{ label: "Stakeholder rating", value: "5/5" }],
-  },
-  
-];
-
-export const PORTFOLIO_CATEGORIES = [
-  "All",
-  "Branding",
-  "Identity Guide",
-  "Social Media",
-  "Paid Ads",
-  "Company Profiles",
-];
-
 export const STATS = [
   { value: 14, suffix: "+", label: "Core services built" },
   { value: 23, suffix: "x", label: "Avg. ROAS uplift" },
@@ -300,7 +331,7 @@ export const BLOG_POSTS = [
     title: "Why standalone posts fail to grow your business",
     date: "May 18, 2026",
     category: "Strategy",
-    image: w2,
+    image: strategy,
     excerpt: "Discover how connecting content pillars, ad messaging, and sales paths turns marketing from a random reaction into a scalable acquisition machine.",
   },
   {
@@ -308,7 +339,7 @@ export const BLOG_POSTS = [
     title: "How slow sales replies are quietly burning your ad budget",
     date: "Apr 29, 2026",
     category: "Sales Support",
-    image: w3,
+    image: social,
     excerpt: "Stop wasting money on traffic. Learn the exact welcome flows, qualification frameworks, and common objection templates to protect your lead quality.",
   },
 ];
