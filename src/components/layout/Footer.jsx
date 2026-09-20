@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import {  FiX, FiHelpCircle } from "react-icons/fi";
 import { FaInstagram, FaTiktok, FaXTwitter } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
-import logo from "../../assets/logoFooter.png";
+import logo from "../../assets/logoFooter.webp";
 import styles from "./Footer.module.css";
 
 function Footer() {

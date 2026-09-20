@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Reveal } from "@/components/sections/Reveal/Reveal";
 import { ContactSection } from "@/components/sections/ContactSection/ContactSection";
 import styles from "./Contact.module.css";
-import ContactImg from "../../assets/Contact Icon.png";
+import ContactImg from "../../assets/Contact Icon.webp";
 
 function ContactPage() {
   const [sent, setSent] = useState(false);

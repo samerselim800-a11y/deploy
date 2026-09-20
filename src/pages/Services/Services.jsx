@@ -8,7 +8,7 @@ import WhyChooseUs from "../../components/sections/WhyChooseUs/WhyChooseUs";
 import { StatsCounter } from "../../components/sections/StatsCounter/StatsCounter";
 import Testimonials from "../../components/sections/Testimonials/Testimonials";
 import styles from "./Services.module.css";
-import TeamCraftImg from "../../assets/What-we-do Icon.png";
+import TeamCraftImg from "../../assets/What-we-do Icon.webp";
 import CaseStudies from "../../components/sections/CaseStudies/CaseStudies";
 
 function ServicesPage() {

@@ -4,7 +4,7 @@ import { ArrowRight, ArrowDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { HERO_SLIDES } from "../../../lib/content";
 import { Link } from "react-router-dom";
-import mascot from "@/assets/mascot.png";
+import mascot from "@/assets/mascot.webp";
 import styles from "./HeroScrollLock.module.css";
 
 const HERO_SLIDE_KEYS = {

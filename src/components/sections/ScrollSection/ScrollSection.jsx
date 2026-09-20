@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 
 import styles from "./ScrollSection.module.css";
 
-import work1 from "@/assets/SE1.png";
-import work3 from "@/assets/SE3.png";
-import work4 from "@/assets/SE4.png";
-import work5 from "@/assets/SE5.png";
-import work6 from "@/assets/SE6.png";
-import work2 from "@/assets/Services2.png";
+import work1 from "@/assets/SE1.webp";
+import work3 from "@/assets/SE3.webp";
+import work4 from "@/assets/SE4.webp";
+import work5 from "@/assets/SE5.webp";
+import work6 from "@/assets/SE6.webp";
+import work2 from "@/assets/Services2.webp";
 
 const SERVICES = [
   {

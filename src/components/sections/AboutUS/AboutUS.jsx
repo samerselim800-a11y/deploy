@@ -3,7 +3,7 @@ import { Fingerprint } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import styles from "./AboutUS.module.css";
 
-import about from "@/assets/About.png";
+import about from "@/assets/About.webp";
 import ButtonMain from "../../layout/buttonMain";
 
 export function AboutUs({ translationPrefix }) {

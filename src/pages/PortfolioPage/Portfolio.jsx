@@ -6,7 +6,7 @@ import { Reveal } from "@/components/sections/Reveal/Reveal";
 import CaseStudies from "@/components/sections/CaseStudies/CaseStudies";
 import { StatsCounter } from "../../components/sections/StatsCounter/StatsCounter";
 import Testimonials from "../../components/sections/Testimonials/Testimonials";
-import imgportfolio from "../../assets/Selected-work Icon.png";
+import imgportfolio from "../../assets/Selected-work Icon.webp";
 import styles from "./Portfolio.module.css";
 
 function PortfolioPage() {

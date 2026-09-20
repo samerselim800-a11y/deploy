@@ -1,8 +1,8 @@
 // src/lib/content.js
-import strategy from "@/assets/hero-strategy.jpg";
-import social from "@/assets/hero-social.jpg";
-import w2 from "@/assets/work-2.jpg";
-import w3 from "@/assets/work-3.jpg";
+import strategy from "@/assets/hero-strategy.webp";
+import social from "@/assets/hero-social.webp";
+import w2 from "@/assets/work-2.webp";
+import w3 from "@/assets/work-3.webp";
 
 function loadFolderGallery(globRecord, prefix) {
   return Object.entries(globRecord)
