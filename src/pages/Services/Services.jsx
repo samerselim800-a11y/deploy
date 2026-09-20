@@ -25,7 +25,9 @@ function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className={`position-relative overflow-hidden ${styles.heroSection}`}>
+      <section
+        className={`position-relative overflow-hidden ${styles.heroSection}`}
+      >
         <div className="container">
           <div className="row align-items-center g-5">
             <div className="col-12 col-lg-6 d-flex align-items-center">
@@ -40,7 +42,9 @@ function ServicesPage() {
                     {t("servicesPage.hero.titleSecondLine")}
                   </span>
                 </h1>
-                <p className={`mt-4 text-muted fs-5 mb-0 ${styles.description}`}>
+                <p
+                  className={`mt-4 text-muted fs-5 mb-0 ${styles.description}`}
+                >
                   {t("servicesPage.hero.description")}
                 </p>
               </Reveal>

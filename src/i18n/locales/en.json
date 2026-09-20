@@ -911,6 +911,13 @@
       "socialMedia": "Social Media",
       "companyProfiles": "Company Profiles"
     },
+    "caseStudies": {
+      "badge": "Case Studies",
+      "title": "Every case study here",
+      "description": "Is proof that real marketing starts with a strong strategy..and ends with real results.",
+      "pill": "Performance Case Study",
+      "button": "See All Work"
+    },
     "projects": {
       "badge": "Selected work",
       "title": "Recent stories",
