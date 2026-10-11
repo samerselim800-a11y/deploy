@@ -40,7 +40,9 @@ function PortfolioPage() {
                     {t("portfolioPage.hero.titleSecondLine")}
                   </span>
                 </h1>
-                <p className={`mt-4 text-muted fs-5 mb-0 ${styles.description}`}>
+                <p
+                  className={`mt-4 text-muted fs-5 mb-0 ${styles.description}`}
+                >
                   {t("portfolioPage.hero.description")}
                 </p>
               </Reveal>
@@ -74,7 +76,7 @@ function PortfolioPage() {
       </div>
 
       {/* Call To Action */}
-      <CTABanner translationPrefix="portfolioPage.cta" />
+      <CTABanner translationPrefix="aboutPage.cta" />
     </div>
   );
 }
